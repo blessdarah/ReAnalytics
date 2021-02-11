@@ -1,0 +1,41 @@
+.btn {
+    border: 2px solid transparent;
+    border-radius: 1000px;
+    padding: 12px 2.5rem;
+}
+
+.btn-sm {
+    padding: 6px 1.25rem;
+}
+
+.btn-indigo {
+    background: var(--indigo);
+
+    &:hover {
+        border: 2px solid var(--indigo);
+        background: none;
+    }
+}
+
+.btn-purple {
+    background: var(--purple);
+}
+
+.btn-pink {
+    background: var(--pink);
+}
+
+.btn-orange {
+    background: var(--orange);
+}
+
+aside {
+    .btn-link {
+        padding: 0;
+    }
+}
+
+.list-group-item,
+.list-group-action {
+    border-radius: 0 !important;
+}

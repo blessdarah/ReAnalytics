@@ -1,0 +1,141 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.5
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Nov 14, 2020 at 07:51 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `cp`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `complaints`
+--
+
+CREATE TABLE `complaints` (
+  `id` int(10) NOT NULL,
+  `faculty` text NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `matricule` varchar(15) NOT NULL,
+  `phone` int(9) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `category` text NOT NULL,
+  `details` varchar(1024) NOT NULL,
+  `file` varchar(1024) NOT NULL,
+  `cid` varchar(15) NOT NULL,
+  `status` text NOT NULL,
+  `dat` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `complaints`
+--
+
+INSERT INTO `complaints` (`id`, `faculty`, `name`, `matricule`, `phone`, `email`, `category`, `details`, `file`, `cid`, `status`, `dat`) VALUES
+(1, 'FS', 'Munajam Thomas', 'UBa14S0211', 677778787, 'tom@yahoo.cm', 'Credit Student Account', 'If you have any proof to support your complaint, combine as a single file & click the browse button. If you have any proof to support your complaint, combine as a single file & click the browse button.\r\nIf you have any proof to support your complaint, combine as a single file & click the browse button.', 'UBA17T0357.pdf', 'FS5F1313AB8931F', '', '2020-07-18 16:22:19'),
+(2, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'PersonLinks Designs-02.png', 'COLTECH5F13FDE3', 'pending', '2020-07-19 09:01:39'),
+(3, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'PersonLinks Designs-02.png', 'COLTECH5F13FDFE', 'pending', '2020-07-19 09:02:06'),
+(4, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'communique23.pdf', 'COLTECH5F13FED5', 'pending', '2020-07-19 09:05:41'),
+(5, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'communique23.pdf', 'COLTECH5F13FFF2', 'pending', '2020-07-19 09:10:26'),
+(6, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'communique23.pdf', 'COLTECH5F1400F8', 'pending', '2020-07-19 09:14:48'),
+(7, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'communique23.pdf', 'COLTECH5F140115', 'pending', '2020-07-19 09:15:17'),
+(8, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'communique23.pdf', 'COLTECH5F140123', 'pending', '2020-07-19 09:15:31'),
+(9, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'communique23.pdf', 'COLTECH5F14019F', 'pending', '2020-07-19 09:17:35'),
+(10, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'communique23.pdf', 'COLTECH5F1401AC', 'pending', '2020-07-19 09:17:48'),
+(11, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'communique23.pdf', 'COLTECH5F14020B', 'pending', '2020-07-19 09:19:23'),
+(12, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'communique23.pdf', 'COLTECH5F140225', 'pending', '2020-07-19 09:19:49'),
+(13, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'communique23.pdf', 'COLTECH5F14023A', 'pending', '2020-07-19 09:20:10'),
+(14, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'communique23.pdf', 'COLTECH5F140246', 'pending', '2020-07-19 09:20:22'),
+(15, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'communique23.pdf', 'COLTECH5F140250', 'pending', '2020-07-19 09:20:32'),
+(16, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'communique23.pdf', 'COLTECH5F140278', 'pending', '2020-07-19 09:21:12'),
+(17, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'communique23.pdf', 'COLTECH5F140295', 'pending', '2020-07-19 09:21:41'),
+(18, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'communique23.pdf', 'COLTECH5F1402CC', 'pending', '2020-07-19 09:22:36'),
+(19, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'communique23.pdf', 'COLTECH5F1402EA', 'pending', '2020-07-19 09:23:06'),
+(20, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'communique23.pdf', 'COLTECH5F140349', 'pending', '2020-07-19 09:24:41'),
+(21, 'COLTECH', 'Sama Babili Ndi', 'UBa17GP0987', 677777777, 'ngwen.abienwi@uniba-edu.cm', 'E-Learning', 'ave any proof to support your complaint, combine as a single file & click the browse button. ave any proof to support your complaint, combine as a single file & click the browse button.', 'communique23.pdf', 'COLTECH5F140354', 'pending', '2020-07-19 09:24:52'),
+(22, 'FS', 'Samantha Abimnui', 'UBa16P147', 66504178, 'samantha@gmail.com', 'Course Management', 'I cannot register for 2 courses because of credit value issue.\r\nPlease, can you grant me 6 extra credits to permit me register for these courses?!', 'admissionLet.docx', 'FS5F55CD0FEBAC8', 'pending', '2020-09-07 07:02:55'),
+(23, 'COLTECH', 'Sam Pius', 'UBa18G2233', 655887741, 'sam@uniba.cm', 'Admissions', 'I need my application fee which I paid in the bank to be validated online. ', 'APA Referencing in Word 2016.pdf', 'COLTECH5F55CF32', 'pending', '2020-09-07 07:12:02'),
+(24, 'FS', 'Bin Tyler', 'UBa11S114', 681654852, 'tyler@uniba.cm', 'Credit Student Account', 'My account has not been credited for my school fees which I paid. I have proof from MTN', '', 'FS5F55DDE0E3AF2', 'pending', '2020-09-07 08:14:40'),
+(25, 'FS', 'Sama Bruno Asah', 'UBa11S114', 681654852, 'bruno@uniba-edu.cm', 'Credit Student Account', 'My account has not been credited for my school fees which I paid. I have proof from MTN', 'Lesson Plan - Munjam Thomas.docx', 'FS5F55DE20742E0', 'pending', '2020-09-07 08:15:44');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `uid` int(11) NOT NULL,
+  `username` varchar(25) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `phone` int(15) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `faculty` varchar(255) NOT NULL,
+  `role` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`uid`, `username`, `password`, `name`, `phone`, `email`, `faculty`, `role`) VALUES
+(1, 'Administrator', 'dfe758a48c0a336b96d6f289875e0db2', 'MUNJAM THOMAS PERSON', 678686249, 'thomas.munjam@uniba.cm', 'UBa Computer Centre', 'Administrator'),
+(2, 'Pierre', '311ba248903382fd1eee8670472d3f39', 'Atekwana Pierre Alain', 672795721, 'pierreatekwana@gmail.com', 'UBa Computer Centre', 'Administrator'),
+(3, 'leonel', 'd94d81a75c0e8c0aef4e46a08206426b', 'Leonel Otun Djatio Foma', 671129365, 'leoneldjatio56@gmail.com', 'UBa Computer Centre', 'Administrator'),
+(4, 'mokwe', '235ebd84c4086c066cd89fb7a504d4c7', 'Mokwe Bea Patrick', 675138086, '', 'NAHPI', 'Focal Point'),
+(7, 'gah-muti', 'a8032c592e2f582fe01fe79c025ca142', 'Gah-muti Sylvanus', 677736880, 'gasmsy@gmail.com', 'FS', 'Focal Point');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `complaints`
+--
+ALTER TABLE `complaints`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`uid`),
+  ADD UNIQUE KEY `phone` (`phone`,`email`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `complaints`
+--
+ALTER TABLE `complaints`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -38,6 +38,7 @@
                 <div class="card-header bg-danger rounded-0 border-0 py-1"></div>
                 <div class="card-body">
                     Events
+                    {{-- {{ count($events) }} --}}
                 </div>
             </div>
         </div>

@@ -18,7 +18,7 @@ class MemberController extends Controller
     public function index()
     {
         Config::set('app.page', 'experts');
-        return view('members.index')->withMembers(Member::latest()->get());
+        return view('members.index')->with('members', Member::latest()->get());
     }
 
     /**
@@ -59,7 +59,7 @@ class MemberController extends Controller
      */
     public function show(Member $member)
     {
-        return view('members.create')->withMember($member);
+        return view('members.create')->with('member', $member);
     }
 
     /**
@@ -70,7 +70,7 @@ class MemberController extends Controller
      */
     public function edit(Member $member)
     {
-        return view('members.edit')->withMember($member);
+        return view('members.edit')->with('member', $member);
     }
 
     /**
@@ -98,7 +98,7 @@ class MemberController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
+     
      * @param  \App\Models\Member  $member
      * @return \Illuminate\Http\Response
      */

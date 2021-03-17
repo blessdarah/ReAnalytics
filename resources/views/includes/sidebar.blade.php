@@ -3,24 +3,24 @@
         <ul class="list-group mt-4 text-primary">
             <a href="{{ route('home') }}"
                 class="list-group-item border-0 mb-4 h2 font-weight-bold rounded text-center text-uppercase text-dark">
-                btc<span class="text-primary">o</span>re
+				ReAnalytics
             </a>
             <a href="{{ route('home') }}"
                 class="{{ Config::get('app.page') === '/' ? 'active' : '' }} list-group-item list-group-item-action border-0 mb-2 rounded">
                 <i class="bx bxs-dashboard"></i> Dashboard
             </a>
-            <a href="{{ route('posts.index') }}"
+             <a href="{{ route('posts.index') }}"
                 class="{{ Config::get('app.page') === 'posts' ? 'active' : '' }} list-group-item list-group-item-action border-0 mb-2 rounded">
                 <i class="bx bx-news"></i> Posts
             </a>
-            {{-- <a href="{{ route('events.index') }}"
-                class="{{ Config::get('app.page') === 'events' ? 'active' : '' }} list-group-item list-group-item-action border-0 mb-2 rounded">
-                <i class="bx bx-slider bx-sm"></i> Events
-            </a>
+            {{-- <a href="{{route('events.index')}}" --}}
+            {{--     class="{{ Config::get('app.page') === 'events' ? 'active' : '' }} list-group-item list-group-item-action border-0 mb-2 rounded"> --}}
+            {{--     <i class="bx bx-slider bx-sm"></i> Events --}}
+            {{-- </a> --}}
             <a href="{{ route('projects.index') }}"
                 class="{{ Config::get('app.page') === 'projects' ? 'active' : '' }} list-group-item list-group-item-action border-0 mb-2 rounded">
                 <i class="bx bx-slider bx-sm"></i> Projects
-            </a> --}}
+            </a> 
             <a href="{{ route('services.index') }}"
                 class="{{ Config::get('app.page') === 'services' ? 'active' : '' }} list-group-item list-group-item-action border-0 mb-2 rounded">
                 <i class="bx bx-expand"></i> Services
@@ -29,10 +29,10 @@
                 class="{{ Config::get('app.page') === 'videos' ? 'active' : '' }} list-group-item list-group-item-action border-0 mb-2 rounded">
                 <i class="bx bx-movie-play"></i> videos
             </a>
-            {{-- <a href="{{ route('members.index') }}"
+            <a href="{{ route('members.index') }}"
                 class="{{ Config::get('app.page') === 'experts' ? 'active' : '' }} list-group-item list-group-item-action border-0 rounded mb-2">
-                <i class="bx bx-slider bx-sm"></i> Experts
-            </a> --}}
+                <i class="bx bx-slider bx-sm"></i> Team
+            </a>
             <a href="{{ route('testimonials.index') }}"
                 class="{{ Config::get('app.page') === 'testimonial' ? 'active' : '' }} list-group-item list-group-item-action border-0 rounded mb-2">
                 <i class='bx bxs-quote-right'></i> Testimonials

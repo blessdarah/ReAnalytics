@@ -39933,6 +39933,17 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/css/main.css":
+/*!********************************!*\
+  !*** ./resources/css/main.css ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -40009,14 +40020,15 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ }),
 
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!**************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/css/main.css ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\coding\PROJECTS\Laravel Projects\btcore\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\coding\PROJECTS\Laravel Projects\btcore\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\coding\PROJECTS\Laravel Projects\ReAnalytics\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! D:\coding\PROJECTS\Laravel Projects\ReAnalytics\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! D:\coding\PROJECTS\Laravel Projects\ReAnalytics\resources\css\main.css */"./resources/css/main.css");
 
 
 /***/ })

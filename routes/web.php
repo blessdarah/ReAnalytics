@@ -65,21 +65,21 @@ Auth::routes();
  */
 Route::post('/contact-submit', [HomeController::class, 'contact'])->name('contact.submit');
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
-    Route::get('/contact-messages', [HomeController::class, 'contactMessages'])->name('contact.messages');
-    Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
+	Route::get('/home', [HomeController::class, 'index'])->name('home');
+	Route::get('/contact-messages', [HomeController::class, 'contactMessages'])->name('contact.messages');
+	Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
 
-    Route::resource('posts', PostController::class);
-    // Route::resource('events', EventController::class);
-    // Route::resource('projects', ProjectController::class);
-    Route::resource('testimonials', TestimonialController::class);
-    Route::resource('services', ServiceController::class);
-    Route::resource('videos', VideoController::class);
-    // Route::resource('members', MemberController::class);
-    Route::resource('attachments', AttachmentController::class);
-    Route::resource('contacts', ContactController::class);
-    Route::resource('banner', BannerController::class);
-    Route::resource('tags', TagController::class)->only(["store", "update", "destroy"]);
+	Route::resource('posts', PostController::class);
+	/* Route::resource('events', EventController::class); */
+	Route::resource('projects', ProjectController::class);
+	Route::resource('testimonials', TestimonialController::class);
+	Route::resource('services', ServiceController::class);
+	Route::resource('videos', VideoController::class);
+	Route::resource('members', MemberController::class);
+	Route::resource('attachments', AttachmentController::class);
+	Route::resource('contacts', ContactController::class);
+	Route::resource('banner', BannerController::class);
+	Route::resource('tags', TagController::class)->only(["store", "update", "destroy"]);
 });
 
 /**
@@ -87,3 +87,15 @@ Route::group(['middleware' => ['auth']], function () {
  * @param string|file|image
  */
 Route::post('/upload-image', [UtilsController::class, 'upload'])->name('files.upload');
+
+
+/*
+|--------------------------------------------------------------------------
+| Referal system routes
+|--------------------------------------------------------------------------
+|
+| These routes will help to manage the referal system designed for the projects
+| This is an entirely new area. 
+|
+*/
+

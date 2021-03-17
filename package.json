@@ -23,6 +23,10 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
-        "flatpickr": "^4.6.6"
+        "@tailwindcss/postcss7-compat": "^2.0.3",
+        "autoprefixer": "^9.8.6",
+        "flatpickr": "^4.6.6",
+        "postcss": "^7.0.35",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
     }
 }

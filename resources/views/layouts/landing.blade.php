@@ -17,14 +17,18 @@
     <!-- Styles -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-
 </head>
 
 @yield('styles')
 
-<body>
-    @include('includes.navbar')
-    {{-- yeild hero --}}
+<body class="bg-blue-50">
+    <header id="app-header" class="relative">
+        <img src="{{ asset('assets/hero-wave.png') }}" alt="hero background wave"
+            class="absolute top-0 left-0 -z-10 responive">
+        @include('includes.navbar')
+        @include('includes.hero')
+    </header>
+
     <main>
         @yield('content')
     </main>

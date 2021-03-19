@@ -1,5 +1,18 @@
-/* ./resources/css/app.css */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.input-field {
+    @apply block w-full h-16 px-4 py-2 mb-4 text-gray-800 rounded outline-none bg-gray-50 ring-2 ring-gray-200;
+}
+
+.button-blue {
+    @apply bg-blue-600;
+}
+
+.button-red {
+    @apply bg-red-600;
+}
+
+body {
+    scroll-behavior: smooth;
+}

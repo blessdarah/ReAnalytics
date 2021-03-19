@@ -1,7 +1,7 @@
 <div class="grid-cols-7 gap-8 mt-10 md:mt-16 lg:mt-24 lg:grid hero lg:pl-20">
     {{-- left side --}}
-    <div class="flex flex-col justify-center px-4 text-center lg:text-left lg:col-span-3 left lg:ml-24 md:px-0">
-        <h1 class="my-4 text-3xl font-bold leading-relaxed text-indigo-900 uppercase lg:text-5xl">
+    <div class="flex flex-col justify-center px-4 text-center lg:text-left lg:col-span-3 left lg:w-8/12 lg:ml-auto md:px-0">
+        <h1 class="my-4 text-3xl font-bold leading-relaxed text-indigo-900 uppercase lg:text-4xl">
             {{ __('Data analysis') }}<br class="hidden lg:block xl:hidden">
             {{ __('and project management') }}
         </h1>

@@ -1,5 +1,9 @@
 @extends('layouts.landing')
 
+@section('hero')
+    @include('includes.hero')
+@endsection
+
 @section('content')
 
     {{-- services --}}

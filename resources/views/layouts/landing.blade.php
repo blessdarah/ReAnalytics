@@ -26,7 +26,7 @@
         <img src="{{ asset('assets/hero-wave.png') }}" alt="hero background wave"
             class="absolute top-0 left-0 -z-10 responive">
         @include('includes.navbar')
-        @include('includes.hero')
+        @yield('hero')
     </header>
 
     <main>

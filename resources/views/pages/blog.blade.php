@@ -71,7 +71,7 @@
                             dearest an windows by. Wooded ladies she basket season age her uneasy saw') }}
                         </p>
 
-                        <a href="{{ route('contact-us') }}" class="inline-block px-8 py-3 text-center text-white transition-all bg-blue-600 w-max hover:bg-blue-800 justify-self-end">
+                        <a href="{{ route('blog.show', Str::slug('Post title')) }}" class="inline-block px-8 py-3 text-center text-white transition-all bg-blue-600 w-max hover:bg-blue-800 justify-self-end">
                             <i class="bx bx-book-reader"></i>
                             {{ __('read this post') }}
                         </a>
@@ -102,3 +102,4 @@
         {{-- pagination end --}}
     </div>
 @endsection
+

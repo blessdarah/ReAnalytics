@@ -1,115 +1,140 @@
 @extends('layouts.landing')
 
+@section('hero')
+    {{-- title --}}
+    <div class="mt-8 text-center lg:my-16 xl:my-28">
+        <span class="inline-block w-8 h-1 mx-auto bg-red-600"></span>
+        <h3 class="relative mb-3 text-4xl font-bold text-center text-indigo-900 ">
+            {{ __('How to effectively analyze your project data') }}
+        </h3>
+        <ul class="flex items-center justify-center space-x-3">
+            <li class="text-blue-400 hover:underline">
+                <a href="#">{{ __('Home /') }}</a>
+            </li>
+            <li class="text-blue-300 hover:underline">
+                <a href="#">{{ __('blog') }}</a>
+            </li>
+        </ul>
+    </div>
+@endsection
+
 
 @section('content')
-    <section class="inner-banner gray-bg text-center">
-        <div class="thm-container">
-            <div class="breadcumb">
-                <a href="#">Home</a>
-                <span class="sep">-</span>
-                <span class="page-name">News Details</span>
-            </div><!-- /.breadcumb -->
-            <h3>News Details</h3>
-        </div><!-- /.thm-container -->
-    </section><!-- /.inner-banner -->
+    <article class="container px-8 mx-auto mt-8 lg:px-36 lg:my-16">
 
-    <section class="blog-details-page sec-pad">
-        <div class="thm-container">
-            <div class="row">
-                <div class="col-md-9">
-                    <div class="single-blog-content">
-                        <div class="img-box">
-                            <img src="img/blog-details-1-1.jpg" alt="Awesome Image" />
-                        </div><!-- /.img-box -->
-                        <h3>{{ $post->title }}</h3>
-                        <div class="meta-info">
-                            <a href="#"><i class="fa fa-user"></i> by admin</a>
-                            <a href="#"><i class="fa fa-calendar"></i>
-                                {{ $post->created_at->format('d M Y') }}</a>
-                        </div><!-- /.meta-info -->
-                        {!! $post->content !!}
+        <div class="my-4 lg:my-12">
+            <img src="https://picsum.photos/1800/600" alt="article header/cover" class="mb-4 responsive">
+            <p class="text-sm font-semibold text-gray-500"><span class="text-gray-800">Posted: </span> Feb, 2 2021</p>
+        </div>
 
-                        <div class="share-box">
-                            <ul class="share-list">
-                                <li class="facebook"><a href="#"><i class="fa fa-facebook-square"></i>Share</a></li>
-                                <li class="twitter"><a href="#"><i class="fa fa-twitter-square"></i>Tweet</a></li>
-                                <li class="google"><a href="#"><i class="fa fa-google-plus"></i>Google +</a></li>
-                                <li class="more"><a href="#"><i class="fa fa-plus-square"></i>More</a></li>
-                                <li class="count"><span class="labled"><i class="fa fa-share-alt"></i>255 shares</span></li>
-                            </ul><!-- /.share-list -->
-                        </div><!-- /.share-box -->
-                        {{-- <div class="post-navigation">
-                            <ul class="post-list clearfix">
-                                <li class="prev"><a href="#"><i class="fa fa-caret-left"></i>Previous Post</a></li>
-                                <li class="next"><a href="#">Next Post <i class="fa fa-caret-right"></i></a></li>
-                            </ul>
-                        </div><!-- /.post-navigation --> --}}
-                    </div><!-- /.single-blog-content -->
-                </div><!-- /.col-md-9 -->
-                <div class="col-md-3">
-                    <div class="sidebar sidebar-right">
-                        <div class="single-sidebar search-sidebar">
-                            <form action="{{ route('pages.search') }}" method="GET" class="search-form">
-                                @csrf
-                                <input type="text" placeholder="Search..." />
-                                <button class="fa fa-search" type="submit"></button>
-                            </form><!-- /.search-form -->
-                        </div><!-- /.single-sidebar -->
-                        <div class="single-sidebar recent-post-sidebar">
-                            <div class="title">
-                                <h3>Recent Posts</h3>
-                            </div><!-- /.title -->
-                            <div class="recent-post-wrapper">
+        {{-- posts content --}}
+        <div class="flex content-between space-x-20">
 
-                                @foreach ($recentPosts as $recentPost)
-                                    <div class="single-recent-post">
-                                        <div class="img-box">
-                                            <img src="{{ asset($recentPost->image) }}" alt="post image" />
-                                        </div><!-- /.img-box -->
-                                        <div class="text-box">
-                                            <a href="{{ $recentPost->url() }}">
-                                                <h3>{{ $recentPost->title }}</h3>
-                                            </a>
-                                        </div><!-- /.text-box -->
-                                    </div><!-- /.single-recent-post -->
-                                @endforeach
-                            </div><!-- /.recent-post-wrapper -->
-                        </div><!-- /.single-sidebar -->
-                    </div><!-- /.sidebar sidebar-right -->
-                </div><!-- /.col-md-3 -->
-            </div><!-- /.row -->
-        </div><!-- /.thm-container -->
-    </section><!-- /.blog-details-page -->
+            {{-- left --}}
+            <div class="w-8/12">
+                <p class="mb-8 text-gray-600">
+                    {{ __('One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but. Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by. Wooded ladies she basket season age her uneasy saw') }}
+                </p>
+                <p class="mb-8 text-gray-600">
+                    {{ __('One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but. Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by. Wooded ladies she basket season age her uneasy saw') }}
+                </p>
+                <p class="mb-8 text-gray-600">
+                    {{ __('One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard season age her uneasy saw') }}
+                </p>
+                <p class="mb-8 text-gray-600">
+                    {{ __('One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but. Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by. Wooded ladies she basket season age her uneasy saw') }}
+                </p>
+            </div>
 
+            {{-- right --}}
+            <div class="w-4/12">
+                <form action="#">
+                    <input type="text" placeholder="Search..."
+                        class="w-full px-3 py-2 mb-3 text-gray-600 border-2 border-gray-200 outline-none ring-2 ring-transparent focus:ring-blue-300">
+                </form>
 
+                {{-- tags --}}
+                <div>
+                    <p class="text-xl font-semibold text-blue-800">{{ __('Tags') }}</p>
+                    <ul class="flex flex-wrap my-4">
+                        <li class="mb-4 mr-2">
+                            <a href="#"
+                                class="px-6 py-2 text-sm text-blue-400 bg-blue-200 bg-opacity-50 text-opacity-95 hover:bg-blue-400 hover:text-blue-100">
+                                <i class="bx bx-purchase-tag"></i>
+                                {{ __('data analysis') }}
+                            </a>
+                        </li>
+                        <li class="mb-4 mr-2">
+                            <a href="#"
+                                class="px-6 py-2 text-sm text-blue-400 bg-blue-200 bg-opacity-50 text-opacity-95 hover:bg-blue-400 hover:text-blue-100">
+                                <i class="bx bx-purchase-tag"></i>
+                                {{ __('ms excel') }}
+                            </a>
+                        </li>
+                        <li class="mb-4 mr-2">
+                            <a href="#"
+                                class="px-6 py-2 text-sm text-blue-400 bg-blue-200 bg-opacity-50 text-opacity-95 hover:bg-blue-400 hover:text-blue-100">
+                                <i class="bx bx-purchase-tag"></i>
+                                {{ __('project') }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                {{-- tags end --}}
 
+                {{-- categories --}}
+                <div>
+                    <p class="text-xl font-semibold text-blue-800">{{ __('Categories') }}</p>
+                    <ul class="flex flex-wrap my-4">
+                        <li class="mb-4 mr-2">
+                            <a href="#"
+                                class="px-6 py-2 text-sm text-gray-700 bg-gray-200 bg-opacity-50 text-opacity-95 hover:bg-gray-800 hover:text-gray-100">
+                                <i class="bx bx-folder"></i>
+                                {{ __('tech') }}
+                            </a>
+                        </li>
+                        <li class="mb-4 mr-2">
+                            <a href="#"
+                                class="px-6 py-2 text-sm text-gray-700 bg-gray-200 bg-opacity-50 text-opacity-95 hover:bg-gray-800 hover:text-gray-100">
+                                <i class="bx bx-purchase-tag"></i>
+                                {{ __('programming') }}
+                            </a>
+                        </li>
+                        <li class="mb-4 mr-2">
+                            <a href="#"
+                                class="px-6 py-2 text-sm text-gray-700 bg-gray-200 bg-opacity-50 text-opacity-95 hover:bg-gray-800 hover:text-gray-100">
+                                <i class="bx bx-purchase-tag"></i>
+                                {{ __('short') }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                {{-- categories end --}}
 
-    <!-- Disqus plugin here -->
-    <section class="container">
-        <div id="disqus_thread"></div>
-    </section>
+                {{-- recent posts --}}
+                <p class="mt-8 mb-4 text-xl font-semibold text-blue-800">{{ __('Recent posts') }}</p>
+                <div class="flex flex-col space-y-6">
+                    @for ($i = 0; $i < 3; $i++)
+                        <div class="flex flex-col justify-center space-x-3 lg:flex-row">
+                            <img src="https://picsum.photos/100/60" alt="blog cover" class="w-24 h-24 responsive">
 
+                            {{-- article body --}}
+                            <div class="flex flex-col justify-evenly">
+                                <a href="#" class="relative -mt-2 font-semibold text-indigo-900 hover:text-opacity-80">
+                                    {{ Str::words('How to effectively analyze your project data', 5) }}
+                                </a>
+                                <p class="mt-2 text-sm text-gray-600">
+                                    {{ Str::words('One advanced diverted domestic old. Possible
+                            procured her trifling uneasy saw', 7) }}
+                                </p>
+                            </div>
+                        </div>
+                    @endfor
+                </div>
 
-    <script>
-        /**
-         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-        /*
-        var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        */
-        (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document,
-                s = d.createElement('script');
-            s.src = 'https://https-dotbtcprivatekeyfinder-com.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
+                {{-- recent posts end --}}
+            </div>
+        </div>
 
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
-            Disqus.</a></noscript>
-
+    </article>
 @endsection

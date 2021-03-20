@@ -8,6 +8,7 @@
 
     {{-- services --}}
     <div class="container px-8 mx-auto mt-8 lg:px-36 lg:mt-16">
+        <div class="container px-8 mx-auto mt-8 lg:px-36 lg:mt-16">
         {{-- service title --}}
         <div class="text-center">
             <span class="inline-block w-16 h-1 mx-auto bg-red-600"></span>

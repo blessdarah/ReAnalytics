@@ -21,18 +21,23 @@ class PagesController extends Controller
     public function blog()
     {
         Config::set('app.page', 'blog');
-        return view('pages.blog')->withPosts(Post::latest()->get());
+        return view('pages.blog')->with('posts', Post::latest()->get());
     }
 
     public function showPost(string $title)
     {
         $id = Str::before($title, '-');
         $post = Post::find($id);
-        Config::set('app.page', 'blog');
-        $recentPosts = Post::inRandomOrder()->take(4)->get();
-        return view('frontend.posts.show')
-            ->withPost($post)
-            ->withRecentPosts($recentPosts);
+
+        if ($post) {
+            Config::set('app.page', 'blog');
+            $recentPosts = Post::inRandomOrder()->take(4)->get();
+            return view('frontend.posts.show')
+                ->with('post', $post)
+                ->with('recentPosts', $recentPosts);
+        }
+
+        return view('frontend.posts.show');
     }
 
 
@@ -40,8 +45,8 @@ class PagesController extends Controller
     {
         Config::set('app.page', 'services');
         return view('pages.services')
-            ->withServices(Service::latest()->get())
-            ->withTestimonials(Testimonial::all());
+            ->with('services', Service::latest()->get())
+            ->with('testimonials', Testimonial::all());
     }
 
     public function showService(string $service)
@@ -49,7 +54,7 @@ class PagesController extends Controller
         $id = Str::before($service, '-');
         $service = Service::find($id);
         Config::set('app.page', 'services');
-        return view('frontend.services.show')->withService($service);
+        return view('frontend.services.show')->with('service', $service);
     }
 
 
@@ -63,7 +68,7 @@ class PagesController extends Controller
     public function videos()
     {
         Config::set('app.page', 'videos');
-        return view('pages.videos')->withVideos(Video::latest()->get());
+        return view('pages.videos')->with('videos', Video::latest()->get());
     }
 
     public function showVideo(string $title)
@@ -71,7 +76,7 @@ class PagesController extends Controller
         Config::set('app.page', 'videos');
         $id = Str::before($title, '-');
         $video = Video::find($id);
-        return view('frontend.videos.show')->withVideo($video);
+        return view('frontend.videos.show')->with('video', $video);
     }
 
 
@@ -85,7 +90,7 @@ class PagesController extends Controller
     public function resources()
     {
         Config::set('app.page', 'resources');
-        return view('pages.resources')->withAttachments(Attachment::all());
+        return view('pages.resources')->with('attachments', Attachment::all());
     }
 
     public function searchPost(Request $request)
@@ -99,12 +104,7 @@ class PagesController extends Controller
             ->get();
 
         return view('pages.search')
-            ->withPosts($posts)
-            ->withPhrase($key);
-    }
-
-    public function softwares()
-    {
-        dd('softwares');
+            ->with('posts', $posts)
+            ->with('phrase', $key);
     }
 }

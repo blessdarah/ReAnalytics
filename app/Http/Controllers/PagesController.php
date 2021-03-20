@@ -26,16 +26,16 @@ class PagesController extends Controller
 
     public function showPost(string $title)
     {
-        $id = Str::before($title, '-');
-        $post = Post::find($id);
+        // $id = Str::before($title, '-');
+        // $post = Post::find($id);
 
-        if ($post) {
-            Config::set('app.page', 'blog');
-            $recentPosts = Post::inRandomOrder()->take(4)->get();
-            return view('frontend.posts.show')
-                ->with('post', $post)
-                ->with('recentPosts', $recentPosts);
-        }
+        // if ($post) {
+        //     Config::set('app.page', 'blog');
+        //     $recentPosts = Post::inRandomOrder()->take(4)->get();
+        //     return view('frontend.posts.show')
+        //         ->with('post', $post)
+        //         ->with('recentPosts', $recentPosts);
+        // }
 
         return view('frontend.posts.show');
     }

@@ -7,7 +7,7 @@
 @section('content')
 
     {{-- services --}}
-    <div class="container px-8 mx-auto mt-8 lg:px-36 lg:mt-36">
+    <div class="container px-8 mx-auto mt-8 lg:px-36 lg:mt-16">
         {{-- service title --}}
         <div class="text-center">
             <span class="inline-block w-16 h-1 mx-auto bg-red-600"></span>
@@ -71,7 +71,7 @@
     {{-- banner end --}}
 
     {{-- how it works --}}
-    <section class="grid grid-cols-8 gap-8 my-10 md:my-16 lg:my-24 xl:my-52">
+    <section class="grid grid-cols-8 gap-8 my-10 md:my-16 lg:my-16 xl:my-20">
         {{-- left section --}}
         <div class="relative col-span-8 md:col-span-4 top-20">
             {{-- fixed background --}}
@@ -295,13 +295,13 @@
             <div class="lg:w-9/12 lg:ml-auto lg:mt-28">
                 <span class="inline-block w-16 h-1 mb-2 bg-red-600"></span>
                 <h3 class="relative mb-8 text-6xl font-semibold uppercase">{{ __('Get in touch') }}<br class="hidden lg:block"> {{ __(' now') }}</h3>
-                <p class="mb-8 text-gray-500 lg:pr-8">
+                <p class="mb-8 text-gray-500 lg:pr-8 lg:w-4/5 lg:mb-12">
                     {{ __('Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                     sed diam nonumy eirmod tempor invidunt ut labore et
                     dolore magna') }}
                 </p>
 
-                <a href="#" class="px-8 py-4 text-center text-white transition-all bg-green-500 rounded-lg hover:bg-green-600">
+                <a href="#" class="px-8 py-4 text-center text-gray-900 transition-all bg-green-500 rounded-lg hover:bg-green-600">
                     <i class="bx bx-phone"></i>
                     {{ __('Contact us') }}
                 </a>

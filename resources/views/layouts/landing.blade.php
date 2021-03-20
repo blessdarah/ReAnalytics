@@ -18,10 +18,14 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 </head>
-
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
 @yield('styles')
 
-<body class="bg-blue-50">
+<body class="overflow-x-hidden bg-blue-50">
     <header id="app-header" class="relative">
         <img src="{{ asset('assets/hero-wave.png') }}" alt="hero background wave"
             class="absolute top-0 left-0 -z-10 responive">

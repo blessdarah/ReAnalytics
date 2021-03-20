@@ -1,4 +1,4 @@
-<div class="container relative px-8 mx-auto mt-8 overflow-hidden lg:px-36 lg:my-36">
+<div class="container relative px-8 mx-auto mt-8 lg:px-36 lg:my-36">
     <div class="grid-cols-12 gap-8 mt-10 md:mt-16 lg:mt-24 lg:grid">
         {{-- left side --}}
         <div

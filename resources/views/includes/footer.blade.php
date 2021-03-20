@@ -82,9 +82,9 @@
 
         <div class="col-span-12 lg:col-span-3">
             <a href="#"
-                class="px-8 py-4 text-center text-white transition-all bg-green-500 rounded-lg hover:bg-green-600">
+                class="px-8 py-4 text-center text-gray-900 transition-all bg-green-500 rounded-lg hover:bg-green-600">
                 <i class="bx bx-phone"></i>
-                {{ __('Contact us') }}
+                {{ __('get quote now') }}
             </a>
         </div>
     </div>

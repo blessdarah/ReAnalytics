@@ -80,8 +80,14 @@
                         </div>
                     </div>
                 @endfor
+            </div> {{-- End grid --}}
 
-            </div>
+            <p class="mt-20 text-center">
+                <a href="{{ route('contact-us') }}" class="px-8 py-3 text-center text-white transition-all bg-red-600 rounded-lg hover:bg-red-800 justify-self-end">
+                    <i class="bx bx-phone"></i>
+                    {{ __('contact us') }}
+                </a>
+            </p>
         </div>
     </section>
     {{-- our team end --}}

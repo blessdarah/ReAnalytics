@@ -30,7 +30,7 @@
                     <p class="mt-2 text-gray-600">
                         {{ __('Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates excepturi quaerat soluta maxime quod.') }}
                     </p>
-                    <a href="{{ route('our-services.show') }}" class="inline-block mt-4 text-blue-500 lg:mt-12">
+                    <a href="{{ route('our-services.show', $i) }}" class="inline-block mt-4 text-blue-500 lg:mt-12">
                         <i class="bx bx-right-arrow-alt bx-sm"></i>
                     </a>
                 </div>
@@ -68,7 +68,7 @@
                     {{-- team member card --}}
                     <div
                         class="flex flex-col items-center content-center col-span-12 py-10 bg-white xl:py-16 md:col-span-6 lg:col-span-4">
-                        <img src="https://picsum.photos/20" alt="member avatar"
+                        <img src="https://picsum.photos/80" alt="member avatar"
                             class="w-20 h-20 mb-2 rounded-full lg:w-32 lg:h-32 responsive">
 
                         <div class="text-center">

@@ -27,7 +27,7 @@
 
         {{-- right section --}}
         <div class="col-span-12 md:col-span-6">
-            <img src="{{ asset('assets/Data-analysis-process.svg') }}" alt="data analysis illutration" class="relative transform scale-125 xl:scale-150 max-h-80 -z-10 xl:-right-16">
+            <img src="{{ asset('assets/Data-analysis-process.svg') }}" alt="data analysis illutration" class="relative transform scale-125 xl:scale-150 -z-10 xl:-right-16">
         </div>
     </div>
 </div>

@@ -24,6 +24,7 @@
     },
     "dependencies": {
         "@tailwindcss/postcss7-compat": "^2.0.3",
+        "alpinejs": "^2.8.1",
         "autoprefixer": "^9.8.6",
         "flatpickr": "^4.6.6",
         "postcss": "^7.0.35",

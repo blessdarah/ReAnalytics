@@ -49,8 +49,14 @@ class PagesController extends Controller
             ->with('testimonials', Testimonial::all());
     }
 
+    /**
+     * @param string service - the service slug
+     * @return Service::class
+     */
     public function showService(string $service)
     {
+        return view('frontend.services.show');
+
         $id = Str::before($service, '-');
         $service = Service::find($id);
         Config::set('app.page', 'services');

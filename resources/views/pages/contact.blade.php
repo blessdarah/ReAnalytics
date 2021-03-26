@@ -2,72 +2,76 @@
 
 
 @section('content')
-    <section class="inner-banner gray-bg text-center">
-        <div class="thm-container">
-            <div class="breadcumb">
-                <a href="{{ route('welcome') }}">Home</a>
-                <span class="sep">-</span>
-                <span class="page-name">Let's keep in touch</span>
-            </div><!-- /.breadcumb -->
-            <h3>Contact us</h3>
-        </div><!-- /.thm-container -->
-    </section><!-- /.inner-banner -->
 
-    <section class="contact-page-wrapper sec-pad">
-        <div class="thm-container">
-            <div class="row">
-                <div class="col-md-8">
-                    <form action="inc/sendemail.php" class="contact-form row">
-                        <div class="col-md-6">
-                            <input type="text" placeholder="Name" name="name" />
-                        </div><!-- /.col-md-6 -->
-                        <div class="col-md-6">
-                            <input type="text" placeholder="Email Address" name="email" />
-                        </div><!-- /.col-md-6 -->
+    <div class="container px-8 mx-auto mt-8 lg:px-36 lg:my-16">
 
-                        <div class="col-md-12">
-                            <textarea name="message" placeholder="Type message here" name="message"></textarea>
-                            <button class="thm-btn yellow-bg" type="submit">Send Nessage</button>
-                        </div><!-- /.col-md-12 -->
-                    </form><!-- /.contact-form -->
-                </div><!-- /.col-md-8 -->
-                <div class="col-md-4">
-                    <div class="contact-sidebar">
-                        <div class="single-contact-info">
-                            <div class="title">
-                                <h3>Address</h3>
-                            </div><!-- /.title -->
-                            <p>Suite 20 Bitcoin Street West - 018 <br /> United States</p>
-                        </div><!-- /.single-contact-info -->
-                        <div class="single-contact-info">
-                            <div class="title">
-                                <h3>Phone</h3>
-                            </div><!-- /.title -->
-                            <p>Local: 2800 256 508 <br /> Mobile: 666 777 888</p>
-                        </div><!-- /.single-contact-info -->
-                        <div class="single-contact-info">
-                            <div class="title">
-                                <h3>Email</h3>
-                            </div><!-- /.title -->
-                            <p>needhelp@bitcoin.com <br /> inquiry@bitcoin.com</p>
-                        </div><!-- /.single-contact-info -->
-                        <div class="single-contact-info social-widget">
-                            <div class="title">
-                                <h3>Follow</h3>
-                            </div><!-- /.title -->
-                            <div class="social">
-                                <a href="#" class="fa fa-twitter"></a>
-                                <!--
-                                                                        --><a href="#" class="fa fa-facebook"></a>
-                                <!--
-                                                                        --><a href="#" class="fa fa-youtube-play"></a>
-                                <!--
-                                                                        --><a href="#" class="fa fa-pinterest"></a>
-                            </div><!-- /.social -->
-                        </div><!-- /.single-contact-info -->
-                    </div><!-- /.contact-sidebar -->
-                </div><!-- /.col-md-4 -->
-            </div><!-- /.row -->
-        </div><!-- /.thm-container -->
-    </section><!-- /.contact-page-wrapper -->
+		<div class="grid grid-cols-2 gap-8">
+
+
+			<ul class="flex flex-col space-y-6">
+
+				<li class="flex space-x-4">
+					<div class="flex items-center justify-center w-20 h-20 text-green-700 bg-green-100">
+						<i class="bx bx-like bx-md"></i>
+						</div>
+						<div class="flex-1">
+						<p class="mb-2 font-semibold text-gray-800">
+							{{ __('Where to find us') }}
+						</p>
+						<p class="text-gray-600">
+							{{ __('Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+								sed diam nonumy eirmod tempor invidunt ut labore et
+									dolore magna') }}
+						</p>
+					</div>
+				</li>
+
+				<li class="flex space-x-4">
+					<div class="flex items-center justify-center w-20 h-20 text-green-700 bg-green-100">
+						<i class="bx bx-face bx-md"></i>
+					</div>
+					<div class="flex-1">
+						<p class="mb-2 font-semibold text-gray-800">
+							{{ __('Contact info') }}
+						</p>
+						<p class="text-gray-600">
+							{{ __('Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+							sed diam nonumy eirmod tempor invidunt ut labore et
+							dolore magna') }}
+						</p>
+					</div>
+				</li>
+
+			</ul>
+
+			<form action="#" class="flex flex-col space-y-4 justify-start">
+				<h3 class="text-2xl font-semibold text-blue-800 mb-2">{{__('Reach out to us')}}</h3>
+				<div class="form-group">
+					<label for="name" class="block mb-2">
+						{{__('Your name')}}
+					</label>
+					<input type="text" name="name" placeholder="Enter your name" class="w-full text-gray-500 py-2 px-3 rounded focus:ring-blue-400">
+				</div>
+
+				<div class="form-group">
+					<label for="email" class="block mb-2">
+						{{__('Your email address')}}
+					</label>
+					<input type="text" name="email" placeholder="Enter your email" class="w-full text-gray-500 py-2 px-3 rounded focus:ring-blue-400">
+				</div>
+
+				<div class="form-group">
+					<label for="message" class="block mb-2">
+						{{__('Your message')}}
+					</label>
+					<textarea name="message" placeholder="Enter message" class="w-full text-gray-500 py-2 px-3 rounded focus:ring-blue-400"></textarea>
+				</div>
+
+				<button class="bg-blue-500 focus:bg-opacity-75 active:bg-blue-600 text-blue-100 rounded-lg text-center inline-block py-4 px-8">{{__('Submit')}}</button>
+
+			</form>
+
+
+		</div>
+	</div>
 @endsection

@@ -3,7 +3,7 @@
         {{-- left side --}}
         <div
             class="flex flex-col justify-center col-span-12 px-4 text-center lg:text-left lg:ml-auto md:px-0 md:col-span-6">
-            <h1 class="my-4 text-3xl font-bold leading-relaxed text-indigo-900 uppercase lg:text-4xl">
+            <h1 class="my-4 text-3xl font-bold leading-8 text-indigo-900 uppercase lg:text-4xl">
                 {{ __('Data analysis') }}<br class="hidden lg:block xl:hidden">
                 {{ __('and project management') }}
             </h1>

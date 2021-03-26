@@ -1,47 +1,69 @@
-@extends('layouts.base')
+
+@extends('layouts.landing')
 
 @section('content')
-    <div class="flex items-center justify-center h-screen">
-        <div class="px-4 md:px-0 md:w-2/5 lg:w-3/12">
-            <h1 class="mb-4 text-2xl font-bold text-center text-gray-700 uppercase">{{ __('Register') }}</h1>
-            <form method="POST" action="{{ route('register') }}">
-                @csrf
-                {{-- name --}}
-                @error('name')
-                    <span class="text-red-500" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-                <input id="name" type="text" class="input-field focus:ring-blue-400 @error('name') ring-red-400 @enderror"
-                    name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Name">
 
-                {{-- email address --}}
-                @error('email')
-                    <span class="text-red-500" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-                <input id="email" type="email"
-                    class="input-field focus:ring-blue-400 @error('email') ring-red-400 @enderror" name="email"
-                    value="{{ old('email') }}" required autocomplete="email" placeholder="Email address">
 
-                {{-- password --}}
-                @error('password')
-                    <span class="text-red-500" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-                <input id="password" type="password"
-                    class="input-field focus:ring-blue-400 @error('password') ring-red-400 @enderror" name="password"
-                    value="{{ old('password') }}" required autocomplete="new-password" placeholder="Password">
+    <div class="container px-8 mx-auto mt-8 lg:px-36 lg:my-16">
 
-                {{-- submit button --}}
-                <button type="submit"
-                    class="w-full h-16 py-2 text-center text-white bg-blue-700 rounded shadow ring-2 hover:ring-blue-700 active:bg-blue-600">{{ __('Register') }}</button>
+			<form action="{{ route('register') }}" method="POST" class="flex flex-col space-y-4 justify-start md:w-3/6 lg:w-2/6 bg-white rounded shadow-lg px-4 md:px-8 md:py-8 py-6">
+				<h3 class="text-2xl font-semibold text-blue-800 mb-2">{{__('Sign Up')}}</h3>
+				{{-- csrf token --}}
 
-            </form>
-        </div>
-    </div>
+				@csrf
 
+			<div class="form-group">
+					<label for="username" class="block mb-2">
+						{{__('Username')}}
+					</label>
+					@error('username')
+						<div class="bg-red-100 text-sm text-red-700 px-3 py-2 rounded mb-2">{{ $message }}</div>
+					@enderror
+					<input type="text" id="username" name="username"  class="w-full text-gray-500 py-2 bg-gray-100 border-0 px-3 rounded focus:ring-blue-400" value="{{ old('username') ?? '' }}"  />
+				</div>
+
+				<div class="form-group">
+					<label for="email" class="block mb-2">
+						{{__('Email address')}}
+					</label>
+					@error('email')
+						<div class="bg-red-100 text-sm text-red-700 px-3 py-2 rounded mb-2">{{ $message }}</div>
+					@enderror
+					<input type="text" id="email" name="email" class="w-full text-gray-500 py-2 bg-gray-100 border-0 px-3 rounded focus:ring-blue-400" value="{{ old('email') ?? '' }}" />
+				</div>
+
+
+				<div class="form-group">
+					<label for="password" class="block mb-2">
+						{{__('Password')}}
+					</label>
+					@error('password')
+						<div class="bg-red-100 text-sm text-red-700 px-3 py-2 rounded mb-2">{{ $message }}</div>
+					@enderror
+					<input type="password" id="password" name="password" class="w-full text-gray-500 py-2 bg-gray-100 border-0 px-3 rounded focus:ring-blue-400" />
+				</div>
+
+				<div class="form-group">
+					<label for="password_confirm" class="block mb-2">
+						{{__('Confirm password')}}
+					</label>
+					@error('password')
+						<div class="bg-red-100 text-sm text-red-700 px-3 py-2 rounded mb-2">{{ $message }}</div>
+					@enderror
+					<input type="password" id="password_confirm" name="password_confirm" class="w-full text-gray-500 py-2 bg-gray-100 border-0 px-3 rounded focus:ring-blue-400" />
+				</div>
+
+
+
+				<button class="bg-blue-500 focus:bg-opacity-75 active:bg-blue-600 text-blue-100 rounded text-center inline-block py-3 px-4">{{__('Sign up')}}</button>
+
+			</form>
+
+
+		</div>
+	</div>
 
 @endsection
+
+
+

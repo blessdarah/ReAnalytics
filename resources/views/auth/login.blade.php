@@ -1,73 +1,44 @@
 @extends('layouts.landing')
 
-
 @section('content')
-    <section class="inner-banner gray-bg text-center">
-        <div class="thm-container">
-            <div class="breadcumb">
-                <a href="{{ route('welcome') }}">Home</a>
-                <span class="sep">-</span>
-                <span class="page-name">Let's keep in touch</span>
-            </div><!-- /.breadcumb -->
-            <h3>Contact us</h3>
-        </div><!-- /.thm-container -->
-    </section><!-- /.inner-banner -->
 
-    <section class="contact-page-wrapper sec-pad">
-        <div class="thm-container">
-            <div class="row">
-                <div class="col-md-8">
-                    <form action="{{ route('login') }}" class="contact-form row" method="POST">
-                        @csrf
-                        <div class="col-md-12">
-                            <input type="text" placeholder="Email address" name="email" />
-                        </div><!-- /.col-md-12 -->
-                        <div class="col-md-12">
-                            @error('password')
-                                <p class="mb-0"><small>{{ $message }}</small></p>
-                            @enderror
-                            <input type="password" placeholder="Password" name="password" />
-                        </div><!-- /.col-md-6 -->
-                        <div class="col-md-12">
-                            <button type="submit" class="thm-btn btn-yellow"
-                                data-animation="animated fadeInDown">Login</button>
-                        </div>
-                    </form><!-- /.contact-form -->
-                </div><!-- /.col-md-8 -->
-                <div class="col-md-4">
-                    <div class="contact-sidebar">
-                        <div class="single-contact-info">
-                            <div class="title">
-                                <h3>Address</h3>
-                            </div><!-- /.title -->
-                            <p>Suite 20 Bitcoin Street West - 018 <br /> United States</p>
-                        </div><!-- /.single-contact-info -->
-                        <div class="single-contact-info">
-                            <div class="title">
-                                <h3>Phone</h3>
-                            </div><!-- /.title -->
-                            <p>Local: 2800 256 508 <br /> Mobile: 666 777 888</p>
-                        </div><!-- /.single-contact-info -->
-                        <div class="single-contact-info">
-                            <div class="title">
-                                <h3>Email</h3>
-                            </div><!-- /.title -->
-                            <p>needhelp@bitcoin.com <br /> inquiry@bitcoin.com</p>
-                        </div><!-- /.single-contact-info -->
-                        <div class="single-contact-info social-widget">
-                            <div class="title">
-                                <h3>Follow</h3>
-                            </div><!-- /.title -->
-                            <div class="social">
-                                <a href="#" class="fa fa-twitter"></a>
-                                <a href="#" class="fa fa-facebook"></a>
-                                <a href="#" class="fa fa-youtube-play"></a>
-                                <a href="#" class="fa fa-pinterest"></a>
-                            </div><!-- /.social -->
-                        </div><!-- /.single-contact-info -->
-                    </div><!-- /.contact-sidebar -->
-                </div><!-- /.col-md-4 -->
-            </div><!-- /.row -->
-        </div><!-- /.thm-container -->
-    </section><!-- /.contact-page-wrapper -->
+
+    <div class="container px-8 mx-auto mt-8 lg:px-36 lg:my-16">
+
+			<form action="{{ route('login') }}" method="POST" class="flex flex-col space-y-4 justify-start md:w-3/6 lg:w-2/6 bg-white rounded shadow-lg px-4 md:px-8 md:py-8 py-6">
+				{{-- csrf token --}}
+
+				@csrf
+
+				<h3 class="text-2xl font-semibold text-blue-800 mb-2">{{__('Login')}}</h3>
+
+				<div class="form-group">
+					<label for="email" class="block mb-2">
+						{{__('Email address')}}
+					</label>
+					@error('email')
+						<div class="bg-red-100 text-sm text-red-700 px-3 py-2 rounded mb-2">{{ $message }}</div>
+					@enderror
+					<input type="text" id="email" name="email" class="w-full text-gray-500 py-2 bg-gray-100 border-0 px-3 rounded focus:ring-blue-400" value="{{ old('email') ?? '' }}" />
+				</div>
+
+
+				<div class="form-group">
+					<label for="password" class="block mb-2">
+						{{__('Password')}}
+					</label>
+					@error('password')
+						<div class="bg-red-100 text-sm text-red-700 px-3 py-2 rounded mb-2">{{ $message }}</div>
+					@enderror
+					<input type="password" id="password" name="password" class="w-full text-gray-500 py-2 bg-gray-100 border-0 px-3 rounded focus:ring-blue-400" value="{{ old('password') ?? '' }}" />
+				</div>
+
+				<button class="bg-blue-500 focus:bg-opacity-75 active:bg-blue-600 text-blue-100 rounded text-center inline-block py-3 px-4">{{__('Submit')}}</button>
+
+			</form>
+
+
+		</div>
+	</div>
+
 @endsection

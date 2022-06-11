@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->mediumText('summary');
             $table->string('image')->nullable();
-            $table->text('content');
+            $table->longText('content');
             $table->boolean('is_published')->default(true);
             $table->date('published_on');
             $table->boolean('archived')->default(false);

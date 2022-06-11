@@ -70,7 +70,7 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
 
 	Route::resource('posts', PostController::class);
-	/* Route::resource('events', EventController::class); */
+	Route::resource('events', EventController::class);
 	Route::resource('projects', ProjectController::class);
 	Route::resource('testimonials', TestimonialController::class);
 	Route::resource('services', ServiceController::class);

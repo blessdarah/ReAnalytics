@@ -55,8 +55,6 @@ class PagesController extends Controller
      */
     public function showService(string $service)
     {
-        return view('frontend.services.show');
-
         $id = Str::before($service, '-');
         $service = Service::find($id);
         Config::set('app.page', 'services');

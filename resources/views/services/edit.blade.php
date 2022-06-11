@@ -1,5 +1,8 @@
-@extends('layouts.dashboard')
+@php
+use Illuminate\Support\Str;
+@endphp
 
+@extends('layouts.admin-dashboard')
 
 @section('content')
     @if ($errors->any())
@@ -9,25 +12,35 @@
             @endforeach
         </div>
     @endif
-    <form action="{{ route('services.update', $service->id) }}" method="POST" class="form" enctype="multipart/form-data">
+    <form action="{{ route('services.update', $service->id) }}" class="mb-4" id="postForm" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PATCH')
 
         @include('services.form')
 
-        <div class="form-group mt-4">
-            <button class="btn btn-indigo" type="submit">Update</button>
+        <div class="form-group my-4">
+            <button class="btn btn-primary" type="submit">Update</button>
         </div>
     </form>
 
 @endsection
 
 @section('scripts')
-    <script>
-        CKEDITOR.replace('detail', {
-            filebrowserUploadUrl: "{{ route('files.upload', ['_token' => csrf_token()]) }}",
-            filebrowserUploadMethod: 'form'
-        });
+<script>
+    const Editor = toastui.Editor;
+    const serviceDetailContent = `{!! Str::markdown($service->detail) !!}`;
+    const editor = new Editor({
+        el: document.querySelector('#editor'),
+        height: '400px',
+        // initialEditType: 'markdown',
+        initialEditType: 'wysiwyg',
+        initialValue: serviceDetailContent
+    });
 
-    </script>
+    document.querySelector('#postForm').addEventListener('submit', e => {
+        e.preventDefault();
+        document.querySelector('#detail').value = editor.getMarkdown();
+        e.target.submit();
+    });
+</script>
 @endsection

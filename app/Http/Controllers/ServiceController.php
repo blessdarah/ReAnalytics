@@ -44,6 +44,7 @@ class ServiceController extends Controller
     {
         $data = $request->validate([
             "name" => "required|string|max:100",
+            "description" => "string|required",
             "detail" => "string|required",
             "icon" => "string|nullable",
             "image" => "nullable"
@@ -92,6 +93,7 @@ class ServiceController extends Controller
     {
         $data = $request->validate([
             "name" => "required|string|max:100",
+            "description" => "string|required",
             "detail" => "string|required",
             "icon" => "string|nullable",
         ]);

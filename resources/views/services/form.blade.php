@@ -23,7 +23,7 @@
             <img src="{{asset($service->image) ?? ''}}" class="img-fluid img-thumbnail mb-3" alt="Preview of uploaded image">
             <input type="file" class="form-control form-control-custom @error('image') is-invalid @enderror" name="image" id="image" value="{{$service->image}}">
             @else
-            <img src="https://via.placeholder.com/728x390.png?text=Upload+Cover+Image" class="img-fluid img-thumbnail mb-3" alt="Preview of uploaded image">
+            <img src="https://via.placeholder.com/728x390.png?text=Upload+Cover+Image" class="img-fluid img-thumbnail mb-3" alt="Preview of uploaded image" id="file-preview">
             <input type="file" class="form-control form-control-custom @error('image') is-invalid @enderror" name="image" id="image" placeholder="service cover image">
             @endif
         </div>

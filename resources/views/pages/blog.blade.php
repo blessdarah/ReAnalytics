@@ -21,11 +21,11 @@
 @section('content')
     <div class="container px-8 mx-auto mt-8 lg:px-36 lg:my-16">
         <ul class="flex flex-col justify-center w-5/6 mx-auto space-y-20">
-            @for ($i = 0; $i < 6; $i++)
+            @foreach ($posts as $post)
                 {{-- article --}}
             <li>
                 <article class="flex flex-col justify-center space-x-8 lg:flex-row">
-                    <img src="https://picsum.photos/350" alt="blog cover" class="responsive">
+                    <img src="{{ asset($post->image) }}" alt="blog cover" class="responsive max-w-72">
 
                     {{-- article body --}}
                     <div class="flex flex-col justify-evenly">
@@ -33,7 +33,7 @@
                         <div class="-mt-3">
                             <span class="inline-block w-8 h-1 bg-red-600 "></span>
                             <h3 class="relative mb-3 text-2xl font-semibold text-indigo-900 ">
-                                {{ __('How to effectively analyze your project data') }}
+                                {{ $post->title }}
                             </h3>
                             <p class="text-sm font-semibold text-gray-400">Feb, 2 2021</p>
                         </div>
@@ -65,20 +65,17 @@
                         {{-- tags end --}}
 
                         <p class="mt-4 mb-8 text-gray-600">
-                            {{ __('One advanced diverted domestic sex repeated bringing you old. Possible
-                            procured her trifling laughter thoughts property she met way. Companions shy
-                            had solicitude favourable own. Which could saw guest man now heard but. Lasted my coming uneasy marked so should. Gravity letters it amongst herself
-                            dearest an windows by. Wooded ladies she basket season age her uneasy saw') }}
+                            {{$post->summary}}
                         </p>
 
-                        <a href="{{ route('blog.show', Str::slug('Post title')) }}" class="inline-block px-8 py-3 text-center text-white transition-all bg-blue-600 w-max hover:bg-blue-800 justify-self-end">
+                        <a href="{{ $post->url() }}" class="inline-block px-8 py-3 text-center text-white transition-all bg-blue-600 w-max hover:bg-blue-800 justify-self-end">
                             <i class="bx bx-book-reader"></i>
                             {{ __('read this post') }}
                         </a>
                     </div>
                 </article>
             </li>
-            @endfor
+            @endforeach
         </ul>
 
         {{-- pagination --}}

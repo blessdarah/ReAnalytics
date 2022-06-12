@@ -40,6 +40,17 @@
 
     @include('includes.footer')
 
+    @yield('scripts')
+
+<div class="live-chat">
+ <h3></h3><!-- Start BawkBox Code--><script data-sil-id="62a58c6f4d114500138b8afb">var loadWidget = function() { var d = document, w = window, l = window.location,p = l.protocol == "file:" ? "http://" : "//"; if (!w.WS) w.WS = {}; c = w.WS; var m=function(t, o){ var e = d.getElementsByTagName("script"); e=e[e.length-1]; var n = d.createElement(t); if (t=="script") {n.async=true;} for (k in o) n[k] = o[k]; e.parentNode.insertBefore(n, e)}; m("script", { src: p + "bawkbox.com/widget/customer-chat/62a58c6f4d114500138b8afb?page=" +encodeURIComponent(l+''), type: 'text/javascript' }); c.load_net = m; }; if(window.Squarespace){ document.addEventListener('DOMContentLoaded', loadWidget); setTimeOut(function(){ document.addEventListener('DOMContentLoaded', loadWidget); }, 3000) } else { loadWidget() } </script><div class="sil-widget-customer-chat sil-widget" id="sil-widget-62a58c6f4d114500138b8afb"><a href="//bawkbox.com/install/customer-chat">Customer Chat</a></div><!-- End BawkBox Code--> 
+
+
+ <h3></h3><!-- Start BawkBox Code--><script data-sil-id="62a58dc14d114500138b8b4c">var loadWidget = function() { var d = document, w = window, l = window.location,p = l.protocol == "file:" ? "http://" : "//"; if (!w.WS) w.WS = {}; c = w.WS; var m=function(t, o){ var e = d.getElementsByTagName("script"); e=e[e.length-1]; var n = d.createElement(t); if (t=="script") {n.async=true;} for (k in o) n[k] = o[k]; e.parentNode.insertBefore(n, e)}; m("script", { src: p + "bawkbox.com/widget/blog/62a58dc14d114500138b8b4c?page=" +encodeURIComponent(l+''), type: 'text/javascript' }); c.load_net = m; }; if(window.Squarespace){ document.addEventListener('DOMContentLoaded', loadWidget); setTimeOut(function(){ document.addEventListener('DOMContentLoaded', loadWidget); }, 3000) } else { loadWidget() } </script><div class="sil-widget-blog sil-widget" id="sil-widget-62a58dc14d114500138b8b4c"><a href="//bawkbox.com/install/blog"></a></div><!-- End BawkBox Code--> 
+
+ <h3>Availability Calendar</h3><!-- Start BawkBox Code--><script data-sil-id="62a590024d114500138b8bc8">var loadWidget = function() { var d = document, w = window, l = window.location,p = l.protocol == "file:" ? "http://" : "//"; if (!w.WS) w.WS = {}; c = w.WS; var m=function(t, o){ var e = d.getElementsByTagName("script"); e=e[e.length-1]; var n = d.createElement(t); if (t=="script") {n.async=true;} for (k in o) n[k] = o[k]; e.parentNode.insertBefore(n, e)}; m('link', { href: p+'bawkbox.com/Widgets/day-calendar/day-calendar.css', rel: 'stylesheet', type: 'text/css'}); m("script", { src: p + "bawkbox.com/widget/day-calendar/62a590024d114500138b8bc8?page=" +encodeURIComponent(l+''), type: 'text/javascript' }); c.load_net = m; }; if(window.Squarespace){ document.addEventListener('DOMContentLoaded', loadWidget); setTimeOut(function(){ document.addEventListener('DOMContentLoaded', loadWidget); }, 3000) } else { loadWidget() } </script><div class="sil-widget-day-calendar sil-widget" id="sil-widget-62a590024d114500138b8bc8"><a href="//bawkbox.com/install/day-calendar">Availability Calendar</a></div><!-- End BawkBox Code--> 
+
+</div>
 </body>
 
 </html>

@@ -23,7 +23,7 @@
     <article class="container px-8 mx-auto mt-8 lg:px-36 lg:my-16">
 
         <div class="my-4 lg:my-12">
-            <img src="https://picsum.photos/1800/600" alt="article header/cover" class="mb-4 responsive">
+            <img src="{{ asset($post->image) }}" alt="article header/cover" class="mb-4 responsive">
             <p class="text-sm font-semibold text-gray-500"><span class="text-gray-800">Posted: </span> Feb, 2 2021</p>
         </div>
 
@@ -31,19 +31,8 @@
         <div class="flex content-between space-x-20">
 
             {{-- left --}}
-            <div class="w-8/12">
-                <p class="mb-8 text-gray-600">
-                    {{ __('One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but. Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by. Wooded ladies she basket season age her uneasy saw') }}
-                </p>
-                <p class="mb-8 text-gray-600">
-                    {{ __('One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but. Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by. Wooded ladies she basket season age her uneasy saw') }}
-                </p>
-                <p class="mb-8 text-gray-600">
-                    {{ __('One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard season age her uneasy saw') }}
-                </p>
-                <p class="mb-8 text-gray-600">
-                    {{ __('One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but. Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by. Wooded ladies she basket season age her uneasy saw') }}
-                </p>
+            <div class="w-8/12 prose">
+            {!! Illuminate\Support\Str::markdown($post->content) ?? 'No data' !!}
             </div>
 
             {{-- right --}}
@@ -136,5 +125,30 @@
             </div>
         </div>
 
+        <div id="disqus_thread"></div>
+
     </article>
+
+@endsection
+
+@section('scripts')
+
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    const disqus_config = function () {
+    this.page.url = "https://reanalytix.disqus.com";  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = "reanalytix"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    const d = document, s = d.createElement('script');
+    s.src = 'https://reanalytix.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 @endsection

@@ -19,9 +19,12 @@
     <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
     <!-- App Css-->
     <link href="/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+    @livewireStyles
+    @powerGridStyles
+    @yield('styles')
 </head>
 
-@yield('styles')
 
 <body>
     <div id="layout-wrapper">
@@ -65,6 +68,9 @@
     <script src="/assets/js/app.js"></script>
     <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
     <script src="/assets/js/editor.js" type="module"></script>
+
+    @livewireScripts
+    @powerGridScripts
     @yield('scripts')
 </body>
 

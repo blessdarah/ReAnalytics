@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AttachmentController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
@@ -80,6 +81,8 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::resource('contacts', ContactController::class);
 	Route::resource('banner', BannerController::class);
 	Route::resource('tags', TagController::class)->only(["store", "update", "destroy"]);
+
+	Route::resource('categories', CategoryController::class);
 });
 
 /**

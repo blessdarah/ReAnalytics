@@ -1,3 +1,11 @@
+@php
+    $postStatuses = [
+        "draft" => "Draft",
+        "published" => "Published",
+        "archived" => "Archived",
+    ];
+@endphp
+
 <div class="row">
     {{-- left section --}}
     <div class="col-md-8">
@@ -37,7 +45,7 @@
         <div class="form-group">
             <label for="postStatus">Change status</label>
             <select id="postStatus" class="form-control" name="status" value="{{$post->status ?? ''}}">
-                @foreach($post->statusTypes() as $key => $value)
+                @foreach($postStatuses as $key => $value)
                     @if(isset($post) && $key === $post->status)
                         <option value="{{$key}}" selected>{{$value}}</option>
                     @else

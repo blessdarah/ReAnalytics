@@ -12,7 +12,7 @@ class Post extends Model
 
     protected $guarded = [];
 
-    public function statusTypes()
+    public static function statusTypes()
     {
         return [
             "draft" => "Draft",

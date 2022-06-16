@@ -3,7 +3,11 @@
 @section('content')
 <div class="card">
     <div class="card-body px-2">
-        <livewire:posts-grid />
     </div>
 </div>
+
+
+<power-grid-table-header title="Post list" :routeName="route('posts.index')" buttonText="Create">
+    <livewire:posts-grid />
+</power-grid-table-header>
 @endsection

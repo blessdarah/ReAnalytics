@@ -53,4 +53,22 @@
         }
     })
 </script>
+
+<script>
+    const imageUploadInput = document.querySelector('#image');
+    imageUploadInput.addEventListener('change', previewImage);
+
+    function previewImage() {
+        const file = imageUploadInput.files;
+        if (file) {
+            const fileReader = new FileReader();
+            const preview = document.getElementById('file-preview');
+            fileReader.onload = event => {
+                preview.setAttribute('src', event.target.result);
+            }
+            fileReader.readAsDataURL(file[0]);
+        }
+    }
+</script>
+
 @endsection

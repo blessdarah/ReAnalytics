@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PostRequest;
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
@@ -32,7 +33,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        $categories = Category::orderBy('name', 'asc')->get();
+        return view('posts.create')->with('categories', $categories);
     }
 
     /**
@@ -74,7 +76,9 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return view('posts.edit')->withPost($post);
+        return view('posts.edit')
+            ->with('categories', Category::orderBy('name')->get())
+            ->with('post', $post);
     }
 
     /**

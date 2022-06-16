@@ -12,6 +12,15 @@ class Post extends Model
 
     protected $guarded = [];
 
+    public function statusTypes()
+    {
+        return [
+            "draft" => "Draft",
+            "published" => "Published",
+            "archived" => "Archived",
+        ];
+    }
+
     /**
      * Return the url of the post varialbe in an seo friendly manner
      *
@@ -32,3 +41,4 @@ class Post extends Model
         return $this->hasMany(Tag::class);
     }
 }
+

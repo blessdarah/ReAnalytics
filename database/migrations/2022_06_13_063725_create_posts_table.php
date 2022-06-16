@@ -19,9 +19,8 @@ class CreatePostsTable extends Migration
             $table->mediumText('summary');
             $table->string('image')->nullable();
             $table->longText('content');
-            $table->boolean('is_published')->default(true);
-            $table->date('published_on');
-            $table->boolean('archived')->default(false);
+            $table->foreignId('category_id')->constrained();
+            $table->enum('status', ['draft', 'published', 'archived']);
             $table->timestamps();
         });
     }

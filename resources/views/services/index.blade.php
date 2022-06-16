@@ -1,6 +1,5 @@
 @extends('layouts.admin-dashboard')
 
-
 @section('content')
 <div class="card">
     <div class="card-header py-2 d-flex justify-content-between align-items-center">

@@ -27,9 +27,8 @@ class PostRequest extends FormRequest
             'title' => 'required|string',
             'summary' => 'required|string',
             'content' => 'required|string',
-            'is_published' => 'nullable|boolean',
-            'published_on' => 'required|date|after_or_equal:created_at',
-            'archived' => 'nullable|boolean',
+            'status' => 'string|required',
+            'category_id' => 'required'
         ];
     }
 
@@ -41,9 +40,10 @@ class PostRequest extends FormRequest
     public function messages()
     {
         return [
-            // 'title.required' => 'A title is required',
+            'category_id.required' => 'Category is required',
             // 'summary.required' => 'Please provide a post summary',
             // 'content.required' => 'Provide the content of this post',
         ];
     }
 }
+

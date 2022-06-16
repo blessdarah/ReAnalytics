@@ -87,6 +87,8 @@ final class PostsGrid extends PowerGridComponent
             ->addColumn('id')
             ->addColumn('title')
             ->addColumn('summary', fn (Post $post) => Str::words($post->summary, 10))
+            ->addColumn('category')
+            ->addColumn('status')
             ->addColumn('created_at')
             ->addColumn('created_at_formatted', fn (Post $model) => Carbon::parse($model->created_at)->format('d/m/Y H:i:s'));
     }
@@ -120,6 +122,14 @@ final class PostsGrid extends PowerGridComponent
             Column::make('Summary', 'summary')
                 ->searchable()
                 ->makeInputText('summary')
+                ->sortable(),
+
+            Column::make('Category', 'category')
+                ->searchable()
+                ->sortable(),
+
+            Column::make('Status', 'status')
+                ->searchable()
                 ->sortable(),
 
             Column::make('Created at', 'created_at')

@@ -77,6 +77,36 @@
                         <li><a href="{{route('events.index')}}" data-key="t-read-email">Event lists</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow">
+                        <i class="bx bx-face icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-email">Projects</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('projects.create')}}" data-key="t-inbox">Create project</a></li>
+                        <li><a href="{{route('projects.index')}}" data-key="t-read-email">Project lists</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow">
+                        <i class="bx bx-face icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-email">Manage team</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('members.create')}}" data-key="t-inbox">Add team member</a></li>
+                        <li><a href="{{route('members.index')}}" data-key="t-read-email">Team members</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow">
+                        <i class="bx bx-face icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-email">Testimonials</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('testimonials.create')}}" data-key="t-inbox">Add testimonial</a></li>
+                        <li><a href="{{route('testimonials.index')}}" data-key="t-read-email">Testimonial list</a></li>
+                    </ul>
+                </li>
 
                 <li class="menu-title" data-key="t-applications">Tags and categories</li>
 

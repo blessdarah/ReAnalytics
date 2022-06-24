@@ -6,6 +6,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TagController;
@@ -13,6 +14,7 @@ use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\UtilsController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Route;
 

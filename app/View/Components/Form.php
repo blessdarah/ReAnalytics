@@ -3,18 +3,24 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use PhpParser\Builder\Method;
 
-class PowerGridTableHeader extends Component
+class Form extends Component
 {
+    public $method;
+    public $action;
+    public $buttonText;
+
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($title, $routeName, $buttonText)
+    public function __construct($method = 'POST', $action, $buttonText = 'Save')
     {
-        $this->title = $title;
-        $this->routeName = $routeName;
+        $this->method = $method;
+        $this->action = $action;
         $this->buttonText = $buttonText;
     }
 
@@ -25,6 +31,6 @@ class PowerGridTableHeader extends Component
      */
     public function render()
     {
-        return view('components.power-grid-table-header');
+        return view('components.form');
     }
 }

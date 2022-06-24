@@ -22,7 +22,15 @@
 
     @livewireStyles
     @powerGridStyles
+
+    <style>
+        .form-group {
+            margin-bottom: 1rem;
+        }
+    </style>
+
     @yield('styles')
+
 </head>
 
 

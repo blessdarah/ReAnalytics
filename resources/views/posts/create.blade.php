@@ -8,15 +8,9 @@
     @endforeach
 </div>
 @endif
-<form action="{{ route('posts.store') }}" id="postForm" method="POST" class="form" enctype="multipart/form-data">
-    @csrf
-
+<x-form action="{{ route('posts.store') }}" id="postForm" method="POST" class="form" enctype="multipart/form-data">
     @include('posts.form')
-
-    <div class="form-group mt-4">
-        <button class="btn btn-primary" type="submit">Save</button>
-    </div>
-</form>
+</x-form>
 @endsection
 
 @section('scripts')

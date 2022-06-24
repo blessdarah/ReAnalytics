@@ -4,10 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\EventRequest;
 use App\Models\Event;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Storage;
-
 
 class EventController extends Controller
 {
@@ -23,7 +21,7 @@ class EventController extends Controller
     public function index()
     {
         Config::set('app.page', 'events');
-        return view('events.index')->withEvents(Event::all());
+        return view('events.index')->with('events', Event::latest());
     }
 
     /**

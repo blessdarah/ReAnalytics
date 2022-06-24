@@ -1,13 +1,8 @@
 @extends('layouts.admin-dashboard')
 
 @section('content')
-<div class="card">
-    <div class="card-body px-2">
-    </div>
-</div>
-
-
-<power-grid-table-header title="Post list" :routeName="route('posts.index')" buttonText="Create">
+<x-table-grid-container title="Post list" routeName="{{route('posts.create')}}" buttonText="Create post">
     <livewire:posts-grid />
-</power-grid-table-header>
+</x-table-grid-container>
+
 @endsection

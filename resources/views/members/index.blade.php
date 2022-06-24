@@ -1,5 +1,6 @@
 @extends('layouts.admin-dashboard')
 
+
 @section('styles')
     <style>
         .new-post {

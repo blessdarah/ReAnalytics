@@ -1,7 +1,7 @@
 @extends('layouts.admin-dashboard')
 
 @section('content')
-<div class="row mt-5">
+<div class="row">
     @foreach ($events as $event)
     <div class="col-md-4">
         <div class="card hoverable">

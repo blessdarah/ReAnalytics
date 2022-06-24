@@ -8,6 +8,6 @@
 
     <button class="btn btn-primary my-2">
         <i class="bx bx-save"></i>
-        {{$buttonText}}
+        {{$buttonText ?? 'Save'}}
     </button>
 </form>

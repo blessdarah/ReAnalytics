@@ -90,7 +90,7 @@ final class PostsGrid extends PowerGridComponent
             ->addColumn('category')
             ->addColumn('status')
             ->addColumn('created_at')
-            ->addColumn('created_at_formatted', fn (Post $model) => Carbon::parse($model->created_at)->format('d/m/Y H:i:s'));
+            ->addColumn('created_at_formatted', fn (Post $model) => Carbon::parse($model->created_at)->format('d M Y'));
     }
 
     /*
@@ -132,10 +132,10 @@ final class PostsGrid extends PowerGridComponent
                 ->searchable()
                 ->sortable(),
 
-            Column::make('Created at', 'created_at')
+            Column::make('Date created', 'created_at')
                 ->hidden(),
 
-            Column::make('Created at', 'created_at_formatted', 'created_at')
+            Column::make('Date created', 'created_at_formatted', 'created_at')
                 ->makeInputDatePicker()
                 ->searchable()
         ];

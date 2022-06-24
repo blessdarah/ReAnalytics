@@ -45,10 +45,10 @@ final class EventsGrid extends PowerGridComponent
     */
 
     /**
-    * PowerGrid datasource.
-    *
-    * @return Builder<\\App\Models\Event>
-    */
+     * PowerGrid datasource.
+     *
+     * @return Builder<\\App\Models\Event>
+     */
     public function datasource(): Builder
     {
         return Event::query();
@@ -85,8 +85,12 @@ final class EventsGrid extends PowerGridComponent
         return PowerGrid::eloquent()
             ->addColumn('id')
             ->addColumn('name')
+            ->addColumn('start_date')
+            ->addColumn('end_date')
             ->addColumn('created_at')
-            ->addColumn('created_at_formatted', fn (Event $model) => Carbon::parse($model->created_at)->format('d/m/Y H:i:s'));
+            ->addColumn('created_at_formatted', fn (Event $model) => Carbon::parse($model->created_at)->format('d/m/Y H:i:s'))
+            ->addColumn('start_date_formatted', fn (Event $model) => Carbon::parse($model->start_date)->format('d/m/Y'))
+            ->addColumn('end_date_formatted', fn (Event $model) => Carbon::parse($model->end_date)->format('d/m/Y'));
     }
 
     /*
@@ -98,7 +102,7 @@ final class EventsGrid extends PowerGridComponent
     |
     */
 
-     /**
+    /**
      * PowerGrid Columns.
      *
      * @return array<int, Column>
@@ -112,15 +116,31 @@ final class EventsGrid extends PowerGridComponent
 
             Column::make('Name', 'name')
                 ->searchable()
-                ->makeInputText('name')
+                ->sortable(),
+
+            Column::make('Venue', 'venue')
+                ->searchable()
+                ->sortable(),
+
+            Column::make('Description', 'description')
+                ->searchable()
+                ->makeInputText('description')
                 ->sortable(),
 
             Column::make('Created at', 'created_at')
                 ->hidden(),
 
+            Column::make('Start date', 'start_date_formatted', 'start_date')
+                ->makeInputDatePicker()
+                ->sortable(),
+
+            Column::make('End date', 'end_date_formatted', 'end_date')
+                ->makeInputDatePicker()
+                ->sortable(),
+
             Column::make('Created at', 'created_at_formatted', 'created_at')
                 ->makeInputDatePicker()
-                ->searchable()
+                ->hidden()
         ];
     }
 
@@ -132,27 +152,25 @@ final class EventsGrid extends PowerGridComponent
     |
     */
 
-     /**
+    /**
      * PowerGrid Event Action Buttons.
      *
      * @return array<int, Button>
      */
 
-    /*
     public function actions(): array
     {
-       return [
-           Button::make('edit', 'Edit')
-               ->class('bg-indigo-500 cursor-pointer text-white px-3 py-2.5 m-1 rounded text-sm')
-               ->route('event.edit', ['event' => 'id']),
+        return [
+            Button::make('edit', 'Edit')
+                ->class('btn btn-sm btn-primary')
+                ->route('events.edit', ['event' => 'id']),
 
-           Button::make('destroy', 'Delete')
-               ->class('bg-red-500 cursor-pointer text-white px-3 py-2 m-1 rounded text-sm')
-               ->route('event.destroy', ['event' => 'id'])
-               ->method('delete')
+            Button::make('destroy', 'Delete')
+                ->class('btn btn-sm btn-danger')
+                ->route('events.destroy', ['event' => 'id'])
+                ->method('delete')
         ];
     }
-    */
 
     /*
     |--------------------------------------------------------------------------
@@ -162,7 +180,7 @@ final class EventsGrid extends PowerGridComponent
     |
     */
 
-     /**
+    /**
      * PowerGrid Event Action Rules.
      *
      * @return array<int, RuleActions>

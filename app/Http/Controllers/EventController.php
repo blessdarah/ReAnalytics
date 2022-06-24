@@ -21,7 +21,7 @@ class EventController extends Controller
     public function index()
     {
         Config::set('app.page', 'events');
-        return view('events.index')->with('events', Event::latest());
+        return view('events.index')->with('events', Event::all());
     }
 
     /**

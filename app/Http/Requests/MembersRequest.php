@@ -28,7 +28,8 @@ class MembersRequest extends FormRequest
             "position" => "required|string",
             "company" => "required|string",
             "profile" => "required|string",
-            "image" => "nullable|image|max:500"
+            "image" => "nullable|image|max:1500"
         ];
     }
 }
+

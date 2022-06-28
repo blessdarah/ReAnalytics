@@ -5,6 +5,7 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PostController;
@@ -36,27 +37,27 @@ use Illuminate\Support\Facades\Route;
  * Routes common to all users of the site
  * **********************************************************
  */
-Route::get('/', [PagesController::class, 'index'])->name('welcome');
-Route::get('/about-us', [PagesController::class, 'about'])->name('about-us');
-
-Route::get('/our-services', [PagesController::class, 'services'])->name('our-services');
-Route::get('/our-services/{service}', [PagesController::class, 'showService'])->name('our-services.show');
+Route::get('/', fn () => view('welcome'))->name('welcome');
 
 
-Route::get('/tutorials', [PagesController::class, 'videos'])->name('pages.videos');
-Route::get('/tutorials/{title}', [PagesController::class, 'showVideo'])->name('pages.videos.show');
+Route::controller(FrontendController::class)->group(function() {
+	Route::get('/about-us', 'about')->name('app.about');
 
-Route::get('/blog', [PagesController::class, 'blog'])->name('blog');
+	Route::get('/our-services', 'services')->name('app.services');
 
-Route::get('/blog/{title}', [PagesController::class, 'showPost'])->name('blog.show');
-
-Route::get('/contact-us', [PagesController::class, 'contact'])->name('contact-us');
-
-Route::get('/resources', [PagesController::class, 'resources'])->name('resources');
-
-Route::get('/search', [PagesController::class, 'searchPost'])->name('pages.search');
-
-Route::get('/software', [PagesController::class, 'softwares'])->name('pages.softwares');
+	Route::get('/services/{name}', 'showService')->name('app.services.show');
+	
+	
+	Route::get('/blog', 'blog')->name('app.blog');
+	
+	Route::get('/blog/{title}', 'showBlog')->name('app.blog.show');
+	
+	Route::get('/contact-us', 'contact')->name('app.contact-us');
+	
+	Route::get('/resources', 'resources')->name('app.resources');
+	
+	Route::get('/search', 'searchPost')->name('app.search');
+});
 
 
 Auth::routes();
@@ -83,7 +84,7 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::resource('attachments', AttachmentController::class);
 	Route::resource('contacts', ContactController::class);
 	Route::resource('banner', BannerController::class);
-	Route::resource('tags', TagController::class)->only(["store", "update", "destroy"]);
+	Route::resource('tags', TagController::class);
 
 	Route::resource('categories', CategoryController::class);
 });
@@ -93,6 +94,7 @@ Route::group(['middleware' => ['auth']], function () {
  * @param string|file|image
  */
 Route::post('/upload-image', [UtilsController::class, 'upload'])->name('files.upload');
+
 
 
 /*
@@ -105,3 +107,12 @@ Route::post('/upload-image', [UtilsController::class, 'upload'])->name('files.up
 |
 */
 
+/*
+|--------------------------------------------------------------------------
+| Fallback route
+|--------------------------------------------------------------------------
+|
+*/
+Route::fallback(function() {
+	return view('404')->name('404');
+});

@@ -161,6 +161,10 @@ final class EventsGrid extends PowerGridComponent
     public function actions(): array
     {
         return [
+            Button::make('show', 'Details')
+                ->class('btn btn-sm btn-link text-primary')
+                ->route('events.show', ['event' => 'id']),
+
             Button::make('edit', 'Edit')
                 ->class('btn btn-sm btn-primary')
                 ->route('events.edit', ['event' => 'id']),

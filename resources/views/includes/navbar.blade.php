@@ -1,49 +1,59 @@
-<header x-data="{open: true}" x-show="open"
-    class="container fixed inset-0 z-50 flex flex-col items-center justify-center h-screen px-8 py-4 mx-auto bg-white bg-wave-white lg:static md:h-auto md:bg-transparent lg:flex-row md:justify-start lg:px-36"
-    id="navbar">
-    {{-- navbar --}}
-    <nav
-        class="flex-col flex-grow hidden my-8 space-y-8 font-semibold text-center md:flex lg:items-center lg:flex-row lg:space-y-0 lg:space-x-8 lg:my-0">
-        <p id="logo" class="font-bold text-center text-gray-800 uppercase lg:text-left">
-            <a href="{{ route('welcome') }}">
-                <img src="{{ asset('assets/logo.png') }}" alt="reanalytics logo" class="h-8 lg:h-12 fluid">
-            </a>
-        </p>
-        <a href="{{ route('welcome') }}"
-            class="text-gray-900 border-b-4 border-red-500 hover:text-blue-700">{{ __('home') }}</a>
-        <a href="{{ route('our-services') }}"
-            class="border-b-4 border-transparent text-gray hover:text-blue-700">{{ __('services') }}</a>
-        <a href="#" class="border-b-4 border-transparent text-gray hover:text-blue-700">{{ __('pricing') }}</a>
-        <a href="{{ route('blog') }}"
-            class="border-b-4 border-transparent text-gray hover:text-blue-700">{{ __('blog') }}</a>
-        <a href="{{ route('about-us') }}"
-            class="border-b-4 border-transparent text-gray hover:text-blue-700">{{ __('about us') }}</a>
-        <a href="{{ route('contact-us') }}"
-            class="border-b-4 border-transparent text-gray hover:text-blue-700">{{ __('contact') }}</a>
-    </nav>
+<div class="col-xxl-9 col-xl-9 col-lg-8 col-md-10 col-sm-8 col-6">
+    <div class="header__right d-flex justify-content-end align-items-center">
+       <div class="main-menu">
+          <nav id="mobile-menu">
+             <ul>
+                <li>
+                   <a href="{{ route('welcome') }}">Home</a>
+                </li>
+                {{-- <li class="has-dropdown">
+                   <a href="course-grid.html">Courses</a>
+                   <ul class="submenu">
+                      <li><a href="course-grid.html">Courses</a></li>
+                      <li><a href="course-list.html">Course List</a></li>
+                      <li><a href="course-sidebar.html">Course sidebar</a></li>
+                      <li><a href="course-details.html">Course Details</a></li>
+                   </ul>
+                </li> --}}
 
-    <a href="{{ route('login') }}"
-        class="hidden px-8 py-3 text-center text-white transition-all bg-blue-600 rounded-lg md:inline-block hover:bg-blue-800 justify-self-end">
-        {{ __('login') }}
-    </a>
+                <li>
+                    <a href="{{ route('app.services') }}">Services</a>
+                 </li>
 
-    {{-- close buttons --}}
-    <span @click="open = false"
-        class="fixed flex items-center justify-center w-8 h-8 text-blue-100 bg-blue-500 rounded-full shadow-md cursor-pointer lg:hidden top-5 right-3 hover:bg-blue-600 hover:text-white hover:shadow-lg active:shadow-sm active:bg-blue-700">
-        <i class="bx bx-x"></i>
-    </span>
-</header>
-
-{{-- logo and menu on small screen --}}
-<div class="flex items-center justify-between md:hidden">
-    <p id="logo" class="font-bold text-center text-gray-800 uppercase lg:text-left">
-        <a href="{{ route('welcome') }}">
-            <img src="{{ asset('assets/logo.png') }}" alt="reanalytics logo" class="h-8 lg:h-12 fluid">
-        </a>
-    </p>
-
-    <button @click="open = true" class="px-3 py-2 text-blue-100 bg-blue-500 rounded-lg hover:bg-blue-600">
-        {{ __('menu') }}
-    </button>
-</div>
-{{-- logo and menu on small screen end --}}
+                <li>
+                   <a href="{{ route('app.blog') }}">Events</a>
+                </li>
+               
+                <li>
+                   <a href="{{ route('app.blog') }}">Blog</a>
+                </li>
+              
+                <li class="has-dropdown">
+                   <a href="javascript:void(0);">About us</a>
+                   <ul class="submenu">
+                      <li><a href="{{ route('app.about') }}">Our mission</a></li>
+                      <li><a href="instructor.html">Team</a></li>
+                   </ul>
+                </li>
+                <li><a href="{{ route('app.contact-us') }}">Contact</a></li>
+             </ul>
+          </nav>
+       </div>
+       <div class="header__search p-relative ml-50 d-none d-md-block">
+          <form action="#">
+             <input type="text" placeholder="Search...">
+             <button type="submit"><i class="fad fa-search"></i></button>
+          </form>
+       </div>
+       <div class="header__btn ml-20 d-none d-sm-block">
+          <a href="{{ route('app.contact-us') }}" class="e-btn">Contact</a>
+       </div>
+       <div class="sidebar__menu d-xl-none">
+          <div class="sidebar-toggle-btn ml-30" id="sidebar-toggle">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+          </div>
+      </div>
+    </div>
+ </div>

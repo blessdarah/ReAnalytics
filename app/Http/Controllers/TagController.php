@@ -14,7 +14,9 @@ class TagController extends Controller
      */
     public function index()
     {
-        //
+        // order tags by name 
+        $tags = Tag::orderBy('name')->get();
+        return view('tags.index')->with('tags', $tags);
     }
 
     /**
@@ -24,7 +26,7 @@ class TagController extends Controller
      */
     public function create()
     {
-        //
+       return view('tags.create'); 
     }
 
     /**
@@ -40,7 +42,7 @@ class TagController extends Controller
         ]);
         Tag::create($tag);
 
-        return redirect()->back()->withToastSuccess('New tag created');
+        return redirect()->route('tags.index');
     }
 
     /**
@@ -51,7 +53,7 @@ class TagController extends Controller
      */
     public function show(Tag $tag)
     {
-        //
+       return view('tags.edit')->with('tag', $tag); 
     }
 
     /**
@@ -62,7 +64,7 @@ class TagController extends Controller
      */
     public function edit(Tag $tag)
     {
-        //
+       return view('tags.edit')->with('tag', $tag); 
     }
 
     /**
@@ -76,7 +78,7 @@ class TagController extends Controller
     {
         $tag->update($request->validate(["name" => "required|string"]));
 
-        return redirect()->back()->withToastSuccess('Tag updated');
+        return redirect()->route('tags.index');
     }
 
     /**
@@ -91,3 +93,4 @@ class TagController extends Controller
         return redirect()->back()->withToastSuccess("$tag->name has been deleted from your tags");
     }
 }
+

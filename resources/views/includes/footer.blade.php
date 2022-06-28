@@ -1,96 +1,105 @@
-<footer class="relative py-8">
-    <img src="{{ asset('assets/footer-bg.jpg') }}" alt="footer background" class="absolute inset-0 responsive -z-10">
+  <!-- footer area start -->
+  <footer>
+    <div class="footer__area footer-bg">
+       <div class="footer__top pt-190 pb-40">
+          <div class="container">
+             <div class="row">
+                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                   <div class="footer__widget mb-50">
+                      <div class="footer__widget-head mb-22">
+                         <div class="footer__logo">
+                            <a href="index.html">
+                               <img src="assets/img/logo/logo-2.png" alt="">
+                            </a>
+                         </div>
+                      </div>
+                      <div class="footer__widget-body">
+                         <p>Great lesson ideas and lesson plans for ESL teachers! Educators can customize lesson plans to best.</p>
 
-    {{-- footer content --}}
-    <div class="container grid grid-cols-12 mx-auto my-8 mt-8 text-blue-100 lg:px-16 lg:mt-36">
-        <div class="col-span-12 lg:col-span-5">
-            <p class="mb-3 text-xl text-white uppercase font-seimibold">{{ __('About us') }}</p>
-            <p class="mb-3 lg:w-4/5 lg:mb-10">
-                {{ __('Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                sed diam nonumy eirmod tempor invidunt ut labore et
-                dolore magna') }}
-            </p>
-
-            {{-- social icons --}}
-            <ul class="inline-flex space-x-4">
-                <li>
-                    <a href="#"
-                        class="flex items-center justify-center w-10 h-10 text-blue-900 transition-all bg-white rounded-full">
-                        <i class="bx bxl-facebook"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="flex items-center justify-center w-10 h-10 text-blue-500 transition-all bg-white rounded-full">
-                        <i class="bx bxl-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="flex items-center justify-center w-10 h-10 text-pink-500 transition-all bg-white rounded-full">
-                        <i class="bx bxl-instagram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="flex items-center justify-center w-10 h-10 text-red-500 transition-all bg-white rounded-full">
-                        <i class="bx bxl-youtube"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="flex items-center justify-center w-10 h-10 text-indigo-600 transition-all bg-white rounded-full">
-                        <i class="bx bx-phone"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="col-span-12 lg:col-span-2">
-            <ul class="inline-flex flex-col space-y-4 text-blue-200">
-                <li>
-                    <a href="#" class="uppercase hover:underline">{{ __('Faqs') }}</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline">{{ __('Our team') }}</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline">{{ __('Our mission') }}</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline">{{ __('Our vision') }}</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="col-span-12 lg:col-span-2">
-            <ul class="inline-flex flex-col space-y-4 text-blue-200">
-                <li>
-                    <a href="#" class="hover:underline">{{ __('Services') }}</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline">{{ __('Blog') }}</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline">{{ __('Events and news') }}</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline">{{ __('Reviews') }}</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="col-span-12 lg:col-span-3">
-            <a href="#"
-                class="px-8 py-4 text-center text-gray-900 transition-all bg-green-500 rounded-lg hover:bg-green-600">
-                <i class="bx bx-phone"></i>
-                {{ __('get quote now') }}
-            </a>
-        </div>
+                         <div class="footer__social">
+                            <ul>
+                               <li><a href="#"><i class="social_facebook"></i></a></li>
+                               <li><a href="#" class="tw"><i class="social_twitter"></i></a></li>
+                               <li><a href="#" class="pin"><i class="social_pinterest"></i></a></li>
+                            </ul>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-xxl-2 offset-xxl-1 col-xl-2 offset-xl-1 col-lg-3 offset-lg-0 col-md-2 offset-md-1 col-sm-5 offset-sm-1">
+                   <div class="footer__widget mb-50">
+                      <div class="footer__widget-head mb-22">
+                         <h3 class="footer__widget-title">Company</h3>
+                      </div>
+                      <div class="footer__widget-body">
+                         <div class="footer__link">
+                            <ul>
+                               <li><a href="#">About</a></li>
+                               <li><a href="#">Courses</a></li>
+                               <li><a href="#">Events</a></li>
+                               <li><a href="#">Instructor</a></li>
+                               <li><a href="#">Career</a></li>
+                               <li><a href="#">Become a Teacher</a></li>
+                               <li><a href="#">Contact</a></li>
+                            </ul>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-xxl-2 col-xl-2 col-lg-2 offset-lg-0 col-md-3 offset-md-1 col-sm-6">
+                   <div class="footer__widget mb-50">
+                      <div class="footer__widget-head mb-22">
+                         <h3 class="footer__widget-title">Platform</h3>
+                      </div>
+                      <div class="footer__widget-body">
+                         <div class="footer__link">
+                            <ul>
+                               <li><a href="#">Browse Library</a></li>
+                               <li><a href="#">Library</a></li>
+                               <li><a href="#">Partners</a></li>
+                               <li><a href="#">News & Blogs</a></li>
+                               <li><a href="#">FAQs</a></li>
+                               <li><a href="#">Tutorials</a></li>
+                            </ul>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-sm-6">
+                   <div class="footer__widget footer__pl-70 mb-50">
+                      <div class="footer__widget-head mb-22">
+                         <h3 class="footer__widget-title">Subscribe</h3>
+                      </div>
+                      <div class="footer__widget-body">
+                         <div class="footer__subscribe">
+                            <form action="#">
+                               <div class="footer__subscribe-input mb-15">
+                                  <input type="email" placeholder="Your email address">
+                                  <button type="submit">
+                                     <i class="far fa-arrow-right"></i>
+                                     <i class="far fa-arrow-right"></i>
+                                  </button>
+                               </div>
+                            </form>
+                            <p>Get the latest news and updates right at your inbox.</p>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="footer__bottom">
+          <div class="container">
+             <div class="row">
+                <div class="col-xxl-12">
+                   <div class="footer__copyright text-center">
+                      <p>© 2022 Educal, All Rights Reserved. Design By <a href="index.html">Theme Pure</a></p>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
     </div>
-
-    {{-- scrol to top button --}}
-    <a href="#navbar" class="absolute flex items-center justify-center w-8 h-8 text-center text-blue-500 bg-white rounded-full right-48 -top-4">
-        <i class='bx bx-up-arrow-alt' ></i>
-    </a>
-</footer>
+ </footer>
+ <!-- footer area end -->

@@ -9,16 +9,9 @@
             @endforeach
         </div>
     @endif
-    <form action="{{ route('members.update', $member->id) }}" method="POST" class="form" enctype="multipart/form-data">
-        @csrf
-        @method('PATCH')
-
+    <x-form action="{{ route('members.update', $member->id) }}" method="PATCH" class="form" enctype="multipart/form-data">
         @include('members.form')
-
-        <div class="form-group mt-4">
-            <button class="btn btn-indigo" type="submit">Update</button>
-        </div>
-    </form>
+    </x-form>
 
 @endsection
 

@@ -1,6 +1,0 @@
-<div class="card">
-    <div class="card-body px-2">
-        <h3>{{$title}}</h3>
-        {{$slot}}
-    </div>
-</div>

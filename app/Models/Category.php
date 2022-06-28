@@ -12,14 +12,14 @@ class Category extends Model
     protected $guarded = [];
 
     public function services() {
-        return $this->belongsToMany(Service::class);
+        return $this->hasMany(Service::class);
     }
 
     public function posts() {
-        return $this->belongsToMany(Post::class);
+        return $this->hasMany(Post::class);
     }
 
     public function events() {
-        return $this->belongsToMany(Event::class);
+        return $this->hasMany(Event::class);
     }
 }

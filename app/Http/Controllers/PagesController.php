@@ -16,12 +16,12 @@ class PagesController extends Controller
     public function index() // welcome page
     {
         Config::set('app.page', 'welcome');
-        return view('welcome')->with('posts', Post::all()->take(3));
+        return view('welcome')->with('posts', Post::latest()->take(3));
     }
     public function blog()
     {
         Config::set('app.page', 'blog');
-        return view('pages.blog')->with('posts', Post::latest()->get());
+        return view('frontend.blog.index')->with('posts', Post::latest()->get());
     }
 
     public function showPost(string $title)

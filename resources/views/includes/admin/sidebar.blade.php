@@ -39,10 +39,6 @@
                         <span class="menu-item" data-key="t-dashboard">Dashboard</span>
                         <span class="badge rounded-pill bg-primary">2</span>
                     </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('posts.index')}}" data-key="t-ecommerce">Posts</a></li>
-                        <li><a href="dashboard-sales.html" data-key="t-sales">Sales</a></li>
-                    </ul>
                 </li>
 
                 <li class="menu-title" data-key="t-applications">Features</li>
@@ -69,7 +65,7 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
-                        <i class="bx bx-face icon nav-icon"></i>
+                        <i class="bx bx-trophy icon nav-icon"></i>
                         <span class="menu-item" data-key="t-email">Events</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -79,7 +75,7 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
-                        <i class="bx bx-face icon nav-icon"></i>
+                        <i class="bx bx-task icon nav-icon"></i>
                         <span class="menu-item" data-key="t-email">Projects</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -89,7 +85,7 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
-                        <i class="bx bx-face icon nav-icon"></i>
+                        <i class="bx bx-user-circle icon nav-icon"></i>
                         <span class="menu-item" data-key="t-email">Manage team</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -99,7 +95,7 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
-                        <i class="bx bx-face icon nav-icon"></i>
+                        <i class="bx bx-cool icon nav-icon"></i>
                         <span class="menu-item" data-key="t-email">Testimonials</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -117,9 +113,27 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{route('categories.index')}}" data-key="t-starter-page">Categories</a></li>
-                        <li><a href="pages-maintenance.html" data-key="t-maintenance">Tags</a></li>
+                        <li><a href="{{route('tags.index')}}" data-key="t-maintenance">Tags</a></li>
                     </ul>
                 </li>
+
+                <li class="menu-title" data-key="t-applications">Settings</li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow">
+                        <i class="bx bx-file icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-utility">Site settings</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('contacts.index')}}" data-key="t-starter-page">Contact links</a></li>
+                        <li><a href="#" data-key="t-maintenance">Contact messages</a></li>
+                    </ul>
+                </li>
+
+                {{-- <a href="{{ route('attachments.index') }}"
+                class="{{ Config::get('app.page') === 'attachments' ? 'active' : '' }} list-group-item list-group-item-action border-0 rounded mb-2">
+                <i class="bx bx-file bx-sm"></i> Files & documents
+                </a> --}}
             </ul>
         </div>
         <!-- Sidebar -->

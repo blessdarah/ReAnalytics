@@ -1,33 +1,42 @@
-<div class="container relative px-8 mx-auto mt-8 lg:px-36 lg:my-36">
-    <div class="grid-cols-12 gap-8 mt-10 md:mt-16 lg:mt-24 lg:grid">
-        {{-- left side --}}
-        <div
-            class="flex flex-col justify-center col-span-12 px-4 text-center lg:text-left lg:ml-auto md:px-0 md:col-span-6">
-            <h1 class="my-4 text-3xl font-bold leading-8 text-indigo-900 uppercase lg:text-4xl">
-                {{ __('Data analysis') }}<br class="hidden lg:block xl:hidden">
-                {{ __('and project management') }}
-            </h1>
-            <p class="block mb-4 text-gray-600 lg:text-lg lg:my-8 lg:w-4/5">
-                {{ __('Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dolorum, incidunt cumque at aliquam voluptatum aut suscipit ut quos unde?') }}
-            </p>
-
-            <div class="mb-16 text-center md:mt-4 lg:text-left md:mb-0 ">
-                <a href="#"
-                    class="px-8 py-4 mr-4 text-center text-white transition-all bg-blue-600 rounded-lg hover:bg-blue-800">
-                    <i class="bx bx-book-open"></i>
-                    {{ __('get quote') }}
-                </a>
-                <a href="#"
-                    class="px-8 py-4 mr-4 text-center text-white transition-all bg-red-600 rounded-lg hover:bg-red-800">
-                    <i class="bx bx-phone"></i>
-                    {{ __('contact us') }}
-                </a>
-            </div>
-        </div>
-
-        {{-- right section --}}
-        <div class="col-span-12 md:col-span-6">
-            <img src="{{ asset('assets/Data-analysis-process.svg') }}" alt="data analysis illutration" class="relative transform scale-125 xl:scale-150 -z-10 xl:-right-16">
-        </div>
+<section class="hero__area hero__height d-flex align-items-center grey-bg-2 p-relative">
+    <div class="hero__shape">
+       <img class="hero-1-circle" src="{{ asset('frontend/assets/img/shape/hero/hero-1-circle.png') }}" alt="">
+       <img class="hero-1-circle-2" src="{{ asset('frontend/assets/img/shape/hero/hero-1-circle-2.png') }}" alt="">
+       <img class="hero-1-dot-2" src="{{ asset('frontend/assets/img/shape/hero/hero-1-dot-2.png') }}" alt="">
     </div>
-</div>
+    <div class="container">
+       <div class="hero__content-wrapper mt-90">
+          <div class="row align-items-center">
+             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                <div class="hero__content p-relative z-index-1">
+                   <h3 class="hero__title">
+                      <span>Access 2700+</span>
+                      <span class="yellow-shape">Online <img src="{{ asset('frontend/assets/img/shape/yellow-bg.png') }}" alt="yellow-shape"> </span> 
+                      Tutorial From Top Instructor.</h3>
+                      <p>Meet university,and cultural institutions, who'll share their experience.</p>
+                      <a href="course-grid.html" class="e-btn">view all course</a>
+                </div>
+             </div>
+             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                <div class="hero__thumb d-flex p-relative">
+                   <div class="hero__thumb-shape">
+                      <img class="hero-1-dot" src="{{ asset('frontend/assets/img/shape/hero/hero-1-dot.png') }}" alt="">
+                      <img class="hero-1-circle-3" src="{{ asset('frontend/assets/img/shape/hero/hero-1-circle-3.png') }}" alt="">
+                      <img class="hero-1-circle-4" src="{{ asset('frontend/assets/img/shape/hero/hero-1-circle-4.png') }}" alt="">
+                   </div>
+                   <div class="hero__thumb-big mr-30">
+                      <img src="{{ asset('frontend/assets/img/hero/hero-1.jpg') }}" alt="">
+                      <div class="hero__quote hero__quote-animation">
+                         <span>Tomorrow is our</span>
+                         <h4>“When I Grow Up” Spirit Day!</h4>
+                      </div>
+                   </div>
+                   <div class="hero__thumb-sm mt-50 d-none d-lg-block">
+                      <img src="{{ asset('frontend/assets/img/hero/hero-sm-1.jpg') }}" alt="">
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>

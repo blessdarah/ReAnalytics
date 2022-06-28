@@ -1,7 +1,11 @@
 @extends('layouts.admin-dashboard')
 
 @section('content')
-<div class="row">
+
+<x-table-grid-container title="Events" routeName="{{route('events.create')}}" buttonText="Create event">
+    <livewire:events-grid />
+</x-table-grid-container>
+<div class="row d-none">
     @foreach ($events as $event)
     <div class="col-md-4">
         <div class="card hoverable">

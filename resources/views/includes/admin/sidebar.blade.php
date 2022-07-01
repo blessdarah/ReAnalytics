@@ -108,7 +108,7 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
-                        <i class="bx bx-file icon nav-icon"></i>
+                        <i class="bx bx-tag icon nav-icon"></i>
                         <span class="menu-item" data-key="t-utility">Common</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -121,7 +121,7 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
-                        <i class="bx bx-file icon nav-icon"></i>
+                        <i class="bx bx-wheel icon nav-icon"></i>
                         <span class="menu-item" data-key="t-utility">Site settings</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">

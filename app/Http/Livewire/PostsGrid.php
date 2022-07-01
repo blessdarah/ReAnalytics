@@ -87,7 +87,7 @@ final class PostsGrid extends PowerGridComponent
             ->addColumn('id')
             ->addColumn('title')
             ->addColumn('summary', fn (Post $post) => Str::words($post->summary, 10))
-            ->addColumn('category')
+            ->addColumn('category', fn (Post $post) => $post->category->name)
             ->addColumn('status')
             ->addColumn('created_at')
             ->addColumn('created_at_formatted', fn (Post $model) => Carbon::parse($model->created_at)->format('d M Y'));

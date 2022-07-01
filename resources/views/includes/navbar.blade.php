@@ -39,12 +39,6 @@
              </ul>
           </nav>
        </div>
-       <div class="header__search p-relative ml-50 d-none d-md-block">
-          <form action="#">
-             <input type="text" placeholder="Search...">
-             <button type="submit"><i class="fad fa-search"></i></button>
-          </form>
-       </div>
        <div class="header__btn ml-20 d-none d-sm-block">
           <a href="{{ route('app.contact-us') }}" class="e-btn">Contact</a>
        </div>

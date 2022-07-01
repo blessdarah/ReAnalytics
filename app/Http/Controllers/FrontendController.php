@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Faq;
 use App\Models\Post;
+use App\Models\Service;
 use App\Models\Tag;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -24,6 +26,22 @@ class FrontendController extends Controller
     public function contact()
     {
         return view('frontend.contact.index');
+    }
+
+    public function services()
+    {
+        $services = Service::latest()->get();
+        $questions = Faq::latest()->take(5)->get();
+        return view('frontend.services.index')
+            ->with('faqs', $questions)
+            ->with('services', $services);
+    }
+
+    public function showService($url)
+    {
+        $id = Str::before($url, '-');
+        $service = Service::findOrFail($id);
+        return view('frontend.services.show')->with('service', $service);
     }
 
     public function blog()

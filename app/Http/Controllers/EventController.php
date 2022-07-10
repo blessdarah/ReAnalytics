@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\EventRequest;
+use App\Models\Category;
 use App\Models\Event;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Storage;
@@ -12,6 +13,7 @@ class EventController extends Controller
     public function __construct()
     {
         Config::set('app.page', 'events');
+        $this->categories = Category::orderBy('name')->get();
     }
     /**
      * Display a listing of the resource.
@@ -31,7 +33,8 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('events.create');
+
+        return view('events.create')->with('categories', $this->categories);
     }
 
     /**

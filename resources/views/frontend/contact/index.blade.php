@@ -9,11 +9,13 @@
             <div class="col-xxl-7 col-xl-7 col-lg-6">
                 <div class="contact__wrapper">
                     <div class="section__title-wrapper mb-40">
-                        <h2 class="section__title">Get in<span class="yellow-bg yellow-bg-big">touch<img src="assets/img/shape/yellow-bg.png" alt=""></span></h2>
+                        <h2 class="section__title">Get in<span class="yellow-bg yellow-bg-big">touch<img src="{{asset('frontend/assets/img/shape/yellow-bg.png')}}" alt=""></span></h2>
                         <p>Have a question or just want to say hi? We'd love to hear from you.</p>
                     </div>
                     <div class="contact__form">
-                        <form action="https://themepure.net/template/educal/educal/assets/mail.php">
+                        <form action="#" method="POST">
+                            @csrf
+
                             <div class="row">
                                 <div class="col-xxl-6 col-xl-6 col-md-6">
                                     <div class="contact__form-input">
@@ -36,12 +38,6 @@
                                     </div>
                                 </div>
                                 <div class="col-xxl-12">
-                                    <div class="contact__form-agree  d-flex align-items-center mb-20">
-                                        <input class="e-check-input" type="checkbox" id="e-agree">
-                                        <label class="e-check-label" for="e-agree">I agree to the<a href="#">Terms & Conditions</a></label>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-12">
                                     <div class="contact__btn">
                                         <button type="submit" class="e-btn">Send your message</button>
                                     </div>
@@ -54,9 +50,9 @@
             <div class="col-xxl-4 offset-xxl-1 col-xl-4 offset-xl-1 col-lg-5 offset-lg-1">
                 <div class="contact__info white-bg p-relative z-index-1">
                     <div class="contact__shape">
-                        <img class="contact-shape-1" src="assets/img/contact/contact-shape-1.png" alt="">
-                        <img class="contact-shape-2" src="assets/img/contact/contact-shape-2.png" alt="">
-                        <img class="contact-shape-3" src="assets/img/contact/contact-shape-3.png" alt="">
+                        <img class="contact-shape-1" src="{{asset('frontend/assets/img/contact/contact-shape-1.png')}}" alt="">
+                        <img class="contact-shape-2" src="{{asset('frontend/assets/img/contact/contact-shape-2.png')}}" alt="">
+                        <img class="contact-shape-3" src="{{asset('frontend/assets/img/contact/contact-shape-3.png')}}" alt="">
                     </div>
                     <div class="contact__info-inner white-bg">
                         <ul>
@@ -120,54 +116,5 @@
     </div>
 </section>
 <!-- contact area end -->
-
-<!-- contact info area start -->
-<section class="contact__area grey-bg-2 pt-120 pb-90 p-relative fix">
-    <div class="contact__shape">
-        <img class="contact-shape-5" src="assets/img/contact/contact-shape-5.png" alt="">
-        <img class="contact-shape-4" src="assets/img/contact/contact-shape-4.png" alt="">
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-xxl-5 offset-xxl-1 col-xl-5 offset-xl-1 col-lg-5 offset-lg-1 col-md-6">
-                <div class="contact__item text-center mb-30 transition-3 white-bg">
-                    <div class="contact__icon d-flex justify-content-center align-items-end">
-                        <svg viewBox="0 0 24 24">
-                            <circle class="st0" cx="12" cy="12" r="10" />
-                            <path class="st0" d="M8,14c0,0,1.5,2,4,2s4-2,4-2" />
-                            <line class="st0" x1="9" y1="9" x2="9" y2="9" />
-                            <line class="st0" x1="15" y1="9" x2="15" y2="9" />
-                        </svg>
-                    </div>
-                    <div class="contact__content">
-                        <h3 class="contact__title">Knowledge Base</h3>
-                        <p>My good sir plastered cuppa barney cobblers mush argy bargy ruddy.</p>
-                        <a href="contact.html" class="e-btn e-btn-border">Visit Documentation</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xxl-5 col-xl-5  col-lg-5 col-md-6">
-                <div class="contact__item text-center mb-30 transition-3 white-bg">
-                    <div class="contact__icon d-flex justify-content-center align-items-end">
-                        <svg viewBox="0 0 24 24">
-                            <path class="st0" d="M21,10.8c0,1.3-0.3,2.6-0.9,3.8c-1.4,2.9-4.4,4.7-7.6,4.7c-1.3,0-2.6-0.3-3.8-0.9L3,20.3l1.9-5.7  C4.3,13.4,4,12.1,4,10.8c0-3.2,1.8-6.2,4.7-7.6c1.2-0.6,2.5-0.9,3.8-0.9H13c4.3,0.2,7.8,3.7,8,8V10.8z" />
-                            <g>
-                                <circle class="st1" cx="9.3" cy="10.5" r="0.5" />
-                                <circle class="st1" cx="12.5" cy="10.5" r="0.5" />
-                                <circle class="st1" cx="15.7" cy="10.5" r="0.5" />
-                            </g>
-                        </svg>
-                    </div>
-                    <div class="contact__content">
-                        <h3 class="contact__title">Online Support</h3>
-                        <p>My good sir plastered cuppa barney cobblers mush argy bargy ruddy.</p>
-                        <a href="contact.html" class="e-btn e-btn-border">Send a Ticket</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- contact info area end -->
 
 @endsection

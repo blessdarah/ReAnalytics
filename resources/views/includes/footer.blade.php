@@ -94,7 +94,7 @@
              <div class="row">
                 <div class="col-xxl-12">
                    <div class="footer__copyright text-center">
-                      <p>© 2022 Educal, All Rights Reserved. Design By <a href="index.html">Theme Pure</a></p>
+                       <p>&copy; <?= date("Y"); ?> Developed with love by <strong>DarahB-Studios</strong></p>
                    </div>
                 </div>
              </div>

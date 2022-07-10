@@ -13,7 +13,7 @@ $currentRouteName = \Request::route()->getName();
                     <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-2 col-sm-4 col-6">
                         <div class="header__left d-flex">
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="{{route('welcome')}}">
                                     <img src="{{ asset('assets/app-logo.png')}}" alt="logo" class="img-fluid" style="height: 80px">
                                 </a>
                             </div>

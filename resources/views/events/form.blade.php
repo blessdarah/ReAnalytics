@@ -1,4 +1,5 @@
 <div class="row">
+    {{-- left section --}}
     <div class="col-md-8">
 
         <div class="form-group">
@@ -32,9 +33,8 @@
     </div>
 
 
+    {{-- right section --}}
     <div class="col-md-4">
-
-
         <div class="form-group">
             <label for="flyer">Event cover flyer or image</label>
             @if(isset($post->image))
@@ -46,7 +46,14 @@
             @endif
         </div>
 
-
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" class="form-control" name="category_id">
+                @foreach($categories as $category)
+                <option value="{{$category->id}}">{{$category->name}}</option>
+                @endforeach
+            </select>
+        </div>
 
     </div>
 </div>

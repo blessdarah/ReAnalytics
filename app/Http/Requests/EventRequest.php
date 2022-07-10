@@ -24,12 +24,13 @@ class EventRequest extends FormRequest
     public function rules()
     {
         return [
-            "name" => "required|string",
-            "flyer" => "nullable|image|max:700",
-            "description" => "required|string",
-            "venue" => "required|string",
-            "start_date" => "required|date|after_or_equal:created_at",
-            "end_date" => "nullable|date|after_or_equal:start_date",
+            "name"              => "required|string",
+            "flyer"             => "nullable|image|max:900",
+            "description"       => "required|string",
+            "venue"             => "required|string",
+            "start_date"        => "required|date|after_or_equal:created_at",
+            "end_date"          => "nullable|date|after_or_equal:start_date",
+            "category_id"       => "nullable"
         ];
     }
 
@@ -41,9 +42,8 @@ class EventRequest extends FormRequest
     public function messages()
     {
         return [
-            "start_date.required" => "The event start date is required",
-            "end_date.nullable" => "You need to provide a valid end date for the event",
+            "start_date.required"   => "The event start date is required",
+            "end_date.nullable"     => "You need to provide a valid end date for the event",
         ];
     }
 }
-

@@ -31,7 +31,6 @@ class HomeController extends Controller
     {
         return view('home')->withTags(Tag::all())
             ->withPosts(Post::all())
-            ->withVideos(Video::all())
             ->withServices(Service::all());
     }
 

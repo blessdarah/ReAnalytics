@@ -25,16 +25,6 @@
         </div>
         <div class="col-md-3">
             <div class="card text-center shadow-sm">
-                <div class="card-header bg-warning rounded-0 border-0 py-1"></div>
-                <div class="card-body">
-                    <i class="bx bx-video"></i>
-                    Videos<br>
-                    {{ count($videos) }}
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card text-center shadow-sm">
                 <div class="card-header bg-danger rounded-0 border-0 py-1"></div>
                 <div class="card-body">
                     Events

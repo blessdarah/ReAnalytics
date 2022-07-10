@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Event;
 use App\Models\Faq;
 use App\Models\Post;
 use App\Models\Service;
@@ -16,6 +17,15 @@ class FrontendController extends Controller
     {
         $this->tags = Tag::orderBy('name')->get();
         $this->categories = Category::orderBy('name')->get();
+    }
+
+    public function welcome()
+    {
+        $services = Service::latest()->take(5)->get();
+        $events = Event::latest()->take(5)->get();
+        return view('welcome')
+            ->with('events', $events)
+            ->with('services', $services);
     }
 
     public function about()
@@ -73,8 +83,9 @@ class FrontendController extends Controller
         return view('frontend.events.index');
     }
 
-    public function showEvent()
+    public function showEvent($id)
     {
-        return view('frontend.events.show');
+        $event = Event::findOrFail($id);
+        return view('frontend.events.show')->with('event', $event);
     }
 }

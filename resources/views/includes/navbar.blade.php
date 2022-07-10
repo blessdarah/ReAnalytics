@@ -40,7 +40,7 @@
           </nav>
        </div>
        <div class="header__btn ml-20 d-none d-sm-block">
-          <a href="{{ route('app.contact-us') }}" class="e-btn">Contact</a>
+          <a href="{{route('login')}}" class="e-btn">Admin login</a>
        </div>
        <div class="sidebar__menu d-xl-none">
           <div class="sidebar-toggle-btn ml-30" id="sidebar-toggle">

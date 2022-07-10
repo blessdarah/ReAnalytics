@@ -69,21 +69,6 @@ class PagesController extends Controller
     }
 
 
-    public function videos()
-    {
-        Config::set('app.page', 'videos');
-        return view('pages.videos')->with('videos', Video::latest()->get());
-    }
-
-    public function showVideo(string $title)
-    {
-        Config::set('app.page', 'videos');
-        $id = Str::before($title, '-');
-        $video = Video::find($id);
-        return view('frontend.videos.show')->with('video', $video);
-    }
-
-
     public function contact()
     {
         Config::set('app.page', 'contact');

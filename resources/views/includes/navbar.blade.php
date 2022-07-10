@@ -32,7 +32,7 @@
                    <a href="javascript:void(0);">About us</a>
                    <ul class="submenu">
                       <li><a href="{{ route('app.about') }}">Our mission</a></li>
-                      <li><a href="instructor.html">Team</a></li>
+                      <li><a href="{{route('app.about-us.team')}}">Our team</a></li>
                    </ul>
                 </li>
                 <li><a href="{{ route('app.contact-us') }}">Contact</a></li>

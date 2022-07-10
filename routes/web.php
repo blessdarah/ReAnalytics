@@ -54,6 +54,8 @@ Route::controller(FrontendController::class)->group(function () {
 
     Route::get('/blog/{title}', 'showBlog')->name('app.blog.show');
 
+    Route::get('/about-us/team', 'members')->name('app.about-us.team');
+
     Route::get('/contact-us', 'contact')->name('app.contact-us');
 
     Route::get('/resources', 'resources')->name('app.resources');

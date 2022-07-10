@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Event;
 use App\Models\Faq;
+use App\Models\Member;
 use App\Models\Post;
 use App\Models\Service;
 use App\Models\Tag;
@@ -87,5 +88,11 @@ class FrontendController extends Controller
     {
         $event = Event::findOrFail($id);
         return view('frontend.events.show')->with('event', $event);
+    }
+
+    public function members()
+    {
+        $members = Member::all();
+        return view('frontend.members.index')->with('members', $members);
     }
 }

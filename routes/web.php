@@ -13,12 +13,9 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\VideoController;
-use App\Http\Controllers\UtilsController;
 use App\Http\Controllers\ProjectController;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Route;
 
-// use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +54,7 @@ Route::controller(FrontendController::class)->group(function () {
     Route::get('/about-us/team', 'members')->name('app.about-us.team');
 
     Route::get('/contact-us', 'contact')->name('app.contact-us');
+    Route::post('/contact-us', 'send_contact_message')->name('app.contact-us.send');
 
     Route::get('/resources', 'resources')->name('app.resources');
 
@@ -89,17 +87,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('contacts', ContactController::class);
     Route::resource('banner', BannerController::class);
     Route::resource('tags', TagController::class);
-
     Route::resource('categories', CategoryController::class);
 });
-
-/**
- * Upload image to server using ckeditor
- * @param string|file|image
- */
-Route::post('/upload-image', [UtilsController::class, 'upload'])->name('files.upload');
-
-
 
 /*
 |--------------------------------------------------------------------------
@@ -120,3 +109,4 @@ Route::post('/upload-image', [UtilsController::class, 'upload'])->name('files.up
 Route::fallback(function () {
     return view('404')->name('404');
 });
+

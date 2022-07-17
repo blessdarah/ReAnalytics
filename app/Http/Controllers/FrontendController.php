@@ -3,14 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\ContactMessage;
 use App\Models\Event;
 use App\Models\Faq;
 use App\Models\Member;
 use App\Models\Post;
 use App\Models\Service;
 use App\Models\Tag;
+use App\Models\User;
+use App\Notifications\ContactFormNotification;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 
 class FrontendController extends Controller
 {
@@ -37,6 +41,22 @@ class FrontendController extends Controller
     public function contact()
     {
         return view('frontend.contact.index');
+    }
+
+    public function send_contact_message(Request $request)
+    {
+        $data = $request->validate([
+            'name' => 'string|required',
+            'email' => 'required|email',
+            'subject' => 'string|required',
+            'message' => 'string|required',
+        ]);
+
+        $contact_message = ContactMessage::create($data);
+        $users = User::all();
+ 
+        Notification::send($users, new ContactFormNotification($contact_message));
+        return redirect()->route('app.contact-us')->with('toast', 'message send successfully');
     }
 
     public function services()

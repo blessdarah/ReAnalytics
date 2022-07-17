@@ -13,28 +13,28 @@
                         <p>Have a question or just want to say hi? We'd love to hear from you.</p>
                     </div>
                     <div class="contact__form">
-                        <form action="#" method="POST">
+                        <form action="{{route('app.contact-us.send')}}" method="POST">
                             @csrf
 
                             <div class="row">
                                 <div class="col-xxl-6 col-xl-6 col-md-6">
                                     <div class="contact__form-input">
-                                        <input type="text" placeholder="Your Name" name="name">
+                                        <input type="text" placeholder="Your Name" name="name" required>
                                     </div>
                                 </div>
                                 <div class="col-xxl-6 col-xl-6 col-md-6">
                                     <div class="contact__form-input">
-                                        <input type="email" placeholder="Your Email" name="email">
+                                        <input type="email" placeholder="Your Email" name="email" required>
                                     </div>
                                 </div>
                                 <div class="col-xxl-12">
                                     <div class="contact__form-input">
-                                        <input type="text" placeholder="Subject" name="subject">
+                                        <input type="text" placeholder="Subject" name="subject" required>
                                     </div>
                                 </div>
                                 <div class="col-xxl-12">
                                     <div class="contact__form-input">
-                                        <textarea placeholder="Enter Your Message" name="message"></textarea>
+                                        <textarea placeholder="Enter Your Message" name="message" required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-xxl-12">

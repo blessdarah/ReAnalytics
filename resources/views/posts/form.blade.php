@@ -1,9 +1,9 @@
 @php
-    $postStatuses = [
-        "draft" => "Draft",
-        "published" => "Published",
-        "archived" => "Archived",
-    ];
+$postStatuses = [
+"draft" => "Draft",
+"published" => "Published",
+"archived" => "Archived",
+];
 @endphp
 
 <div class="row">
@@ -46,11 +46,11 @@
             <label for="postStatus">Change status</label>
             <select id="postStatus" class="form-control" name="status" value="{{$post->status ?? ''}}">
                 @foreach($postStatuses as $key => $value)
-                    @if(isset($post) && $key === $post->status)
-                        <option value="{{$key}}" selected>{{$value}}</option>
-                    @else
-                        <option value="{{$key}}">{{$value}}</option>
-                    @endif
+                @if(isset($post) && $key === $post->status)
+                <option value="{{$key}}" selected>{{$value}}</option>
+                @else
+                <option value="{{$key}}">{{$value}}</option>
+                @endif
                 @endforeach
             </select>
         </div>

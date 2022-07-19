@@ -21,7 +21,7 @@
                  </li>
 
                 <li>
-                   <a href="{{ route('app.blog') }}">Events</a>
+                   <a href="{{ route('app.projects') }}">Projects</a>
                 </li>
                
                 <li>

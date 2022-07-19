@@ -40,7 +40,9 @@ class ContactFormNotification extends Notification
         return [
             'subject' => $this->contact_message->subject,
             'from' => $this->contact_message->email,
-            'id' => $this->contact_message->id
+            'id' => $this->contact_message->id,
+            'type' => 'contact_message',
+            'created_at' => $this->contact_message->created_at
         ];
     }
 

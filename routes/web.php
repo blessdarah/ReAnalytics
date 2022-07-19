@@ -42,7 +42,7 @@ Route::controller(FrontendController::class)->group(function () {
 
     Route::get('/our-services', 'services')->name('app.services');
 
-    Route::get('/services/{name}', 'showService')->name('app.services.show');
+    Route::get('/out-services/{name}', 'showService')->name('app.services.show');
 
     Route::get('/upcoming-events', 'events')->name('app.events');
     Route::get('/upcoming-events/{id}', 'showEvent')->name('app.events.show');
@@ -55,6 +55,9 @@ Route::controller(FrontendController::class)->group(function () {
 
     Route::get('/contact-us', 'contact')->name('app.contact-us');
     Route::post('/contact-us', 'send_contact_message')->name('app.contact-us.send');
+
+    Route::get('/our-projects', 'projects')->name('app.projects');
+    Route::get('/our-projects/{title}', 'showProject')->name('app.projects.show');
 
     Route::get('/resources', 'resources')->name('app.resources');
 
@@ -75,6 +78,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/contact-messages', [HomeController::class, 'contactMessages'])->name('contact.messages');
     Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
+Route::get('/notifications', [HomeController::class, 'notifications'])->name('notifications');
 
     Route::resource('posts', PostController::class);
     Route::resource('events', EventController::class);
@@ -106,7 +110,7 @@ Route::group(['middleware' => ['auth']], function () {
 |--------------------------------------------------------------------------
 |
 */
-Route::fallback(function () {
-    return view('404')->name('404');
-});
+// Route::fallback(function () {
+//     return view('404')->name('404');
+// });
 

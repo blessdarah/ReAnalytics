@@ -130,6 +130,8 @@
                     </ul>
                 </li>
 
+                <li><a href="{{route('welcome')}}" target="_blank" data-key="t-inbox">Visit site</a></li>
+
                 {{-- <a href="{{ route('attachments.index') }}"
                 class="{{ Config::get('app.page') === 'attachments' ? 'active' : '' }} list-group-item list-group-item-action border-0 rounded mb-2">
                 <i class="bx bx-file bx-sm"></i> Files & documents

@@ -57,4 +57,9 @@ class HomeController extends Controller
     {
         return view('auth.profile');
     }
+
+    public function notifications()
+    {
+        return view('notifications.index');
+    }
 }

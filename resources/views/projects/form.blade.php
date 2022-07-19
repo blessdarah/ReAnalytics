@@ -11,7 +11,8 @@
         </div>
         <div class="form-group">
             <label for="detail">Project detail</label>
-            <textarea class="form-control @error('detail') is-invalid @enderror" name="detail" id="detail" rows="5">{!!  old('detail') ?? ($project->detail ?? '') !!}</textarea>
+            <div id="editor"></div>
+            <input type="hidden" name="detail" id="detail" value={{old('detail') ?? $post->detail ?? ''}}>
         </div>
     </div>
 

@@ -8,6 +8,7 @@ use App\Models\Event;
 use App\Models\Faq;
 use App\Models\Member;
 use App\Models\Post;
+use App\Models\Project;
 use App\Models\Service;
 use App\Models\Tag;
 use App\Models\User;
@@ -54,7 +55,7 @@ class FrontendController extends Controller
 
         $contact_message = ContactMessage::create($data);
         $users = User::all();
- 
+
         Notification::send($users, new ContactFormNotification($contact_message));
         return redirect()->route('app.contact-us')->with('toast', 'message send successfully');
     }
@@ -114,5 +115,18 @@ class FrontendController extends Controller
     {
         $members = Member::all();
         return view('frontend.members.index')->with('members', $members);
+    }
+
+    public function projects()
+    {
+        $projects = Project::latest()->get();
+        return view('frontend.projects.index')->with('projects', $projects);
+    }
+
+    public function showProject(string $url)
+    {
+        $id = Str::before($url, '-');
+        $project = Project::findOrFail($id);
+        return view('frontend.projects.index')->with('project', $project);
     }
 }

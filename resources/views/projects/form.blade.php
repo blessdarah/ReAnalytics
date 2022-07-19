@@ -20,8 +20,14 @@
     {{-- right section --}}
     <div class="col-md-4">
         <div class="form-group">
-            <label for="image">Project cover image</label>
-            <input type="file" class="form-control-file @error('image') is-invalid @enderror" name="image" id="image" placeholder="Project cover image">
+            <label for="image">Project image</label>
+            @if(isset($project->image))
+            <img src="{{asset($project->image) ?? ''}}" class="img-fluid img-thumbnail mb-3" alt="Preview of uploaded image">
+            <input type="file" class="form-control form-control-custom @error('image') is-invalid @enderror" name="image" id="image" placeholder="service cover image">
+            @else
+            <img src="https://via.placeholder.com/728x390.png?text=Upload+Cover+Image" class="img-fluid img-thumbnail mb-3" alt="Preview of uploaded image" id="file-preview">
+            <input type="file" class="form-control form-control-custom @error('image') is-invalid @enderror" name="image" id="image" placeholder="service cover image">
+            @endif
         </div>
         <div class="form-group">
             <label for="status">Project status</label>

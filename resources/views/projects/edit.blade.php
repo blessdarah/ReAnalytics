@@ -28,7 +28,6 @@
         // initialEditType: 'markdown',
         initialEditType: 'wysiwyg',
         initialValue: projectContent
-        // placeholder: 'Write something cool!',
     });
 
     document.querySelector('#projectForm').addEventListener('submit', e => {

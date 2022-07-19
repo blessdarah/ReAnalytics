@@ -127,6 +127,6 @@ class FrontendController extends Controller
     {
         $id = Str::before($url, '-');
         $project = Project::findOrFail($id);
-        return view('frontend.projects.index')->with('project', $project);
+        return view('frontend.projects.show')->with('project', $project);
     }
 }

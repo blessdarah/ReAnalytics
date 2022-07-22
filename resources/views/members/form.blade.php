@@ -13,7 +13,7 @@
         </div>
 
         <div class="form-group">
-            <label for="company">Works at?</label>
+            <label for="company">Qualifications</label>
             <input type="text" name="company" id="company" class="form-control @error('company') is-invalid @enderror" placeholder="Company or organization name" value="{{ old('company') ?? ($member->company ?? '') }}">
         </div>
 
@@ -24,7 +24,6 @@
 
     </div>
     <div class="col-md-4">
-
         <div class="form-group">
             <label for="image">Provide a profile image for this member</label>
             <input type="file" class="form-control-file @error('image') is-invalid @enderror" name="image" id="image" placeholder="Member cover image">

@@ -76,7 +76,7 @@
     <script src="/assets/js/app.js"></script>
     <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
     <script src="/assets/js/editor.js" type="module"></script>
-
+|
     @livewireScripts
     @powerGridScripts
     @yield('scripts')

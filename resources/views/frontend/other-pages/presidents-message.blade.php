@@ -32,8 +32,8 @@
                 <div class="teacher__wrapper">
                     <div class="teacher__top d-md-flex align-items-end justify-content-between">
                         <div class="teacher__info">
-                            <h4>Rector</h4>
-                            <span>Message</span>
+                            <h4>{{ucfirst($message->author)}}'s Message</h4>
+                            <span>Last updated: {{$message->updated_at->format('M d, Y')}}</span>
                         </div>
                     </div>
                     <div class="teacher__bio">

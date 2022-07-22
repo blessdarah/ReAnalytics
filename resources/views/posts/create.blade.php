@@ -26,7 +26,7 @@
 
     document.querySelector('#postForm').addEventListener('submit', e => {
         e.preventDefault();
-        document.querySelector('#content').value = editor.getMarkdown();
+        document.querySelector('#content').value = editor.getHTML();
         e.target.submit();
     });
 </script>

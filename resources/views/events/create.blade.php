@@ -27,7 +27,7 @@
 
     document.querySelector('#eventForm').addEventListener('submit', e => {
         e.preventDefault();
-        document.querySelector('#description').value = editor.getMarkdown();
+        document.querySelector('#description').value = editor.getHTML();
         e.target.submit();
     });
 </script>

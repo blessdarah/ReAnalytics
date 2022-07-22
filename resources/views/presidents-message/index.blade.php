@@ -29,7 +29,7 @@
 
     document.querySelector('#messageForm').addEventListener('submit', e => {
         e.preventDefault();
-        document.querySelector('#body').value = editor.getMarkdown();
+        document.querySelector('#body').value = editor.getHTML();
         e.target.submit();
     });
 </script>

@@ -33,7 +33,7 @@
 
     document.querySelector('#projectForm').addEventListener('submit', e => {
         e.preventDefault();
-        document.querySelector('#detail').value = editor.getMarkdown();
+        document.querySelector('#detail').value = editor.getHTML();
         e.target.submit();
     });
 </script>

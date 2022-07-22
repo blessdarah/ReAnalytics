@@ -117,20 +117,39 @@
                     </ul>
                 </li>
 
+                <li class="menu-title" data-key="t-applications">About</li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow">
+                        <i class="bx bx-cog icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-utility">About us</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('messages.index', ['author' => 'president'])}}" data-key="t-starter-page">President's message</a></li>
+                        <li><a href="{{route('messages.index', ['author' => 'rector'])}}" data-key="t-starter-page">Rector's message</a></li>
+                        <li><a href="{{route('tags.index')}}" data-key="t-maintenance">Organigram</a></li>
+                    </ul>
+                </li>
+
+
                 <li class="menu-title" data-key="t-applications">Settings</li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
-                        <i class="bx bx-wheel icon nav-icon"></i>
+                        <i class="bx bx-cog icon nav-icon"></i>
                         <span class="menu-item" data-key="t-utility">Site settings</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{route('contacts.index')}}" data-key="t-starter-page">Contact links</a></li>
-                        <li><a href="#" data-key="t-maintenance">Contact messages</a></li>
+                        <li><a href="{{route('site-info.index')}}" data-key="t-maintenance">General settings</a></li>
                     </ul>
                 </li>
 
-                <li><a href="{{route('welcome')}}" target="_blank" data-key="t-inbox">Visit site</a></li>
+                <li>
+                    <a href="{{route('welcome')}}" target="_blank">
+                        <i class="bx bx-link-external icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-utility">Visit site</span>
+                    </a>
+                </li>
 
                 {{-- <a href="{{ route('attachments.index') }}"
                 class="{{ Config::get('app.page') === 'attachments' ? 'active' : '' }} list-group-item list-group-item-action border-0 rounded mb-2">

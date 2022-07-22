@@ -3,6 +3,8 @@
 
 <head>
     @include('includes.document-head')
+    @yield('styles')
+
 </head>
 
 <body>
@@ -82,4 +84,5 @@
 
     @include('includes.document-scripts')
 </body>
+
 </html>

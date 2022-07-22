@@ -25,10 +25,6 @@
                 class="{{ Config::get('app.page') === 'services' ? 'active' : '' }} list-group-item list-group-item-action border-0 mb-2 rounded">
                 <i class="bx bx-expand"></i> Services
             </a>
-            <a href="{{ route('videos.index') }}"
-                class="{{ Config::get('app.page') === 'videos' ? 'active' : '' }} list-group-item list-group-item-action border-0 mb-2 rounded">
-                <i class="bx bx-movie-play"></i> videos
-            </a>
             <a href="{{ route('members.index') }}"
                 class="{{ Config::get('app.page') === 'experts' ? 'active' : '' }} list-group-item list-group-item-action border-0 rounded mb-2">
                 <i class="bx bx-slider bx-sm"></i> Team

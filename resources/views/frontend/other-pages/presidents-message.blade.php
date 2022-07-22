@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
                 <div class="teacher__details-thumb p-relative w-img pr-30">
-                    <img src="{{asset($member->image)}}" alt="">
+                    <img src="{{asset($message->image)}}" alt="">
                     <div class="teacher__details-shape">
                         <img class="teacher-details-shape-1" src="{{asset('frontend/assets/img/teacher/details/shape/shape-1.png')}}" alt="">
                         <img class="teacher-details-shape-2" src="{{asset('frontend/assets/img/teacher/details/shape/shape-2.png')}}" alt="">
@@ -32,16 +32,12 @@
                 <div class="teacher__wrapper">
                     <div class="teacher__top d-md-flex align-items-end justify-content-between">
                         <div class="teacher__info">
-                            <h4>{{$member->name}}</h4>
-                            <span>{{$member->position}}</span>
+                            <h4>Rector</h4>
+                            <span>Message</span>
                         </div>
                     </div>
                     <div class="teacher__bio">
-                        {{$member->profile}}
-
-                        <div class="mt-4">
-                            <a class="btn btn-primary" href="#" onclick="history.back()">back</a>
-                        </div>
+                        {!! $message->body !!}
                     </div>
                 </div>
             </div>

@@ -31,8 +31,10 @@
                 <li class="has-dropdown">
                    <a href="javascript:void(0);">About us</a>
                    <ul class="submenu">
-                      <li><a href="{{ route('app.about') }}">Our mission</a></li>
-                      <li><a href="{{route('app.about-us.team')}}">Our team</a></li>
+                      <li><a href="{{ route('app.about-us.presidents-message') }}">President's Message</a></li>
+                      <li><a href="{{ route('app.about-us.rectors-message') }}">Rector's message</a></li>
+                      <li><a href="{{route('app.about-us.team')}}">Board members</a></li>
+                      <li><a href="{{route('app.about-us.team')}}">GHIB Organigram</a></li>
                    </ul>
                 </li>
                 <li><a href="{{ route('app.contact-us') }}">Contact</a></li>

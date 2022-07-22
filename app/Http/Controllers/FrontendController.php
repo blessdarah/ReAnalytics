@@ -8,6 +8,7 @@ use App\Models\Event;
 use App\Models\Faq;
 use App\Models\Member;
 use App\Models\Post;
+use App\Models\PresidentsMessage;
 use App\Models\Project;
 use App\Models\Service;
 use App\Models\Tag;
@@ -117,6 +118,12 @@ class FrontendController extends Controller
         return view('frontend.members.index')->with('members', $members);
     }
 
+    public function showMember($id)
+    {
+        $member = Member::find($id);
+        return view('frontend.members.show')->with('member', $member);
+    }
+
     public function projects()
     {
         $projects = Project::latest()->get();
@@ -128,5 +135,23 @@ class FrontendController extends Controller
         $id = Str::before($url, '-');
         $project = Project::findOrFail($id);
         return view('frontend.projects.show')->with('project', $project);
+    }
+
+    public function presidentsMessage()
+    {
+        $message = PresidentsMessage::where('author', 'president')->first();
+        return view('frontend.other-pages.presidents-message')->with('message', $message);
+    }
+
+
+    public function rectorsMessage()
+    {
+        $message = PresidentsMessage::where('author', 'rector')->first();
+        return view('frontend.other-pages.presidents-message')->with('message', $message);
+    }
+
+    public function organigram()
+    {
+        return view('frontend.other-pages.orgnigram');
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactUsMail;
 use App\Models\Category;
 use App\Models\ContactMessage;
 use App\Models\Event;
@@ -16,6 +17,7 @@ use App\Models\User;
 use App\Notifications\ContactFormNotification;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Notification;
 
 class FrontendController extends Controller
@@ -56,6 +58,11 @@ class FrontendController extends Controller
 
         $contact_message = ContactMessage::create($data);
         $users = User::all();
+
+        // dd(env('MAIL_USERNAME'));
+
+        Mail::to('blessdarahuba@gmail.com')
+            ->send(new ContactUsMail($data['name'], $data['email'], $data['subject'], $data['message']));
 
         Notification::send($users, new ContactFormNotification($contact_message));
         return redirect()->route('app.contact-us')->with('toast', 'message send successfully');

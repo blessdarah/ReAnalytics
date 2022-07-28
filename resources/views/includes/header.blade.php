@@ -1,12 +1,13 @@
 @php
 $currentRouteName = \Request::route()->getName();
+echo $currentRouteName;
 @endphp
 
 <header>
     @if($currentRouteName == 'welcome')
     <div id="header-sticky" class="header__area header__transparent header__padding">
         @else
-        <div id="header-sticky" class="header__area header__transparent header__padding header__white">
+        <div id="header-sticky" class="header__area header__transparent header__padding ">
             @endif
             <div class="container-fluid">
                 <div class="row align-items-center">

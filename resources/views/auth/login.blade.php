@@ -35,7 +35,9 @@
                                 <div class="sign__input">
                                     <div class="fx-relay-email-input-wrapper">
                                         <input name="email" value="{{old('email') ?? ''}}" type="text" placeholder="e-mail address" style="padding-right: 80px;">
-                                        <div class="fx-relay-icon" style="top: 0px; bottom: 0px;"><button class="fx-relay-button" id="fx-relay-button" type="button" title="Generate new mask" style="background-image: url(&quot;moz-extension://65d42beb-b178-4072-891d-c9b9fd1f8a46/images/logo-image-fx-relay.svg&quot;);"></button></div>
+                                        <div class="fx-relay-icon" style="top: 0px; bottom: 0px;">
+                                            <button class="fx-relay-button" id="fx-relay-button" type="button" title="Generate new mask" style="background-image: url(&quot;moz-extension://65d42beb-b178-4072-891d-c9b9fd1f8a46/images/logo-image-fx-relay.svg&quot;);"></button>
+                                        </div>
                                     </div>
                                     <i class="fal fa-envelope"></i>
                                 </div>

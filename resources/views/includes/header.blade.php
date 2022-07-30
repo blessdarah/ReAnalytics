@@ -1,6 +1,5 @@
 @php
 $currentRouteName = \Request::route()->getName();
-echo $currentRouteName;
 @endphp
 
 <header>
@@ -16,6 +15,7 @@ echo $currentRouteName;
                             <div class="logo">
                                 <a href="{{route('welcome')}}">
                                     <img src="{{ asset('assets/app-logo.png')}}" alt="logo" class="img-fluid" style="height: 80px">
+                                    <a href="#">news panel</a>
                                 </a>
                             </div>
                         </div>

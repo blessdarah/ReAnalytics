@@ -8,6 +8,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PresidentsMessageController;
 use App\Http\Controllers\ServiceController;
@@ -65,7 +66,6 @@ Route::controller(FrontendController::class)->group(function () {
     Route::get('/our-projects/{title}', 'showProject')->name('app.projects.show');
 
     Route::get('/resources', 'resources')->name('app.resources');
-
     Route::get('/search', 'searchPost')->name('app.search');
 });
 
@@ -94,11 +94,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('members', MemberController::class);
     Route::resource('attachments', AttachmentController::class);
     Route::resource('contacts', ContactController::class);
+    Route::resource('organizations', OrganizationController::class);
     Route::resource('banner', BannerController::class);
     Route::resource('tags', TagController::class);
     Route::resource('categories', CategoryController::class);
-    Route::resource('messages', PresidentsMessageController::class );
-    Route::resource('site-info', SiteInfoController::class );
+    Route::resource('messages', PresidentsMessageController::class);
+    Route::resource('site-info', SiteInfoController::class);
 });
 
 /*

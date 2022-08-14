@@ -65,6 +65,17 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
+                        <i class="bx bx-news icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-email">Orgnizations</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('organizations.create')}}" data-key="t-inbox">Create organization</a></li>
+                        <li><a href="{{route('organizations.index')}}" data-key="t-read-email">Organizations</a></li>
+                    </ul>
+                </li>
+ 
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow">
                         <i class="bx bx-trophy icon nav-icon"></i>
                         <span class="menu-item" data-key="t-email">Events</span>
                     </a>

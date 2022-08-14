@@ -40,7 +40,7 @@ class OrganizationController extends Controller
         $data = $request->validated();
         Organization::create($data);
         session()->flash('success', 'New organiztion added successfully');
-        return redirect()->route('organiztions.index');
+        return redirect()->route('organizations.index');
     }
 
     /**
@@ -62,7 +62,7 @@ class OrganizationController extends Controller
      */
     public function edit(Organization $organization)
     {
-        return view('organizations.edit')->with('organiztion', $organization);
+        return view('organizations.edit')->with('organization', $organization);
     }
 
     /**
@@ -77,7 +77,7 @@ class OrganizationController extends Controller
         $data = $request->validated();
         $organization->update($data);
         session()->flash('success', 'Organization updated successfully');
-        return redirect()->back();
+        return redirect()->route('organizations.index');
     }
 
     /**

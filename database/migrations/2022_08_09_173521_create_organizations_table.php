@@ -16,7 +16,7 @@ class CreateOrganizationsTable extends Migration
         Schema::create('organizations', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->mediumText('description');
+            $table->mediumText('short_description');
             $table->string('focal_point_name');
             $table->string('focal_point_tel');
             $table->string('focal_point_email');

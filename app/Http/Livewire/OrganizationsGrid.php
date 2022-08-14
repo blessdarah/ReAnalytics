@@ -167,11 +167,11 @@ final class OrganizationsGrid extends PowerGridComponent
        return [
            Button::make('edit', 'Edit')
                ->class('btn btn-primary btn-sm')
-               ->route('organization.edit', ['organization' => 'id']),
+               ->route('organizations.edit', ['organization' => 'id']),
 
            Button::make('destroy', 'Delete')
                ->class('btn btn-danger btn-sm')
-               ->route('organization.destroy', ['organization' => 'id'])
+               ->route('organizations.destroy', ['organization' => 'id'])
                ->method('delete')
         ];
     }

@@ -9,7 +9,7 @@
             @endforeach
         </div>
     @endif
-    <form action="{{ route('organizations.update', $contact->id) }}" method="POST" class="form" enctype="multipart/form-data">
+    <form action="{{ route('organizations.update', $organization->id) }}" method="POST" class="form" enctype="multipart/form-data">
         @csrf
         @method('PATCH')
 

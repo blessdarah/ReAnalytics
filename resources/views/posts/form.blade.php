@@ -1,9 +1,9 @@
 @php
-$postStatuses = [
-"draft" => "Draft",
-"published" => "Published",
-"archived" => "Archived",
-];
+    $postStatuses = [
+        "draft" => "Draft",
+        "published" => "Published",
+        "archived" => "Archived",
+    ];
 @endphp
 
 <div class="row">

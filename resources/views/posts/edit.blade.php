@@ -34,17 +34,15 @@ use Illuminate\Support\Str;
         height: '400px',
         // initialEditType: 'markdown',
         initialEditType: 'wysiwyg',
-        initialValue: postContent
+        initialValue: postContent,
     });
-
 
     document.querySelector('#postForm').addEventListener('submit', e => {
         e.preventDefault();
         document.querySelector('#content').value = editor.getHTML();
         e.target.submit();
     });
-</script>
-<script>
+
     const postTitle = document.querySelector('#title');
     const slug = document.querySelector('#slug');
     const published = document.querySelector('#publish-true');

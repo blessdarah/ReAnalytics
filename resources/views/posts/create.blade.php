@@ -22,6 +22,17 @@
         // initialEditType: 'markdown',
         initialEditType: 'wysiwyg',
         // placeholder: 'Write something cool!',
+        customHTMLRenderer: {
+            htmlBlock: {
+            iframe(node) {
+                return [
+                { type: 'openTag', tagName: 'iframe', outerNewLine: true, attributes: node.attrs },
+                { type: 'html', content: node.childrenHTML },
+                { type: 'closeTag', tagName: 'iframe', outerNewLine: true },
+                ];
+            },
+        }
+  },
     });
 
     document.querySelector('#postForm').addEventListener('submit', e => {

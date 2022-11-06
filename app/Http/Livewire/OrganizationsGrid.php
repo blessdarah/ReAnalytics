@@ -47,7 +47,7 @@ final class OrganizationsGrid extends PowerGridComponent
     /**
     * PowerGrid datasource.
     *
-    * @return Builder<\App\Models\Organization>
+    * @return Builder<Organization>
     */
     public function datasource(): Builder
     {

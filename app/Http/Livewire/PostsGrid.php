@@ -48,7 +48,7 @@ final class PostsGrid extends PowerGridComponent
     /**
      * PowerGrid datasource.
      *
-     * @return Builder<\App\Models\Post>
+     * @return Builder<Post>
      */
     public function datasource(): Builder
     {

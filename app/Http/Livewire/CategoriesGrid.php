@@ -48,7 +48,7 @@ final class CategoriesGrid extends PowerGridComponent
     /**
      * PowerGrid datasource.
      *
-     * @return Builder<\App\Models\Category>
+     * @return Builder<Category>
      */
     public function datasource(): Builder
     {

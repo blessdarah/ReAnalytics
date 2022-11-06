@@ -6,5 +6,5 @@
 //   initialEditType: 'wysiwyg',
 //   // placeholder: 'Write something cool!',
 // });
-// 
+//
 // editor.getMarkdown();

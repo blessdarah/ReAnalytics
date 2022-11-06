@@ -7,6 +7,7 @@ use App\Models\Post;
 use App\Models\Service;
 use App\Models\Tag;
 use App\Models\Video;
+use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
 
@@ -25,7 +26,7 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return Renderable
      */
     public function index()
     {

@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreContactInfoRequest;
 use App\Http\Requests\UpdateContactInfoRequest;
 use App\Models\ContactInfo;
+use Illuminate\Http\Response;
 
 class ContactInfoController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -21,7 +22,7 @@ class ContactInfoController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -31,8 +32,8 @@ class ContactInfoController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreContactInfoRequest  $request
-     * @return \Illuminate\Http\Response
+     * @param StoreContactInfoRequest $request
+     * @return Response
      */
     public function store(StoreContactInfoRequest $request)
     {
@@ -42,8 +43,8 @@ class ContactInfoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\ContactInfo  $contactInfo
-     * @return \Illuminate\Http\Response
+     * @param ContactInfo $contactInfo
+     * @return Response
      */
     public function show(ContactInfo $contactInfo)
     {
@@ -53,8 +54,8 @@ class ContactInfoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\ContactInfo  $contactInfo
-     * @return \Illuminate\Http\Response
+     * @param ContactInfo $contactInfo
+     * @return Response
      */
     public function edit(ContactInfo $contactInfo)
     {
@@ -64,9 +65,9 @@ class ContactInfoController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateContactInfoRequest  $request
-     * @param  \App\Models\ContactInfo  $contactInfo
-     * @return \Illuminate\Http\Response
+     * @param UpdateContactInfoRequest $request
+     * @param ContactInfo $contactInfo
+     * @return Response
      */
     public function update(UpdateContactInfoRequest $request, ContactInfo $contactInfo)
     {
@@ -76,8 +77,8 @@ class ContactInfoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\ContactInfo  $contactInfo
-     * @return \Illuminate\Http\Response
+     * @param ContactInfo $contactInfo
+     * @return Response
      */
     public function destroy(ContactInfo $contactInfo)
     {

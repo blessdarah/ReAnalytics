@@ -48,7 +48,7 @@ final class ServiceGrid extends PowerGridComponent
     /**
      * PowerGrid datasource.
      *
-     * @return Builder<\App\Models\Service>
+     * @return Builder<Service>
      */
     public function datasource(): Builder
     {

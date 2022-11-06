@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePresidentsMessageRequest;
+use App\Http\Requests\UpdatePresidentsMessageRequest;
 use Illuminate\Http\Request;
 use App\Models\PresidentsMessage;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 
 class PresidentsMessageController extends Controller
@@ -12,7 +14,7 @@ class PresidentsMessageController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -24,7 +26,7 @@ class PresidentsMessageController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -34,8 +36,8 @@ class PresidentsMessageController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StorePresidentsMessageRequest  $request
-     * @return \Illuminate\Http\Response
+     * @param StorePresidentsMessageRequest $request
+     * @return Response
      */
     public function store(StorePresidentsMessageRequest $request)
     {
@@ -45,8 +47,8 @@ class PresidentsMessageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\PresidentsMessage  $presidentsMessage
-     * @return \Illuminate\Http\Response
+     * @param PresidentsMessage $presidentsMessage
+     * @return Response
      */
     public function show(PresidentsMessage $presidentsMessage)
     {
@@ -56,8 +58,8 @@ class PresidentsMessageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\PresidentsMessage  $presidentsMessage
-     * @return \Illuminate\Http\Response
+     * @param PresidentsMessage $presidentsMessage
+     * @return Response
      */
     public function edit(PresidentsMessage $presidentsMessage)
     {
@@ -67,9 +69,9 @@ class PresidentsMessageController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdatePresidentsMessageRequest  $request
-     * @param  \App\Models\PresidentsMessage  $presidentsMessage
-     * @return \Illuminate\Http\Response
+     * @param  UpdatePresidentsMessageRequest  $request
+     * @param PresidentsMessage $presidentsMessage
+     * @return Response
      */
     public function update(Request $request, int $id)
     {
@@ -94,8 +96,8 @@ class PresidentsMessageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\PresidentsMessage  $presidentsMessage
-     * @return \Illuminate\Http\Response
+     * @param PresidentsMessage $presidentsMessage
+     * @return Response
      */
     public function destroy(PresidentsMessage $presidentsMessage)
     {

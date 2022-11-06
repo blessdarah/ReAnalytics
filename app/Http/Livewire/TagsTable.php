@@ -47,7 +47,7 @@ final class TagsTable extends PowerGridComponent
     /**
     * PowerGrid datasource.
     *
-    * @return Builder<\App\Models\Tag>
+    * @return Builder<Tag>
     */
     public function datasource(): Builder
     {

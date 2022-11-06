@@ -2,7 +2,8 @@
 
 namespace App\Http\Livewire;
 
-use \App\Models\Event;
+use;
+use App\Models\Event;
 use Illuminate\Support\Carbon;
 use Illuminate\Database\QueryException;
 use Illuminate\Database\Eloquent\Builder;
@@ -47,7 +48,7 @@ final class EventsGrid extends PowerGridComponent
     /**
      * PowerGrid datasource.
      *
-     * @return Builder<\\App\Models\Event>
+     * @return Builder<\App\Models\Event>
      */
     public function datasource(): Builder
     {

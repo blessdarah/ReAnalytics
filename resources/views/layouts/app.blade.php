@@ -7,6 +7,9 @@
 </head>
 
 <body>
+    @if(Route::currentRouteName() != 'welcome')
+        @include('includes.navbar')
+    @endif
     @yield('content')
     @include('includes.footer')
 </body>

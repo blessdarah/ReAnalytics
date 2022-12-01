@@ -16,6 +16,7 @@ use App\Http\Controllers\TagController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SiteInfoController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
@@ -77,7 +78,7 @@ Auth::routes();
  * **********************************************************
  */
 Route::post('/contact-submit', [HomeController::class, 'contact'])->name('contact.submit');
-Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
+Route::group(['middleware' => ['auth'] ], function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/contact-messages', [HomeController::class, 'contactMessages'])->name('contact.messages');
     Route::get('/profile', [HomeController::class, 'profile'])->name('profile');

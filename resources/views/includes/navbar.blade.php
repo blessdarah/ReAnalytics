@@ -20,6 +20,7 @@
                 <a href="{{route('welcome')}}" class="md:w-auto w-full md:py-0 py-3 text-center">Home</a>
                 <a href="{{route('app.services')}}" class="md:w-auto w-full md:py-0 py-3 text-center">Services</a>
                 <a href="{{route('app.blog')}}" class="md:w-auto w-full md:py-0 py-3 text-center">Blog</a>
+                <a href="{{route('app.about')}}" class="md:w-auto w-full md:py-0 py-3 text-center">About</a>
             </nav>
             <div class="w-1 border-l border-gray-200 h-5 md:ml-6 lg:ml-10"></div>
             <div class="h-full font-medium flex items-center md:flex-row flex-col md:pl-6 lg:pl-10">

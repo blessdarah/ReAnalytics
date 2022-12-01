@@ -1,66 +1,99 @@
 @extends('layouts.app')
 
 @section('content')
-<livewire:page-banner title="Services" pageName="Services" />
-
-<section class="what__area pt-115">
-    <div class="container">
-        <div class="row">
-            <div class="col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
-                <div class="section__title-wrapper mb-60 text-center">
-                    <h2 class="section__title">What is <span class="yellow-bg-big">Skilline? <img src="{{asset('frontend/assets/img/shape/yellow-bg-2.png')}}" alt=""></span></h2>
-                    <p>Sloshed faff about me old mucker blatant bubble and squeak hanky panky some dodgy chav bevvy arse chimney pot I, ruddy plastered buggered smashing blow off I'm telling up the kyver he legged it bleeder jolly good, </p>
+<livewire:page-banner title="Services" subTitle="Here is the pages subtitle" />
+{{-- sevices card --}}
+<section class="bg-white">
+    <div class="px-8 py-10 mx-auto lg:max-w-screen-xl sm:max-w-xl md:max-w-full sm:px-12 md:px-16 lg:py-20 sm:py-16">
+        <div class="grid gap-x-8 gap-y-12 sm:gap-y-16 md:grid-cols-2 lg:grid-cols-3">
+            <div class="relative">
+                <a href="#_" class="block overflow-hidden group rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1465310477141-6fb93167a273?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2550&amp;h=1700&amp;q=80" class="object-cover w-full h-56 transition-all duration-300 ease-out sm:h-64 group-hover:scale-110" alt="">
+                </a>
+                <div class="relative mt-5">
+                    <p class="uppercase font-semibold text-xs mb-2.5 text-purple-600">July 20th 2021</p>
+                      <a href="#" class="block mb-3 hover:underline">
+                        <h2 class="text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-700">Seeking Adventure</h2>
+                      </a>
+                    <p class="mb-4 text-gray-700">Seek out adventure and live a life that others envy. You only get one chance to reach for the sky. Explore, discover, and seek out adventure.</p>
+                    <a href="#_" class="font-medium underline">Read More</a>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            @foreach($services as $service)
-            <div class="col-xxl-5 offset-xl-1 col-xl-5 offset-xl-1 col-lg-6">
-                <div class="what__item transition-3 mb-30 p-relative fix">
-                    <div class="what__thumb w-img">
-                        <img src="{{asset($service->image)}}" alt="">
-                    </div>
-                    <div class="what__content p-absolute text-center">
-                        <h3 class="what__title white-color">{{$servict->title}}</h3>
-                        <a href="{{$service->url()}}" class="e-btn e-btn-border-2">Learn more</a>
-                    </div>
+            <div class="relative">
+                <a href="#_" class="block overflow-hidden group rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1577095972574-2fbdcf60c8ef?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2550&amp;h=1700&amp;q=80" class="object-cover w-full h-56 transition-all duration-300 ease-out sm:h-64 group-hover:scale-110" alt="">
+                </a>
+                <div class="relative mt-5">
+                    <p class="uppercase font-semibold text-xs mb-2.5 text-purple-600">July 20th 2021</p>
+                      <a href="#" class="block mb-3 hover:underline">
+                        <h2 class="text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-700">Explore the deep</h2>
+                      </a>
+                    <p class="mb-4 text-gray-700">The massive deep blue is worth exploring at least one time in your life. It is full of excitement and mystery. Go out and explore the deep.</p>
+                    <a href="#_" class="font-medium underline">Read More</a>
                 </div>
             </div>
-            @endforeach
+            <div class="relative">
+                <a href="#_" class="block overflow-hidden group rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1462651567147-aa679fd1cfaf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2550&amp;h=1700&amp;q=80" class="object-cover w-full h-64 transition-all duration-300 ease-out group-hover:scale-110" alt="">
+                </a>
+                <div class="relative mt-5">
+                    <p class="uppercase font-semibold text-xs mb-2.5 text-purple-600">July 20th 2021</p>
+                      <a href="#" class="block mb-3 hover:underline">
+                        <h2 class="text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-700">Find Your Roots</h2>
+                      </a>
+                    <p class="mb-4 text-gray-700">Make sure to stay-grounded to your roots, but it's also important to understand that you are worth the success you have achieved.</p>
+                    <a href="#_" class="font-medium underline">Read More</a>
+                </div>
+            </div>
+            <div class="relative">
+                <a href="#_" class="block overflow-hidden group rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1470104240373-bc1812eddc9f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2550&amp;q=80" class="object-cover w-full h-64 transition-all duration-300 ease-out group-hover:scale-110" alt="">
+                </a>
+                <div class="relative mt-5">
+                    <p class="uppercase font-semibold text-xs mb-2.5 text-purple-600">July 20th 2021</p>
+                      <a href="#" class="block mb-3 hover:underline">
+                        <h2 class="text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-700">Inspire Greatness</h2>
+                      </a>
+                    <p class="mb-4 text-gray-700">Find others who seek out greatness and surround yourself with positive and successful people. This is key to inspiring greatness for others.</p>
+                    <a href="#_" class="font-medium underline">Read More</a>
+                </div>
+            </div>
+            <div class="relative">
+                <a href="#_" class="block overflow-hidden group rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1530262929451-caf6b99b5136?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2550&amp;q=80" class="object-cover w-full h-64 transition-all duration-300 ease-out group-hover:scale-110" alt="">
+                </a>
+                <div class="relative mt-5">
+                    <p class="uppercase font-semibold text-xs mb-2.5 text-purple-600">July 20th 2021</p>
+                      <a href="#" class="block mb-3 hover:underline">
+                        <h2 class="text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-700">Royalty in the Sky</h2>
+                      </a>
+                    <p class="mb-4 text-gray-700">Reach for the stars and find greatness in yourself. Royalty is not in the eyes of others, rather it is in the eye of the be-holder.</p>
+                    <a href="#_" class="font-medium underline">Read More</a>
+                </div>
+            </div>
+            <div class="relative">
+                <a href="#_" class="block overflow-hidden group rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1559080463-5c7eb3a52de1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2550&amp;q=80" class="object-cover w-full h-56 transition-all duration-300 ease-out sm:h-64 group-hover:scale-110" alt="">
+                </a>
+                <div class="relative mt-5">
+                    <p class="uppercase font-semibold text-xs mb-2.5 text-purple-600">July 20th 2021</p>
+                      <a href="#" class="block mb-3 hover:underline">
+                        <h2 class="text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-700">Enjoy Your Life</h2>
+                      </a>
+                    <p class="mb-4 text-gray-700">Be sure to enjoy the life that you have worked so hard to create. There's no point in reaching greatness if you do not celebrate.</p>
+                    <a href="#_" class="font-medium underline">Read More</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+{{-- sevices card end --}}
 
-<section class="why__area pt-125">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-xxl-5 offset-xxl-1 col-xl-5 offset-xl-1 col-lg-6 col-md-8">
-                <div class="why__content pr-50 mt-40">
-                    <div class="section__title-wrapper mb-30">
-                        <span class="section__sub-title">Why Choses Me</span>
-                        <h2 class="section__title">Tools for <span class="yellow-bg yellow-bg-big">Teachers<img src="assets/img/shape/yellow-bg.png" alt=""></span> and Learners</h2>
-                        <p>Oxford chimney pot Eaton faff about blower blatant brilliant, bubble and squeak he legged it Charles bonnet arse at public school bamboozled.</p>
-                    </div>
-                    <div class="why__btn">
-                        <a href="{{route('app.contact-us')}}" class="e-btn e-btn-3 mr-30">Get in touch</a>
-                        <a href="{{route('app.about')}}" class="link-btn">
-                            Learn More
-                            <i class="far fa-arrow-right"></i>
-                            <i class="far fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xxl-5 col-xl-5 col-lg-6 col-md-8">
-                <div class="why__thumb">
-                    <img src="{{asset('frontend/assets/img/why/why.png')}}" alt="">
-                    <img class="why-green" src="{{asset('frontend/assets/img/why/why-shape-green.png')}}" alt="">
-                    <img class="why-pink" src="{{asset('frontend/assets/img/why/why-shape-pink.png')}}" alt="">
-                    <img class="why-dot" src="{{asset('frontend/assets/img/why/why-shape-dot.png')}}" alt="">
-                    <img class="why-line" src="{{asset('frontend/assets/img/why/why-shape-line.png')}}" alt="">
-                </div>
-            </div>
-        </div>
+<section class="h-auto py-16 sm:py-20 lg:px-0 px-10 bg-[#fcf8f0]">
+    <div class="w-full max-w-2xl mx-auto flex space-y-8 sm:space-y-12 flex-col items-center">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl tracking-tight max-w-lg lg:max-w-full lg:leading-tight sm:text-center">We are happy to always be in touch with our services<br></h2>
+        <a href="#_" class="block sm:w-auto w-full text-center px-6 py-3 flex-shrink-0 bg-amber-400 text-white rounded font-bold shadow-xl text-lg hover:bg-gray-900 uppercase">Book a service today</a>
+        <p class="text-gray-500 text-base lg:text-xl md:text-center text-left">We are keen to your requirements and meet them always.<br></p>
     </div>
 </section>
 

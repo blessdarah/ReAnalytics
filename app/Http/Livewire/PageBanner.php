@@ -6,8 +6,9 @@ use Livewire\Component;
 
 class PageBanner extends Component
 {
-    public $title;
-    public $pageName;
+    public string $title;
+    public ?string $pageName;
+    public ?string $subTitle;
 
     public function render()
     {

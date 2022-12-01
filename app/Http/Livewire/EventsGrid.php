@@ -2,7 +2,6 @@
 
 namespace App\Http\Livewire;
 
-use;
 use App\Models\Event;
 use Illuminate\Support\Carbon;
 use Illuminate\Database\QueryException;

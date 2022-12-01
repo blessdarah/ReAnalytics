@@ -43,14 +43,12 @@ Route::controller(FrontendController::class)->group(function () {
     Route::get('/about-us', 'about')->name('app.about');
 
     Route::get('/our-services', 'services')->name('app.services');
-
     Route::get('/out-services/{name}', 'showService')->name('app.services.show');
 
     Route::get('/upcoming-events', 'events')->name('app.events');
     Route::get('/upcoming-events/{id}', 'showEvent')->name('app.events.show');
 
     Route::get('/blog', 'blog')->name('app.blog');
-
     Route::get('/blog/{title}', 'showBlog')->name('app.blog.show');
 
     Route::get('/about-us/board-members', 'members')->name('app.about-us.team');
@@ -79,7 +77,7 @@ Auth::routes();
  * **********************************************************
  */
 Route::post('/contact-submit', [HomeController::class, 'contact'])->name('contact.submit');
-Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/contact-messages', [HomeController::class, 'contactMessages'])->name('contact.messages');
     Route::get('/profile', [HomeController::class, 'profile'])->name('profile');

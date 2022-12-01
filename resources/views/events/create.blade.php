@@ -22,7 +22,7 @@
         height: '400px',
         // initialEditType: 'markdown',
         initialEditType: 'wysiwyg',
-        // placeholder: 'Write something cool!',
+        placeholder: 'Write something cool!',
     });
 
     document.querySelector('#eventForm').addEventListener('submit', e => {

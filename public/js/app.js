@@ -6873,7 +6873,7 @@ module.exports = JSON.parse("{\"name\":\"axios\",\"version\":\"0.21.4\",\"descri
     for (var i = 0, len = elements.length; i < len; i++) {
       var _ret = _loop(i);
 
-      if (_ret === "continue")
+      if (_ret === "continue") continue;
     }
 
     return createdDocument.body.innerHTML;
@@ -8621,7 +8621,7 @@ function FlatpickrInstance(element, instanceConfig) {
     function setCalendarWidth() {
         var config = self.config;
         if (config.weekNumbers === false && config.showMonths === 1) {
-
+            return;
         }
         else if (config.noCalendar !== true) {
             window.requestAnimationFrame(function () {

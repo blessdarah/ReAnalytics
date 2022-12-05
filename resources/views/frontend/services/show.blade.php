@@ -1,42 +1,24 @@
-@extends('layouts.landing')
-
-@section('hero')
-{{-- title --}}
-<div class="mt-8 text-center lg:my-16 xl:my-28">
-    <span class="inline-block w-8 h-1 mx-auto bg-red-600"></span>
-    <h3 class="relative mb-3 text-4xl font-bold text-center text-indigo-900 ">{{$service->name ?? __('Temporal name')}}</h3>
-    <ul class="flex items-center justify-center space-x-3">
-        <li class="text-blue-400 hover:underline">
-            <a href="#">{{ __('Home /') }}</a>
-        </li>
-        <li class="text-blue-300 hover:underline">
-            <a href="#">{{ __('blog') }}</a>
-        </li>
-    </ul>
-</div>
-@endsection
+@extends('layouts.app')
 
 
 @section('content')
-<article class="container px-8 mx-auto mt-8 lg:px-36 lg:my-16">
+<!-- page title area start -->
+<div class="mx-auto w-full px-8 lg:max-w-7xl my-8">
+    <div class="md:grid gap-8 grid-cols-5">
+        <div class="col-span-3">
+            <img src="{{asset($service->image)}}" data-aos="fade-right" class="max-w-full h-auto rounded-2xl shadow mb-8" alt="{{$service->title}}">
+        </div>
+        <div class="col-span-2" data-aos-delay="300">
+            <h3 class="text-4xl font-extrabold text-dark my-6" data-aos="slide-down">{{$service->name}}</h3>
+            <div class="prose prose-zinc text-gray-600 " data-aos="fade-up" data-aos-delay="200">
+                {!! $service->detail !!}
+            </div>
 
-    <span class="flex items-center justify-center w-16 h-16 mb-8 text-red-700 bg-red-100">
-        <i class="inline-block bx bx-printer bx-md"></i>
-    </span>
-
-    {{-- service detail --}}
-    <div class="flex content-between space-x-20">
-
-        {{-- left --}}
-        <div class="lg:w-8/12 prose">
-            <img src="{{asset($service->image)}}" alt="Service cover image">
-            {!! Illuminate\Support\Str::markdown($service->detail) ?? 'No data' !!}
-            <a href="#" class="px-8 py-4 mt-12 text-center text-white transition-all bg-blue-600 rounded-lg hover:bg-blue-800">
-                <i class="bx bx-hand"></i>
-                {{ __('request service') }}
-            </a>
+            <div>
+                <button onclick="window.history.back()" data-aos="fade-up" data-aos-delay="300" class="my-4 text-center text-white bg-dark rounded-xl px-4 py-2 border-2 hover:bg-gray-100 hover:text-dark transition duration-200ms ease-in-out">back</button>    
+            </div>
         </div>
     </div>
-
-</article>
+</div>
+<!-- page title area end -->
 @endsection

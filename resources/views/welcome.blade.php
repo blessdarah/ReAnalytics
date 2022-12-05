@@ -11,39 +11,38 @@
             <div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white"></div>
             <img src="https://cdn.devdojo.com/assets/patterns/pattern-01.svg">
         </div>
+
         <!-- Header Nav -->
         @include('includes.navbar')
-
 
         <div class="w-full relative h-auto pt-20 lg:pt-32">
             <div class="max-w-7xl relative mx-auto sm:px-4 xl:px-0 flex items-center lg:flex-row flex-col h-full">
                 <div
-                    class="w-full relative lg:w-1/2 flex-shrink-0 h-full flex flex-col xl:pr-0 lg:pr-5 lg:items-start sm:items-center justify-center space-y-10">
-                    <h1 class="font-extrabold text-4xl sm:text-5xl xl:text-6xl sm:text-center lg:text-left relative tracking-tight">
+                        class="w-full relative lg:w-1/2 flex-shrink-0 h-full flex flex-col xl:pr-0 lg:pr-5 lg:items-start sm:items-center justify-center space-y-10">
+                    <h1 data-aos="zoom-in" data-aos-duration="400" class="font-extrabold text-4xl sm:text-5xl xl:text-6xl sm:text-center lg:text-left relative tracking-tight">
                         Express data analytics for your business<br></h1>
 
                     <div class="flex max-w-sm items-center lg:max-w-lg">
                         <div class="flex flex-shrink-0">
-                            <img src="https://cdn.devdojo.com/tails/avatars/010.jpg"
-                                 class="rounded-full w-12 h-12 border-2 border-white">
-                            <img src="https://cdn.devdojo.com/tails/avatars/017.jpg"
-                                 class="rounded-full -ml-5 w-12 h-12 border-2 border-white">
-                            <img src="https://cdn.devdojo.com/tails/avatars/041.jpg"
-                                 class="rounded-full -ml-5 w-12 h-12 border-2 border-white">
+                            <img data-aos="slide-left" data-aos-duration="400" src="https://cdn.devdojo.com/tails/avatars/010.jpg"
+                                                                               class="rounded-full w-12 h-12 border-2 border-white">
+                            <img data-aos="slide-left" data-aos-duration="600" src="https://cdn.devdojo.com/tails/avatars/017.jpg"
+                                                                               class="rounded-full -ml-5 w-12 h-12 border-2 border-white">
+                            <img data-aos="slide-left" data-aos-duration="800" src="https://cdn.devdojo.com/tails/avatars/041.jpg"
+                                                                               class="rounded-full -ml-5 w-12 h-12 border-2 border-white">
                         </div>
-                        <p class="pl-3 lg:text-base text-xs">Join <span class="font-bold">23,000</span> other developers
-                            as we build the next greatest <span class="font-bold">SAAS tools</span> together!</p>
+                        <p data-aos="slide-left" data-aos-duration="400" class="pl-3 lg:text-base text-xs">Join <span class="font-bold">23,000</span> other developers
+                        as we build the next greatest <span class="font-bold">SAAS tools</span> together!</p>
                     </div>
 
                     <div
-                        class="w-full flex sm:flex-row flex-col sm:justify-center lg:justify-start font-medium sm:space-x-5 space-y-4 sm:space-y-0">
-                        <a href="#_"
-                           class="px-7 py-4 bg-gray-900 text-white border-2 border-gray-900 hover:bg-white hover:text-gray-900 transition-all ease-out duration-150 rounded-xl flex items-center justify-center text-lg">Contact
-                            us</a>
-                        <a href="#_"
-                           class="px-7 flex items-center py-4 bg-gray-100 border-2 border-gray-100 hover:border-gray-900 justify-center hover:bg-white transition-all ease-out duration-150 text-gray-900 rounded-xl text-lg">
+                            class="w-full flex sm:flex-row flex-col sm:justify-center lg:justify-start font-medium sm:space-x-5 space-y-4 sm:space-y-0">
+                        <a href="#_" data-aos="fade-up" data-aos-duration="500"
+                                                        class="px-7 py-4 bg-gray-900 text-white border-2 border-gray-900 hover:bg-white hover:text-gray-900 transition-all ease-out duration-150 rounded-xl flex items-center justify-center text-lg">Contact us</a>
+                        <a href="#_" data-aos="fade-up" data-aos-duration="800"
+                                                        class="px-7 flex items-center py-4 bg-gray-100 border-2 border-gray-100 hover:border-gray-900 justify-center hover:bg-white transition-all ease-out duration-150 text-gray-900 rounded-xl text-lg">
                             <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"
-                                 xmlns="http://www.w3.org/2000/svg">
+                                                                          xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                       d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
                                       clip-rule="evenodd" class=""></path>
@@ -54,20 +53,20 @@
                 </div>
 
                 <div class="lg:w-1/2 flex-shrink-0 h-full lg:pt-0 pt-24">
-                    <div class="relative h-full w-full pl-12 lg:pr-0 pr-10">
+                    <div data-aos="zoom-in" data-aos-duration="1000" class="relative h-full w-full pl-12 lg:pr-0 pr-10">
                         <div
-                            class="h-auto transform xl:translate-x-8 translate-y-2 w-32 sm:w-56 xl:w-64 absolute border border-gray-100 left-0 bottom-0 z-10 rounded-lg shadow-2xl overflow-hidden p-2 bg-white">
+                                class="h-auto transform xl:translate-x-8 translate-y-2 w-32 sm:w-56 xl:w-64 absolute border border-gray-100 left-0 bottom-0 z-10 rounded-lg shadow-2xl overflow-hidden p-2 bg-white">
                             <img src="https://cdn.devdojo.com/images/january2022/chart-1.png" class="tails-relative">
                         </div>
                         <div
-                            class="h-auto transform translate-x-5 lg:translate-x-6 -translate-y-5 xl:-translate-y-8 w-32 sm:w-56 xl:w-64 absolute border border-gray-100 right-0 z-10 top-0 rounded-xl shadow-2xl overflow-hidden p-2 bg-white">
+                                class="h-auto transform translate-x-5 lg:translate-x-6 -translate-y-5 xl:-translate-y-8 w-32 sm:w-56 xl:w-64 absolute border border-gray-100 right-0 z-10 top-0 rounded-xl shadow-2xl overflow-hidden p-2 bg-white">
                             <img src="https://cdn.devdojo.com/images/january2022/chart-2.png" class="">
                         </div>
                         <div class="relative flex items-center justify-center p-3">
                             <div class="absolute inset-0 opacity-30 rounded-2xl blur-xl"
                                  style="background-image:linear-gradient(90deg, rgb(68, 255, 154) -0.55%, rgb(68, 176, 255) 22.86%, rgb(139, 68, 255) 48.36%, rgb(255, 102, 68) 73.33%, rgb(235, 255, 112) 99.34%); -webkit-filter: blur(40px);filter: blur(40px);"></div>
                             <div
-                                class="bg-gray-100 transform rounded-xl p-2 shadow-2xl border border-gray-100 overflow-hidden h-auto w-full flex flex-col">
+                                    class="bg-gray-100 transform rounded-xl p-2 shadow-2xl border border-gray-100 overflow-hidden h-auto w-full flex flex-col">
 
                                 <img src="https://cdn.devdojo.com/images/january2022/admin-bg.png"
                                      class="h-auto opacity-100">
@@ -75,20 +74,17 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
     {{--Header end--}}
 
-    {{-- test --}}
-
-    <!-- Section 1 -->
+    <!-- Features -->
     <section class="pt-12 pb-8 leading-7 text-gray-900 bg-white border-b border-solid md:pt-24 md:pb-12 box-border border-slate-100">
         <div class="relative px-12 mx-auto w-full max-w-7xl text-gray-900 box-border">
-            <div class="flex flex-wrap -mx-5 mt-0 box-border">
+            <div  class="flex flex-wrap -mx-5 mt-0 box-border">
                 <!-- Feature 1 -->
-                <div class="relative flex-none px-5 mt-0 w-full max-w-full md:w-1/3 md:flex-none box-border">
+                <div data-aos="slide-up" data-aos-duration="800" class="relative flex-none px-5 mt-0 w-full max-w-full md:w-1/3 md:flex-none box-border">
                     <div class="mb-3">
                         <img class="w-16 h-16 -ml-1" src="https://cdn.devdojo.com/images/march2022/code.png">
                     </div>
@@ -96,7 +92,7 @@
                     <p class="mt-0 mb-8 md:mb-0 box-border text-slate-400"> Tails has been built with developers in mind. Each template and design are built to be configurable and customizable for any project </p>
                 </div>
                 <!-- Feature 2 -->
-                <div class="relative flex-none px-5 mt-0 w-full max-w-full md:w-1/3 md:flex-none box-border">
+                <div data-aos="slide-up" data-aos-duration="1000" class="relative flex-none px-5 mt-0 w-full max-w-full md:w-1/3 md:flex-none box-border">
                     <div class="mb-3">
                         <img class="w-16 h-16 -ml-1" src="https://cdn.devdojo.com/images/march2022/brush.png">
                     </div>
@@ -104,7 +100,7 @@
                     <p class="mt-0 mb-8 md:mb-0 box-border text-gray-400"> You can change any aspect of these templates including colors, fonts, and more. You can make it fit perfectly into any website or application. </p>
                 </div>
                 <!-- Feature 3 -->
-                <div class="relative flex-none px-5 mt-0 w-full max-w-full md:w-1/3 md:flex-none box-border">
+                <div data-aos="slide-up" data-aos-duration="1200" class="relative flex-none px-5 mt-0 w-full max-w-full md:w-1/3 md:flex-none box-border">
                     <div class="mb-3">
                         <img class="w-16 h-16 -ml-1" src="https://cdn.devdojo.com/images/march2022/cloud.png">
                     </div>
@@ -113,7 +109,8 @@
                 </div>
             </div>
         </div>
-        <!-- Testimonials -->
+
+        <!-- Partners -->
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-10  items-center justify-between mx-auto px-12 border-t border-gray-200 pt-10 mt-24 lg:justify-between max-w-7xl">
             <div class="box-border inline-flex items-center py-0 my-2 justify-center sm:justify-start text-gray-800">
                 <svg class="w-auto h-7 flex-shrink-0 text-gray-400 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2500 676"><defs></defs><path fill-rule="nonzero" d="M343.757 632.09c-37.607 6.604-75.876 8.584-115.464 13.857L107.546 292.295v368.83C69.94 665.083 35.63 670.361 0 675.64V0h100.293l137.236 383.352V0h106.228v632.09zm207.84-384.663c40.91 0 103.591-1.98 141.198-1.98v105.566c-46.848 0-101.608 0-141.198 1.98V510.03c62.024-3.957 124.045-9.24 186.723-11.22v101.604L446.025 623.51V0H738.32v105.569H551.597v141.858zm579.306-141.856h-109.526v485.616c-35.63 0-71.26 0-105.564 1.315v-486.93H806.287V0h324.621l-.005 105.571zm171.548 134.6h144.5v105.566h-144.5V585.25h-103.596V0h294.941v105.569h-191.345V240.17zm362.893 252.703c60.044 1.315 120.742 5.942 179.468 9.235v104.25c-94.35-5.942-188.704-11.872-285.034-13.857V0h105.566v492.874zm268.54 120.744c33.65 1.983 69.28 3.963 103.59 7.915V0h-103.59v613.618zM2500 0l-133.943 321.326L2500 675.64c-39.592-5.279-79.18-12.537-118.77-19.136l-75.874-195.298-77.19 179.468c-38.276-6.604-75.224-8.584-113.486-13.862l135.918-309.449L2127.871 0h113.482l69.28 177.488L2384.532 0H2500z"></path></svg>
@@ -135,91 +132,92 @@
             </div>
         </div>
     </section>
-{{-- test --}}
 
     {{-- Features --}}
     <section class="pt-20 pb-32 bg-white">
-        <div class="px-20 mx-auto max-w-7xl"><h2 class="mb-1 text-3xl font-extrabold leading-tight text-gray-900">What
-                we offer<br></h2>
-            <p class="mb-16 text-lg text-gray-500">Here is our list of our powerful and award-winning features.</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-16 lg:gap-x-24 gap-y-20">
-                <div class="">
+        <div class="px-20 mx-auto max-w-7xl">
+            <h2 data-aos="slide-right" data-aos-duration="800" class="mb-1 text-3xl font-extrabold leading-tight text-gray-900">What we offer</h2>
+            <p data-aos="slide-right" class="mb-16 text-lg text-gray-500">Here is our list of our powerful and award-winning features.</p>
+            <div data-aos-delay="1000" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-16 lg:gap-x-24 gap-y-20">
+                <div data-aos="slide-up" data-aos-duration="1000" class="">
                     <div class="flex items-center justify-center w-12 h-12 mb-4 text-red-600 bg-red-100 rounded-full"
                          data-primary="red-600" data-rounded="rounded-full">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                             xmlns="http://www.w3.org/2000/svg">
+                                                                               xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                                                                                 d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
                         </svg>
                     </div>
                     <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900 lg:text-lg">Processing</h3>
                     <p class="text-sm text-gray-500 lg:text-base">Faster processing to help you build your applications
-                        quicker and with more efficiency.</p></div>
-                <div class="">
+                    quicker and with more efficiency.</p></div>
+                <div data-aos="slide-up" data-aos-duration="1000" data-aos-delay="500" class="">
                     <div
-                        class="flex items-center justify-center w-12 h-12 mb-4 text-green-600 bg-green-100 rounded-full"
-                        data-primary="green-600" data-rounded="rounded-full">
+                            class="flex items-center justify-center w-12 h-12 mb-4 text-green-600 bg-green-100 rounded-full"
+                            data-primary="green-600" data-rounded="rounded-full">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                             xmlns="http://www.w3.org/2000/svg">
+                                                                               xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                                                                 d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                                                 d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                         </svg>
                     </div>
                     <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900 lg:text-lg">Configuration</h3>
                     <p class="text-sm text-gray-500 lg:text-base">Faster processing to help you build your applications
-                        quicker and with more efficiency.</p></div>
-                <div class="">
+                    quicker and with more efficiency.</p></div>
+
+                <div data-aos="slide-up" data-aos-duration="1000" data-aos-delay="700" class="">
                     <div class="flex items-center justify-center w-12 h-12 mb-4 text-blue-600 bg-blue-100 rounded-full"
                          data-primary="blue-600" data-rounded="rounded-full">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                             xmlns="http://www.w3.org/2000/svg">
+                                                                               xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                                                                                 d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
                         </svg>
                     </div>
                     <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900 lg:text-lg">Bundling</h3>
                     <p class="text-sm text-gray-500 lg:text-base">Bundling functionality to help you build your
-                        application with ease and sustainability.</p></div>
-                <div>
-                    <div
-                        class="flex items-center justify-center w-12 h-12 mb-4 text-purple-600 bg-purple-100 rounded-full"
-                        data-primary="purple-600" data-rounded="rounded-full">
+                    application with ease and sustainability.</p></div>
+                <div data-aos="slide-up" data-aos-duration="1000" data-aos-delay="900" >
+                    <div 
+                                                                  class="flex items-center justify-center w-12 h-12 mb-4 text-purple-600 bg-purple-100 rounded-full"
+                                                                  data-primary="purple-600" data-rounded="rounded-full">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                             xmlns="http://www.w3.org/2000/svg">
+                                                                               xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                                                                                 d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
                         </svg>
                     </div>
                     <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900 lg:text-lg">Database</h3>
                     <p class="text-sm text-gray-500 lg:text-base">Take advantage of unlimited storage and data retrieval
-                        from our global CDN data centers.</p></div>
-                <div class="">
+                    from our global CDN data centers.</p>
+                </div>
+                <div data-aos="slide-up" data-aos-duration="1000" data-aos-delay="1100" class="">
                     <div
-                        class="flex items-center justify-center w-12 h-12 mb-4 text-indigo-600 bg-indigo-100 rounded-full"
-                        data-primary="indigo-600" data-rounded="rounded-full">
+                            class="flex items-center justify-center w-12 h-12 mb-4 text-indigo-600 bg-indigo-100 rounded-full"
+                            data-primary="indigo-600" data-rounded="rounded-full">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                             xmlns="http://www.w3.org/2000/svg">
+                                                                               xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
+                                                                                 d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
                         </svg>
                     </div>
                     <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900 lg:text-lg">Integrations</h3>
                     <p class="text-sm text-gray-500 lg:text-base">Simple and configuration intregrations with your
-                        favorite applications and services.</p></div>
-                <div class="">
+                    favorite applications and services.</p></div>
+                <div data-aos="slide-up" data-aos-duration="1000" data-aos-delay="1300" class="">
                     <div class="flex items-center justify-center w-12 h-12 mb-4 text-pink-600 bg-pink-100 rounded-full"
                          data-primary="pink-600" data-rounded="rounded-full">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                             xmlns="http://www.w3.org/2000/svg">
+                                                                               xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                                                                 d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
                     <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900 lg:text-lg">Speed</h3>
                     <p class="text-sm text-gray-500 lg:text-base">Our tools and services have been crafted for maximum
-                        speed and efficiency.</p></div>
+                    speed and efficiency.</p></div>
             </div>
         </div>
     </section>

@@ -44,7 +44,7 @@ Route::controller(FrontendController::class)->group(function () {
     Route::get('/about-us', 'about')->name('app.about');
 
     Route::get('/our-services', 'services')->name('app.services');
-    Route::get('/out-services/{name}', 'showService')->name('app.services.show');
+    Route::get('/our-services/{name}', 'showService')->name('app.services.show');
 
     Route::get('/upcoming-events', 'events')->name('app.events');
     Route::get('/upcoming-events/{id}', 'showEvent')->name('app.events.show');

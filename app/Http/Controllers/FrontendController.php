@@ -32,6 +32,7 @@ class FrontendController extends Controller
     {
         $services = Service::latest()->take(5)->get();
         $events = Event::latest()->take(5)->get();
+
         return view('welcome')
             ->with('events', $events)
             ->with('services', $services);

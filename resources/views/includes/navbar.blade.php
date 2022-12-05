@@ -26,7 +26,7 @@
             <div class="h-full font-medium flex items-center md:flex-row flex-col md:pl-6 lg:pl-10">
                 <a href="{{route('app.contact-us')}}" class="md:w-auto w-full text-center md:py-0 py-3">Contact us</a>
                 <a href="{{route('login')}}"
-                   class="px-5 md:mr-0 mr-5 ml-5 text-center lg:ml-7 py-3 border-2 border-gray-900 hover:text-gray-100 hover:bg-gray-900 transition-colors ease-out duration-100 rounded-xl">
+                   class="px-5 md:mr-0 mr-5 ml-5 text-center lg:ml-7 py-3 border-2 border-gray-900 hover:decoration-none hover:text-gray-100 hover:bg-gray-900 transition-colors ease-out duration-100 rounded-xl">
                     @if(Auth::id())
                         {{__('Dashboard')}}
                     @else

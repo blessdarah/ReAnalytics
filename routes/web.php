@@ -3,6 +3,7 @@
 use App\Http\Controllers\AttachmentController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\FrontendController;
@@ -99,6 +100,7 @@ Route::group(['middleware' => ['auth'] ], function () {
     Route::resource('categories', CategoryController::class);
     Route::resource('messages', PresidentsMessageController::class);
     Route::resource('site-info', SiteInfoController::class);
+    Route::resource('clients', ClientController::class);
 });
 
 /*

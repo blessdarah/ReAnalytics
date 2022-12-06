@@ -19,31 +19,31 @@
       <p class="text-gray-600">info@reanalytics.com</p>
     </div>
   </div>
-  <form data-aos="fade-up" data-aos-duration="1800"  class="mt-8 lg:mt-16" action="{{route('register')}}" method="POST">
+  <form data-aos="fade-up" data-aos-duration="1800"  class="mt-8 lg:mt-16" action="{{route('app.contact-us.send')}}" method="POST">
       @csrf
       <div class="flex gap-4 item-center">
         <div class="mb-4 flex-1">
               <label for="name">Full name</label>
+              <input id="name" name="name" type="text" value="{{old('name') ?? ''}}" class="rounded color-gray-700 py-1 px-2 h-12 border border-gray-700 bg-white block w-full">
               @error('name')
                   <p class="font-small text-red-400 my-1">{{$message}}</p>
               @enderror
-              <input id="name" name="name" type="text" value="{{old('name') ?? ''}}" class="rounded color-gray-700 py-1 px-2 h-12 border border-gray-700 bg-white block w-full">
           </div>
           <div class="mb-4 flex-1">
               <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" value="{{old('subject') ?? ''}}" class="rounded color-gray-700 py-1 px-2 h-12 border border-gray-700 bg-white block w-full">
               @error('subject')
                   <p class="font-small text-red-400 my-1">{{$message}}</p>
               @enderror
-              <input id="subject" name="name" type="text" value="{{old('subject') ?? ''}}" class="rounded color-gray-700 py-1 px-2 h-12 border border-gray-700 bg-white block w-full">
           </div>
         </div>
 
       <div class="mb-4">
           <label for="email">Email</label>
+          <input id="email" name="email" type="email" value="{{old('email') ?? ''}}" class="rounded color-gray-700 py-1 px-2 h-12 border border-gray-700 bg-white block w-full">
           @error('email')
               <p class="font-small text-red-400 my-1">{{$message}}</p>
           @enderror
-          <input id="email" name="email" type="email" value="{{old('email') ?? ''}}" class="rounded color-gray-700 py-1 px-2 h-12 border border-gray-700 bg-white block w-full">
       </div>
 
       <div class="mb-4">

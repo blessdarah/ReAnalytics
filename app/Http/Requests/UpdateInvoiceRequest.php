@@ -25,9 +25,10 @@ class UpdateInvoiceRequest extends FormRequest
     {
         return [
             "code" => "nullable|string",
-            "name" => "string|required", 
-            "status" => "string|required", 
-            "total" => "number|required"
+            "client_id" => "nullable|string",
+            "name" => "string|required",
+            "description" => "string|required",
+            "status" => "string|required",
         ];
     }
 }

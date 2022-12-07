@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreInvoiceRequest;
 use App\Http\Requests\UpdateInvoiceRequest;
+use App\Models\Client;
 use App\Models\Invoice;
+use Illuminate\Support\Str;
 
 class InvoiceController extends Controller
 {
@@ -15,7 +17,9 @@ class InvoiceController extends Controller
      */
     public function index()
     {
-        return view('invoices.index')->with("invoices", Invoice::all());
+        return view('invoices.index')
+            ->with("invoices", Invoice::all())
+            ->with("clients", Client::all());
     }
 
     /**
@@ -25,7 +29,7 @@ class InvoiceController extends Controller
      */
     public function create()
     {
-        return view('invoices.create');
+        return view('invoices.create')->with("clients", Client::all());
     }
 
     /**
@@ -37,6 +41,8 @@ class InvoiceController extends Controller
     public function store(StoreInvoiceRequest $request)
     {
         $data = $request->validated();
+        // dd($data);
+        $data['code'] = Str::uuid();
         Invoice::create($data);
         return redirect()->route('invoices.index');
     }
@@ -60,7 +66,9 @@ class InvoiceController extends Controller
      */
     public function edit(Invoice $invoice)
     {
-        return view('invoices.edit')->with('invoice', $invoice);
+        return view('invoices.edit')
+            ->with('invoice', $invoice)
+            ->with("clients", Client::all());
     }
 
     /**

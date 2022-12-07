@@ -14,14 +14,14 @@ class CreateInvoicesTable extends Migration
     public function up(): void
     {
         Schema::create(
-            'invoices', 
+            'invoices',
             function (Blueprint $table) {
                 $table->id();
                 $table->foreignId("client_id");
-                $table->string("code", 12)->unique();
+                $table->string("code")->unique();
                 $table->string("name");
                 $table->string("description");
-                $table->enum("status", ["paid", "pending"])->default("pending");
+                $table->enum("status", ["paid", "pending", "cancelled"])->default("pending");
                 $table->double("total")->default(0.0);
                 $table->timestamps();
             }

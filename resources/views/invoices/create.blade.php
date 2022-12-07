@@ -8,15 +8,15 @@
     @endforeach
 </div>
 @endif
-<form action="{{ route('services.store') }}" id="serviceForm" method="POST" class="form" enctype="multipart/form-data">
+<form action="{{ route('invoices.store') }}" id="invoiceForm" method="POST" class="form" enctype="multipart/form-data">
     @csrf
 
-    @include('services.form')
+    @include('invoices.form')
 
     <div class="form-group mb-4">
         <button class="btn btn-primary" type="submit">
             <i class="bx bx-save"></i>
-            Save
+            Save invoice
         </button>
     </div>
 </form>
@@ -33,7 +33,7 @@
         // placeholder: 'Write something cool!',
     });
 
-    document.querySelector('#serviceForm').addEventListener('submit', e => {
+    document.querySelector('#invoiceForm').addEventListener('submit', e => {
         e.preventDefault();
         document.querySelector('#detail').value = editor.getHTML();
         e.target.submit();

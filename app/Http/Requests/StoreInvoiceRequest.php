@@ -13,7 +13,7 @@ class StoreInvoiceRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,9 +25,10 @@ class StoreInvoiceRequest extends FormRequest
     {
         return [
             "code" => "nullable|string",
-            "name" => "string|required", 
-            "status" => "string|required", 
-            "total" => "number|required"
+            "name" => "string|required",
+            "status" => "string|required",
+            "description" => "string|required",
+            "client_id" => "numeric|required"
         ];
     }
 }

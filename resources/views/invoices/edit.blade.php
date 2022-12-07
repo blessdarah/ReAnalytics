@@ -12,11 +12,11 @@ use Illuminate\Support\Str;
             @endforeach
         </div>
     @endif
-    <form action="{{ route('services.update', $service->id) }}" class="mb-4" id="postForm" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('invoices.update', $invoice->id) }}" class="mb-4" id="postForm" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PATCH')
 
-        @include('services.form')
+        @include('invoices.form')
 
         <div class="form-group my-4">
             <button class="btn btn-primary" type="submit">Update</button>
@@ -25,22 +25,3 @@ use Illuminate\Support\Str;
 
 @endsection
 
-@section('scripts')
-<script>
-    const Editor = toastui.Editor;
-    const serviceDetailContent = `{!! Str::markdown($service->detail) !!}`;
-    const editor = new Editor({
-        el: document.querySelector('#editor'),
-        height: '400px',
-        // initialEditType: 'markdown',
-        initialEditType: 'wysiwyg',
-        initialValue: serviceDetailContent
-    });
-
-    document.querySelector('#postForm').addEventListener('submit', e => {
-        e.preventDefault();
-        document.querySelector('#detail').value = editor.getHTML();
-        e.target.submit();
-    });
-</script>
-@endsection

@@ -188,9 +188,14 @@ final class InvoiceTable extends PowerGridComponent
                 ->target('_self'),
 
             Button::make('destroy', 'Delete')
-                ->class('btn btn-sm btn-danger')
+                ->class('btn btn-sm btn-danger mb-3')
                 ->route('invoices.destroy', ['invoice' => 'id'])
                 ->method('delete')
+                ->target('_self'),
+
+            Button::make('show', 'Details')
+                ->class('btn btn-sm btn-success')
+                ->route('invoices.show', ['invoice' => 'id'])
                 ->target('_self')
          ];
     }

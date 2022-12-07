@@ -73,6 +73,26 @@
                         <li><a href="{{route('organizations.index')}}" data-key="t-read-email">Organizations</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow">
+                        <i class="bx bx-user icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-clients">Clients</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('clients.create')}}" data-key="t-inbox">Create client</a></li>
+                        <li><a href="{{route('clients.index')}}" data-key="t-read-email">Clients</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow">
+                        <i class="bx bx-printer icon nav-icon"></i>
+                        <span class="menu-item" data-key="t-invoice">Invoice</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('invoices.create')}}" data-key="t-inbox">Create invoice</a></li>
+                        <li><a href="{{route('invoices.index')}}" data-key="t-read-email">Invoices</a></li>
+                    </ul>
+                </li>
  
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">

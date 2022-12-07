@@ -8,6 +8,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\PostController;
@@ -78,30 +79,40 @@ Auth::routes();
  * Requires Password and username
  * **********************************************************
  */
-Route::post('/contact-submit', [HomeController::class, 'contact'])->name('contact.submit');
-Route::group(['middleware' => ['auth'] ], function () {
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
-    Route::get('/contact-messages', [HomeController::class, 'contactMessages'])->name('contact.messages');
-    Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
-    Route::get('/notifications', [HomeController::class, 'notifications'])->name('notifications');
-    Route::get('/organigram', [HomeController::class, 'organigram'])->name('organigram');
+Route::post('/contact-submit', [HomeController::class, 'contact'])
+        ->name('contact.submit');
 
-    Route::resource('posts', PostController::class);
-    Route::resource('events', EventController::class);
-    Route::resource('projects', ProjectController::class);
-    Route::resource('testimonials', TestimonialController::class);
-    Route::resource('services', ServiceController::class);
-    Route::resource('members', MemberController::class);
-    Route::resource('attachments', AttachmentController::class);
-    Route::resource('contacts', ContactController::class);
-    Route::resource('organizations', OrganizationController::class);
-    Route::resource('banner', BannerController::class);
-    Route::resource('tags', TagController::class);
-    Route::resource('categories', CategoryController::class);
-    Route::resource('messages', PresidentsMessageController::class);
-    Route::resource('site-info', SiteInfoController::class);
-    Route::resource('clients', ClientController::class);
-});
+Route::group(
+    ['middleware' => ['auth'] ], 
+    function () {
+        Route::get('/home', [HomeController::class, 'index'])->name('home');
+        Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
+
+        Route::get('/contact-messages', [HomeController::class, 'contactMessages'])
+                ->name('contact.messages');
+        Route::get('/notifications', [HomeController::class, 'notifications'])
+                ->name('notifications');
+        Route::get('/organigram', [HomeController::class, 'organigram'])
+                ->name('organigram');
+
+        Route::resource('posts', PostController::class);
+        Route::resource('events', EventController::class);
+        Route::resource('projects', ProjectController::class);
+        Route::resource('testimonials', TestimonialController::class);
+        Route::resource('services', ServiceController::class);
+        Route::resource('members', MemberController::class);
+        Route::resource('attachments', AttachmentController::class);
+        Route::resource('contacts', ContactController::class);
+        Route::resource('organizations', OrganizationController::class);
+        Route::resource('banner', BannerController::class);
+        Route::resource('tags', TagController::class);
+        Route::resource('categories', CategoryController::class);
+        Route::resource('messages', PresidentsMessageController::class);
+        Route::resource('site-info', SiteInfoController::class);
+        Route::resource('clients', ClientController::class);
+        Route::resource('invoices', InvoiceController::class);
+    }
+);
 
 /*
 |--------------------------------------------------------------------------

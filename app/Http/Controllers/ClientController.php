@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreClientRequest;
 use App\Http\Requests\UpdateClientRequest;
 use App\Models\Client;
+use Illuminate\Http\RedirectResponse;
 
 class ClientController extends Controller
 {
@@ -15,11 +16,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-        return view('client.index')->with(
-            [
-                "clients" => Client::all()
-            ]
-        );
+        return view('clients.index')->with("clients", Client::all());
     }
 
     /**
@@ -29,16 +26,16 @@ class ClientController extends Controller
      */
     public function create()
     {
-       return view('clients.create');
+        return view('clients.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\StoreClientRequest  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(StoreClientRequest $request)
+    public function store(StoreClientRequest $request): RedirectResponse
     {
         $data = $request->validated();
         Client::create($data);
@@ -64,7 +61,7 @@ class ClientController extends Controller
      */
     public function edit(Client $client)
     {
-        return view("clients.show")->with("client", $client);
+        return view("clients.edit")->with("client", $client);
     }
 
     /**
@@ -78,7 +75,7 @@ class ClientController extends Controller
     {
         $data = $request->validated();
         $client->update($data);
-        return redirect()->route('clients.index'); 
+        return redirect()->route('clients.index');
     }
 
     /**
